@@ -3,6 +3,9 @@ clear,clc,clf
 plCar=[1,0;0,0.5]*[0,1,1,0,0;0,0,1,1,0]+repmat([-0.5;0],1,5);
 plBar=[0,1;0,0];
 plBall=0.1*[cos(2*pi*([0:0.01:1,0]));sin(2*pi*([0:0.01:1,0]))];
+params.M = 1;
+params.m = 0.1;
+params.l = 1;
 %% Drawing Scene
 figure(1)
 hCar=hgtransform; line(plCar(1,:),plCar(2,:),'parent',hCar)
@@ -19,8 +22,22 @@ th = 45*pi/180;
 set(hCar,'matrix',makehgtform('translate',[px,0,0]))
 set(hBar,'matrix',makehgtform('translate',[0,0.5,0])*makehgtform('zrotate',pi/2+th))
 %% Modelo dinamico
-% D(q)*qpp+V(qp,q)+G(q)=u(t)
-D = [M+m,-l*m*cos(th);-l*m*cos(th),m*l^2];
-V = [m*l*w^2*sin(th);0];
-G = [0;m*l*g*sin(th)];
-qpp = D\(V+G-u)
+figure(1)
+h=0.001;
+nmax = 10000;
+% F = @(t)([0;0]);
+xrk = [0.1;0;45*pi/180;0.0;];
+xr = [];
+for n=0:nmax
+    trk = n*h;
+%     F = @(t)([u(1)-b*xrk(2);u(2)-b*xrk(4)]);
+    xrk = methodRK(@(x)(dynCarPendulum(x,params)),xrk,h);
+%     xrk = methodRKandF(@(t,x,f,pars)(dynRobot2R(t,x,f,pars)),F,params,trk,xrk,h);
+    xr = [xr xrk];
+    px = xrk(1);
+    th = xrk(3);
+    set(hCar,'matrix',makehgtform('translate',[px,0,0]))
+    set(hBar,'matrix',makehgtform('translate',[0,0.5,0])*makehgtform('zrotate',pi/2+th))
+%     pause
+    drawnow
+end
