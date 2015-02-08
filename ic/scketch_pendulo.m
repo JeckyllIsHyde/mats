@@ -25,19 +25,22 @@ set(hBar,'matrix',makehgtform('translate',[0,0.5,0])*makehgtform('zrotate',pi/2+
 figure(1)
 h=0.001;
 nmax = 10000;
-% F = @(t)([0;0]);
-xrk = [0.1;0;45*pi/180;0.0;];
+xrk = [0;0;-1*pi/180;0.0;];
 xr = [];
 for n=0:nmax
     trk = n*h;
-%     F = @(t)([u(1)-b*xrk(2);u(2)-b*xrk(4)]);
-    xrk = methodRK(@(x)(dynCarPendulum(x,params)),xrk,h);
-%     xrk = methodRKandF(@(t,x,f,pars)(dynRobot2R(t,x,f,pars)),F,params,trk,xrk,h);
+    F = @(t)([carPendulumFLC(-400/pi*xrk(3),-100/10*xrk(4));0]);
+%    xrk = methodRK(@(x)(dynCarPendulum(x,params)),xrk,h);
+    [F(1),[xrk(3);xrk(4)]]
+    xrk = methodRKandF(@(t,x,f,pars)(dynCarPendulum(t,x,f,pars)),F,params,trk,xrk,h);
     xr = [xr xrk];
     px = xrk(1);
     th = xrk(3);
     set(hCar,'matrix',makehgtform('translate',[px,0,0]))
     set(hBar,'matrix',makehgtform('translate',[0,0.5,0])*makehgtform('zrotate',pi/2+th))
-%     pause
+    pause
     drawnow
 end
+%%
+figure(2)
+plot(xr(4,:),'r'),grid on, hold on
