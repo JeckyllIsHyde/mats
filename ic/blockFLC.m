@@ -1,9 +1,18 @@
 function u = blockFLC(x,v)
 
-xmax = 10;
-x = min(xmax,x)/xmax*100;
-vmax = 5;
-v = min(vmax,v)/vmax*100; 
+xmax = 10; xmin = -10;
+if x>=0
+    x = min(xmax,x)/xmax*100;
+elseif x<0
+    x = -max(xmin,x)/xmin*100;
+end
+
+vmax = 5; vmin = -5;
+if v>=0
+    v = min(vmax,v)/vmax*100;
+elseif v<0
+    v = -max(vmin,v)/vmin*100;
+end
 
 % member functions
 paramsNG = struct('a',-100,'b',-100,'c',-50,'d',-25); 
