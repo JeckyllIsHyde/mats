@@ -1,0 +1,105 @@
+\documentclass[10pt,onecolumn,twoside,letterpaper]{article}
+\usepackage[text={7in,9.5in},centering]{geometry}
+\usepackage[spanish,es-nodecimaldot]{babel}
+
+\usepackage{hyperref}
+
+\usepackage{multicol}
+
+\usepackage{harvard}% bibliographystyle: apsr, agsm, dcu, kluwer, nederlands
+\newcommand{\myreferences}{../../../doc/review/review/library}
+\usepackage{graphicx}
+\graphicspath{{../../../doc/images/}}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{colortbl}
+\definecolor{gray}{cmyk}{0.0,0.0,0.0,0.60}
+
+\usepackage{float}
+
+%\usepackage{auto-pst-pdf}
+%\usepackage{pst-all}
+
+%\usepackage[numbered]{mcode}
+%\usepackage{lipsum}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO]{\small{\textcolor{gray}{\textsc{Hacia un framework de locomoci\'on b\'ipeda evolutiva y flexible}}}}
+\fancyhead[LO]{\includegraphics[scale=0.05]{unlogo.png}}
+\fancyhead[LE]{\includegraphics[scale=0.05]{unlogo.png}\quad\small{\textcolor{gray}{\textsc{Optimizacion Bio-inspirada}}}}
+\fancyhead[RE]{\small{\textcolor{gray}{\textsc{TAREA 01}}}}
+\fancyfoot[CO,CE]{\thepage}
+\fancyfoot[LO,RE]{\scriptsize{\textcolor{gray}{\emph{Version 0.2}}}}
+
+\title{\vspace{-0.8cm}\includegraphics[scale=0.12]{unescudobn.png}\\\vspace{-0.0cm}
+  \LARGE \textbf{An\'alisis del planteamiento de un MOP para el dise\~no de un robot con locomoci\'on b\'ipeda}}
+\author{J.A. Castillo-Le\'on\thanks{jacastillol@unal.edu.co}}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}\small
+Se presenta el \'analisis del planteamiento de un MOP, tomado de un \'articulo que presenta una soluci\'on optimizada de la selecci\'on de param\'etros de un controlador SMC. Un robot b\'ipedo que camina sobre una pendiente en forma lateral. Al final se presenta los frentes de Pareto obtenidos y la comparaci\'on de varios algoritmos metaheur\'isticos. 
+\end{abstract}
+\begin{multicols}{2}
+\section{Problema:}
+El dise\~no de un control SMC (\emph{Slide Mode Control}), que busca controlar un modelo de locomoci\'on b\'ipeda, con desplazamiento lateral como patr\'on de marcha, es optimizado mediante el m\'etodo de enjambre de part\'iculas (PSO) y comparado con otros m\'etodos de algoritmos evolutivos \cite{Mahmoodabadi2014}.
+\par El modelo de locomoci\'on es representado por tres eslabones rotacionales (ver Figura \ref{fig:modelo}), el formalismo de Newton-Euler es utilizado para resolver la din\'amica del sistema. Las longitudes, masas, inercias y centros de masa o en resumen la morfolog\'ia del modelo es parametrizada basada en la biomec\'anica, por lo que no forman parte de las variables de dise\~no del controlador\cite{Mahmoodabadi2014}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.25]{3RLateralRobot.png}
+  \caption{Modelo Din\'amico General}
+  \label{fig:modelo}
+\end{figure}
+\par La marcha din\'amicamente estable es alcazada con la restricci\'on del ZMP (\emph{Zero-Moment-Point}), que establece un criterio para saber si la pierna soporte no va girar antes de tiempo con respecto a uno de sus bordes. Para que esta condicion se d\'e, el ZMP debe quedar en el convex hull que forman: 1) el pie de soporte en la fase de soporte simple \'o 2) los dos pies en la fase de soporte doble. El modelo simplificado de c\'alculo es \emph{ZMP-Car-Table} eq. \ref{eq:zmpCarTable}.
+\begin{equation}
+  \label{eq:zmpCarTable}
+  x_{zmp}\,=\,x_{com}-\frac{\ddot{x}_{com}}{g}z_{com}
+\end{equation}
+\par El modelo de impacto se toma como una perturbaci\'on que altera las velocidades angulares y las superficies del controlador SMC. El impacto modelado tomado como fuerzas impulsivas que generan discontinuidades en las velocidades angulares de los eslabones.
+\par El control SMC, es un control que aporta robustez e invarianza ante incertidumbres de modelo, contiene las variables de dise\~no de este problema de optimizaci\'on evolutiva. Seis coeficientes $s_i$, tres superficies deslizantes y tres entradas de control equivalente $u_{eqi}$.
+\begin{equation}
+  \label{eq:superficies}
+  s_i(e_i,t)\,=\,\left(\frac{d}{dt} + \lambda_i\right)^{n-1}e_i\,=\,0,\mathtt{\quad}\,i\,=\,1,2,3.
+\end{equation}
+\begin{equation}
+  \label{eq:sencontrol}
+  u_i\,=\,u_{eqi}-k_i\mathtt{sat}(\Phi),\mathtt{\quad}\,i\,=\,1,2,3.
+\end{equation}
+\section{Planteamiento del MOP:}
+Para el dise\~no del control SMC, se ha utilizado algoritmos metaheur\'isticos con el fin de obtener una selecci\'on optimizada de par\'amentros. Dos funciones obejtivo son utilizadas: 1) la suma normalizada de errores angulares $f_{obj1}$ y 2) la suma normalizada del esfuerzo de control $f_{obj2}$.
+\begin{equation}
+  \label{eq:f1}
+  f_{obj1}\,=\,\int_0^{\infty}\,e^2(\mathbf{x}(t),\mathbf{u}(t))\,dt
+\end{equation}
+\begin{equation}
+  \label{eq:f2}
+  f_{obj1}\,=\,\int_0^{\infty}\,L(\mathbf{x}(t),\mathbf{u}(t))\,dt
+\end{equation}
+en donde las funciones error $e(\cdot)$ y esfuerzo de control $L(\cdot)$, son funciones dependientes de las variables de dise\~no, $\lambda_1$, $\lambda_2$, $\lambda_3$, $k_1$, $k_2$ y $k_3$.
+\par La regi\'on de factibilidad esta dada por las siguientes restricciones:
+\begin{equation}
+  \label{eq:kres}
+  0\leq k_1,k_2,k_3\leq 5
+\end{equation}
+\begin{equation}
+  \label{eq:lres}
+  100\leq \lambda_1,\lambda_2,\lambda_3\leq 500
+\end{equation}
+hay que resaltar que este problema no tiene restricciones de igualdad $h_i(\cdot)\,=\,0$ o restricciones de desigualdad $g_i(\cdot)\,\leq\,0$. Lo que permite entender la regi\'on de factibilidad como un hipercubo en $\mathbb{R}^6$.
+\par Minimizar $\mathbf{F}=[f_{obj1},f_{obj2}]^T$, sujeta la regi\'on de factibilidad dada por \ref{eq:kres} y \ref{eq:lres}, donde el vector de variables de dise\~no es $[\lambda_1,\lambda_2,\lambda_3,k_1,k_2,k_3]^T$.
+\section{Resultados}
+En la figura \ref{fig:pareto}, se muestra el frente \'optimo de Pareto obtenido mediante dos m\'etodos de enjambre de part\'iculas (Sigma-MOPSO,Ingenious-MOPSO) y dos m\'etodos algoritmos gen\'eticos (Modified-NSGAII, MOGA). Seg\'un \cite{Mahmoodabadi2014}, el Ingenious-MOPSO logra un frente de Pareto m\'as diverso y uniforme que los otros tres m\'etodos.
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.3]{ParetoOptimalSetPSO.png}
+  \caption{Frente \'optimo de Pareto}
+  \label{fig:pareto}
+\end{figure}
+\end{multicols}
+%\nocite{*}
+\bibliographystyle{nederlands}% apsr, agsm, dcu, kluwer, nederlands
+\bibliography{\myreferences}
+\end{document}
