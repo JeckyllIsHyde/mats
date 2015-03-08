@@ -26,56 +26,65 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[RO]{\small{\textcolor{gray}{\textsc{Hacia un framework de locomoci\'on b\'ipeda evolutiva y flexible}}}}
+\fancyhead[RO]{\small{\textcolor{gray}{\textsc{Hacia un framework de locomoci\'on b\'ipeda, evolutiva y flexible}}}}
 \fancyhead[LO]{\includegraphics[scale=0.05]{unlogo.png}}
 \fancyhead[LE]{\includegraphics[scale=0.05]{unlogo.png}\quad\small{\textcolor{gray}{\textsc{Control Inteligente 2015-01}}}}
 \fancyhead[RE]{\small{\textcolor{gray}{\textsc{TALLER 01}}}}
 \fancyfoot[CO,CE]{\thepage}
-\fancyfoot[LO,RE]{\scriptsize{\textcolor{gray}{\emph{Version 0.1}}}}
+\fancyfoot[LO,RE]{\scriptsize{\textcolor{gray}{\emph{Version 0.5}}}}
 
 \title{\vspace{-0.8cm}\includegraphics[scale=0.12]{unescudobn.png}\\\vspace{-0.0cm}
   \LARGE \textbf{Taller 1 - Inteligencia computacional y control autom\'atico}}
-\author{J.A. Castillo-Le\'on\thanks{jacastillol@unal.edu.co}}
+\author{J.A. Castillo-Le\'on\thanks{jacastillol@unal.edu.co} \and Ronny Gelleschus\thanks{rgelleschus@unal.edu.co}}
 \date{}
 
 \begin{document}
 \maketitle
-\begin{abstract}\small
-
-\end{abstract}
+\begin{abstract}\noindent\small\textit{En el siguiente documento se describen los conceptos fundamentales que ser\'an tratados a lo largo del curso de Control Inteligente, los conceptos ser\'an basados en las referencias dadas por el profesor y algunas otras adicionales citadas aca para soportar las ideas discutidas. Primero se discute acerca de Inteligencia Computacional e Inteligencia, desde el punto de vista de los agentes, los subcampos que la conforman y finalmente definiciones b\'asicas de los subcampos m\'as importantes para el curso.}
+\end{abstract}\vspace{1cm}
 \par{\bf \large Punto 1: Acerca de Inteligencia Computacional (CI)}\\
 \par{\bf 1.1: Ciencia versus Ingeniera de la CI}\\
-Ingenieria de la CI: El objetivo principal es la especificaci\'on de m\'etodos para dise\~no de artefactos \'utiles e inteligentes. Esto incluye la construcci\'on de programas para la soluci\'on de problemas particulares.\\
-Ciencia de la CI: Entender los principios detras del razonamiento. Requiere de teor\'ia y experimentaci\'on 
+Ingenier\'ia de la CI: El objetivo principal es la especificaci\'on de m\'etodos para dise\~no de artefactos \'utiles e inteligentes. Esto incluye la construcci\'on de programas para la soluci\'on de problemas particulares. Requiere de experimentaci\'on (ingenier\'ia) y teor\'ia (ciencia).\\
+Ciencia de la CI: Entender los principios detras del razonamiento. Requiere de teor\'ia (ciencia) y experimentaci\'on (ingenier\'ia). 
 \par{\bf 1.2: M\'as inteligente}\\
+Para este ejercicio, se organizaran las ideas respecto al concepto de Agente Inteligente, descrito en la lectura y resumido en: un agente interact\'ua con su entorno, lo que hace a cada agente apropiado para su situaci\'on y sus necesidades. La flexibilidad ante cambios de entorno y objetivos es causa de poder aprende de experiencias y poder seleccionar acciones apropiadas ante limitaciones de percepci\'on y pocos c\'alculos \cite{book:Poole}.\\
 Para cada una de las siguientes proposiciones afirmativas, se dan cinco razones explicativas:
 \begin{enumerate}
-\item \emph{Un perro es m\'as inteligente que un gusano.} Un agente interactua con su entorno. Lo que hace a cada agente apropiado para su situaci\'on y sus necesidades. Flexibilidad ante cambios de entorno y objetivos. Aprende de experiencias. Seleciones apropiadas ante limitaciones de percepci\'on y pocos c\'alculos.
+\item \emph{Un perro es m\'as inteligente que un gusano.} 
+Visto el gusano como un agente, presenta el sentido de vision mediante la percepci\'on de luz o ausencia de ella. No tiene el sentido de audici\'on, pero presenta sensores de vibraci\'on que le permite saber de la presencia de animales a su alrededor. Tiene una capacidad de regeneraci\'on que no esta presente en los perros y los humanos\cite{website:lifeworm}. Por la sencillez de su cerebro, no puede aprender pero por la evoluci\'on una siguiente poblacion podria adaptarse a nuevos problemas.
+El perro puede aprender y adaptarse por si solo al entorno. 
 \item \emph{Un humano es m\'as inteligente que un perro.}
+El perro no presenta creatividad mientras que el humano destaca por ello.
 \item \emph{Una organizaci\'on es m\'as inteligente que un individuo humano.}
+Una organizaci\'on puede especializarse con mejores resultados a tareas que solo un humano puede hacer. Los productos creados por una organizaci\'on pueden ser parcial o totalmente inexplicables para un solo ser humano. 
 \end{enumerate}
-\par \textcolor{blue}{\texttt{M\'as inteligente:}} Se puede definir en esta tarea como ``m\'as inteligente'' a las siguiente situaci\'on \cite{Verdaasdonk2009}\\
-\par{\bf \large Punto 2: Nuevas formas de c\'omputo, DNAC y QC}\\
-Las formas de c\'omputo actuales basadas en silicio tienen los siguientes inconvenientes: Miniaturizaci\'on, disipaci\'on de energ\'ia, velocidad de intercambio de la informaci\'on y muchas m\'as. Para solventar estos problemas nuevos paradigmas se colocan en escena: \emph{Computacion Cu\'antica} (QC) basada en la mec\'anica cu\'antica y \emph{Computacion por ADN} (DNAC) en donde el medio en el cual se realizan el c\'omputo consiste de biomol\'eculas y enzimas. 
-\par{\bf 2.1: Diferencias y similitudes entre DNAC y QC}\\
+\par \textcolor{blue}{\texttt{M\'as inteligente:}} Se puede definir en esta tarea como ``m\'as inteligente'' a la capacidad de un agente, 1) a que desde un principio se encuentre adaptado a su entorno (evolucion), 2) que durante su desarrollo en vida pueda adaptarse a nuevas situaciones y aprender de experiencias pasadas, 3) que tenga la capacidad de crear e innovar para mejorar su grado de adaptaci\'on y 4) que en conjunto con otros agentes busque la optimizaci\'on y creaci\'on de cosas por especializaci\'on.\\
+\par{\bf \large Punto 2: Subcampos de la inteligencia computacional}\\
+\par{\bf 2.1: Diferencias y similitudes entre subcampos}\\
+\par Los autores ense\~nan las similitudes y diferencias entre los subcampos de Inteligencia Computacional (computaci\'on neuronal – NC, computaci\'on difusa – FC, computaci\'on evolutiva – EC, computaci\'on cu\'antica – QC y computaci\'on DNA – DNAC) utilizando 4 criterios \cite{Craenen}.\\
+El primer criterio es el medio de computaci\'on utilizado. Las primeras tres partes, NC, FC y EC, todav\'ia se basan totalmente en los computadores digitales ``cl\'asico'', basados en silicio, mientras que los campos de QC y DNAC son intentos de utilizar nuevos medios de computaci\'on.\\
+El segundo criterio es la estructura de los algoritmos utilizados. QC y DNAC en el futuro tal vez permitir\'an crear algoritmos totalmente paralelos para los algoritmos utilizados en NC y EC. Aunque hoy en d\'ia estos imitan procesos en forma secuencial la realidad es que su natural es computar en paralelo. Los algoritmos de FC tambi\'en son secuenciales pero all\'i la inspiraci\'on natural tampoco es paralela, as\'i en este caso no hay problema.\\
+Un tercer criterio puede ser la fuente de inspiraci\'on. NC y EC son inspiradas por la biolog\'ia, respectivamente el cerebro humano y la teor\'ía de evoluci\'on de Charles Darwin. DNAC directamente utiliza un medio biol\'ogico. Por otro lado, FC est\'a inspirado por el razonamiento y la lengua humana y QC es el intento de utilizar directamente procesos f\'isicos muy particulares.\\
+El \'ultimo criterio que los autores establecen, es el nivel en que se busca la inteligencia y mejoramiento de computación. QC y DNAC intentan crear una base completamente nueva para la computaci\'on. NC y EC buscan la inteligencia especialmente en la adaptaci\'on, pero en diferentes niveles: mientras que en EC una poblaci\'on se adapta por cruce, mutaci\'on y selecci\'on (o a veces solo dos de estos), en NC es una red neuronal artificial (=un individuo) que se desarrolla y adapta. Por otro lado el punto fuerte de la FC no es la adaptaci\'on sino el m\'etodo con el cual se puede definir conceptos ``difusos'' y tomar decisiones basado en esto.\\
+Las formas de c\'omputo actuales basadas en silicio tienen los siguientes inconvenientes: Miniaturizaci\'on, disipaci\'on de energ\'ia, velocidad de intercambio de la informaci\'on y muchas m\'as. Para solventar estos problemas nuevos paradigmas se colocan en escena: \emph{Computaci\'on Cu\'antica} (QC) basada en la mec\'anica cu\'antica y \emph{Computaci\'on por ADN} (DNAC) en donde el medio en el cual se realizan el c\'omputo consiste de biomol\'eculas y enzimas. \\
 Diferencias: DNAC es biol\'ogica y QC es at\'omica. El tama\~no y los retos tecnol\'ogicos. Uno es bioinspirado y el otro es inspirado en la f\'isica\\
 Similitudes: Computaci\'on en paralelo lo que permite que la implementaci\'on de las redes neuronales y los algor\'itmos evolutivos sea natural en el sentido que deja\'ian de ser simulados secuencialmente.
 \par{\bf 2.2: ¿Qu\'e es bioware?}\\
-\textcolor{blue}{\texttt{Bioware:}} Es el medio f\'isico y en similitud con el hardware, sobre el cual se soporta el computador basado en ADN, compuesto de biomol\'eculas y enzimas.\\
+\textcolor{blue}{\texttt{Bioware:}} Es el medio f\'isico y en similitud con el hardware, sobre el cual se soporta el computador basado en ADN, compuesto de biomol\'eculas y enzimas. Se destaca porque su arquitectura le permite la computaci\'on en paralelo\\
 \par{\bf \large Punto 3: Algunas definiciones b\'asicas}\\
-\par \textcolor{blue}{\texttt{Control Inteligente:}} Al igual que el control convencional, pretende llevar un proceso o sistema a un estado o comportamiento deseado, con la diferencia de que no existe como tal un fundamento te\'orico fuerte que muestre la estabilidad de sus resultados, sin embargo en la pr\'actica funciona, lo cual es reflejado por el sin numero de productos y patentes encontrados al dia de hoy. Esta compuesto por tres areas: Sistemas difusos, Redes Neuronales Artificiales y Computacion evolutiva. Es importante destacar la fortaleza que estas t\'ecnicas presentan cuando no se tienen modelos de los sistemas o procesos a controlar, ya que la tendencia de este control hoy en dia, es deducir un modelo de una planta que originalemente se ve como de \emph{caja negra}.
-\par \textcolor{blue}{\texttt{Sistemas Difusos:}} La l\'ogica difusa, es una extencion de la l\'ogica de primer orden. La l\'ogica de primer orden es utilizada en las matem\'aticas para su desarrollo y conservaci\'on. Todas las demostraciones y teoremas escritos son basados en las reglas de inferencia. Todos estos conceptos de inferencia para sacar conclusiones son utilizados en la l\'ogica difusa, con la diferencia que la pertenencia de un elemento a un conjunto ya no es de \emph{falso} o \emph{verdadero}, as\'i como las proposiciones en la l\'ogica difusa tampoco ser\'an de falsas o verdaderas. La representacion del conociento ser\'a tambi\'en expresada de forma simb\'olica pero con mayor l\'exico para su descripcion. De esta forma el conocimiento experto se pede representar mediante reglas, que esta compuestas por proposiciones difusas. Finalemente se pueden aplicar al control.
-\par \textcolor{blue}{\texttt{Redes Neuronales Artificiales:}} Inspiradas en las redes neuronales biol\'ogicas, las ANNs son modelos simplificados de las neuronas y sus agrupamientos que replican unas cuantas caracter\'isticas de los sistemas biol\'ogicos. Algunas caracteristicas son el precesamiento en paralelo, la adaptabilidad, el aprendizaje, la generalizaci\'on, la robustez, etc. Desde el punto de vista matem\'atico, son mapeadores universales por lo que pueden ser usadas para la aproximacion de funciones. Tambien son usadas como clasificadores, reconocimiento de patrones o generacion de patrones. Al igual que las biologicas, pueden aprender del ensayo y el error, existen varias formas de aprendizaje, las m\'as citadas son Supervisadas, Auto-organizadas y por Refuerzo. Desde el punto de vista de estructura se puede hacer dos distinciones \emph{Feed-Forward Neural Networks} FFNN y \emph{Recurrent Neural Networks} RNN.
-\par \textcolor{blue}{\texttt{Algoritmos Gen\'eticos:}} Tomando las ideas de la evoluci\'on Darwiniana, el aloritmo es replicado para buscar soluciones optimizadas, dentro de un espacio de b\'usqueda en el cual pueda haber m\'ultiples objetivos, m\'ultiples restricciones, variables discretas o continuas. El algoritmo gen\'etico se describe como un proceso metaheur\'istico. El algoritmo comienza son una poblaci\'on de individios $P_0$ donde cada individuo $x \in P_0$ compite entre ellos mediante unas funciones de fitness $\mathbf{F}=[f_{obj1},...,f_{objn}]^T$, basado en esto se plantea un operador de selecci\'on, un operador de cruce y un operador de mutaci\'on. Estas heur\'isticas exploran el espacio mediante la diversidad de la poblaci\'on y explotan el espacio mediante la mutaci\'on, por ejemplo. Los algoritmos gen\'eticos generalmente utilizados para la selecci\'on de parametros de dise\~no de controladores y morfol\'ogicos. Existen varios tipos de operadores y en base a ello el nombre de distintos algoritmos gen\'eticos: VEGA, MOGA, NSGA-II, etc. 
+\par \textcolor{blue}{\texttt{Control Inteligente:}}  Control Inteligente es una aplicaci\'on de inteligencia computacional a la ingenier\'ia de automatizaci\'on industrial. Representar problemas usando razonamiento, adaptaci\'on, aprendizaje y optimizaci\'on heurística dando soluci\'on a problemas que el control cl\'asico o convencional no responde. Al igual que el control convencional, pretende llevar un proceso o sistema a un estado o comportamiento deseado, con la diferencia de que no existe como tal un fundamento te\'orico fuerte que muestre la estabilidad de sus resultados, sin embargo en la pr\'actica funciona, lo cual es reflejado por el sin numero de productos y patentes encontrados al dia de hoy. Esta compuesto por tres areas: Sistemas difusos, Redes Neuronales Artificiales y Computacion evolutiva. Es importante destacar la fortaleza que estas t\'ecnicas presentan cuando no se tienen modelos de los sistemas o procesos a controlar, ya que la tendencia de este control hoy en dia, es deducir un modelo de una planta que originalemente se ve como de \emph{caja negra} \cite{Craenen,website:lifeworm}.
+\par \textcolor{blue}{\texttt{Sistemas Difusos:}} La l\'ogica difusa, es una extencion de la l\'ogica de primer orden. La l\'ogica de primer orden es utilizada en las matem\'aticas para su desarrollo y conservaci\'on. Todas las demostraciones y teoremas escritos son basados en las reglas de inferencia. Todos estos conceptos de inferencia para sacar conclusiones son utilizados en la l\'ogica difusa, con la diferencia que la pertenencia de un elemento a un conjunto ya no es s\'olo de \emph{falso} o \emph{verdadero}, as\'i como las proposiciones en la l\'ogica difusa tampoco ser\'an de falsas o verdaderas. La representacion del conocimiento ser\'a tambi\'en expresada de forma simb\'olica pero con mayor l\'exico para su descripcion. De esta forma el conocimiento experto se puede representar mediante reglas, que esta compuestas por proposiciones difusas. Finalemente se pueden aplicar al control\cite{russell2004}.
+\par \textcolor{blue}{\texttt{Redes Neuronales Artificiales:}} Inspiradas en las redes neuronales biol\'ogicas, las ANNs son modelos simplificados de las neuronas y sus agrupamientos que replican unas cuantas caracter\'isticas de los sistemas biol\'ogicos. Algunas caracteristicas son el precesamiento en paralelo, la adaptabilidad, el aprendizaje, la generalizaci\'on, la robustez, etc. Desde el punto de vista matem\'atico, son mapeadores universales por lo que pueden ser usadas para la aproximacion de funciones. Tambien son usadas como clasificadores, reconocimiento de patrones o generacion de patrones. Al igual que las biologicas, pueden aprender del ensayo y el error, existen varias formas de aprendizaje (las m\'as citadas son Supervisadas, Auto-organizadas y por Refuerzo. Desde el punto de vista de estructura se puede hacer dos distinciones \emph{Feed-Forward Neural Networks} FFNN y \emph{Recurrent Neural Networks} RNN)\cite{looney1997}.
+\par \textcolor{blue}{\texttt{Algoritmos Gen\'eticos:}} Tomando las ideas de la evoluci\'on Darwiniana, el algoritmo es replicado para buscar soluciones optimizadas, dentro de un espacio de b\'usqueda en el cual pueda haber m\'ultiples objetivos, m\'ultiples restricciones, variables discretas o continuas. El algoritmo gen\'etico se describe como un proceso metaheur\'istico. El algoritmo comienza con una poblaci\'on de individios $P_0$ donde cada individuo $x \in P_0$ compite entre ellos mediante unas funciones de fitness $\mathbf{F}=[f_{obj1},...,f_{objn}]^T$, basado en esto se plantea un operador de selecci\'on, un operador de cruce y un operador de mutaci\'on. Estas heur\'isticas exploran el espacio mediante la diversidad de la poblaci\'on y explotan el espacio mediante la mutaci\'on, por ejemplo. Los algoritmos gen\'eticos generalmente utilizados para la selecci\'on de parametros de dise\~no de controladores y morfol\'ogicos. Existen varios tipos de operadores y en base a ello el nombre de distintos algoritmos gen\'eticos: VEGA, MOGA, NSGA-II, etc)\cite{looney1997,russell2004}. 
 %begin{multicols}{2}
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.25]{3RLateralRobot.png}
-  \caption{Modelo Din\'amico General}
-  \label{fig:modelo}
-\end{figure}
+%\begin{figure}[H]
+%  \centering
+%  \includegraphics[scale=0.25]{3RLateralRobot.png}
+%  \caption{Modelo Din\'amico General}
+%  \label{fig:modelo}
+%\end{figure}
 %end{multicols}
 %\nocite{*}
 \bibliographystyle{nederlands}% apsr, agsm, dcu, kluwer, nederlands
-\bibliography{\myreferences}
+\bibliography{cirefs}
 \end{document}
