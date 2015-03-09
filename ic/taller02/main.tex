@@ -30,12 +30,12 @@
 \fancyhead[RO]{\small{\textcolor{gray}{\textsc{Hacia un framework de locomoci\'on b\'ipeda, evolutiva y flexible}}}}
 \fancyhead[LO]{\includegraphics[scale=0.05]{unlogo.png}}
 \fancyhead[LE]{\includegraphics[scale=0.05]{unlogo.png}\quad\small{\textcolor{gray}{\textsc{Control Inteligente 2015-01}}}}
-\fancyhead[RE]{\small{\textcolor{gray}{\textsc{TALLER 01}}}}
+\fancyhead[RE]{\small{\textcolor{gray}{\textsc{TALLER 02}}}}
 \fancyfoot[CO,CE]{\thepage}
 \fancyfoot[LO,RE]{\scriptsize{\textcolor{gray}{\emph{Version 0.1}}}}
 
 \title{\vspace{-0.8cm}\includegraphics[scale=0.12]{unescudobn.png}\\\vspace{-0.0cm}
-  \LARGE \textbf{Taller 2 - }}
+  \LARGE \textbf{Taller 2 - Fundamentos de L\'ogica y Conjutos Difusos}}
 \author{J.A. Castillo-Le\'on\thanks{jacastillol@unal.edu.co} \and Ronny Gelleschus\thanks{rgelleschus@unal.edu.co}}
 \date{}
 
@@ -43,6 +43,9 @@
 \maketitle
 \begin{abstract}\noindent\small\textit{En el siguiente documento se describen...}
 \end{abstract}\vspace{1cm}
+
+%begin{multicols}{2}
+
 \par{\bf \large Punto 1:} Considere el conjuto difuso $\mathcal{C}$ definido por su funci\'on de pertenencia $\mu_c(x):\mathbb{R}\to[0,1]:$ con $\mu_c=1/(1+(x-1)^2)$. Calcule el $\alpha$-corte de $\mathcal{C}$ para $\alpha=0.5$, $\mathcal{A}_{0.5}$ (ver Figura \ref{fig:Acut05}).\\
 Soluci\'on: Como se propone en \cite{Babuska1999}, $\mathcal{A}_{0.5}=\left\{x|\mu_c(x)\geq0.5\right\}$ con $x\in\mathbb{R}$. A continuaci\'on se demuestra que $\mu(x)\,\geq\,0.5\,\forall x \in [0,2]$,
 \begin{align*}\small
@@ -109,35 +112,91 @@ En un ejemplo cuando se habla de \emph{altura}, se puede definir a la variable l
     x_3&0.1&0.2&0.9
   \end{array}
 \end{equation*}
-y un conjuto difuso $\mathcal{A}\,=\,\left\{0.1/x_1,1/x_2,0.4/x_3\right\}$, determinar $\mathcal{B}\,=\,\mathcal{A}\circ R$, primero con el operador $max-min$ y luego con el operador $max-prod$.
+y un conjuto difuso $\mathcal{A}\,=\,\left\{0.1/x_1,1/x_2,0.4/x_3\right\}$, determinar $\mathcal{B}\,=\,\mathcal{A}\circ R$, primero con el operador $max$-$min$ y luego con el operador $max$-$prod$.
 \par \textcolor{blue}{\texttt{Operador max-min:}} 
 \begin{equation*}
   \label{eq:relation}
-  min(\mathcal{A},R)\,=\,min(\left[
+  min(ext_Y(\mathcal{A}),R)\,=\,min\left(\left[
   \begin{array}{ccc}
     0.1&0.1&0.1\\
     1.0&1.0&1.0\\
-    0.4&0.4&0.4\\
+    0.4&0.4&0.4
   \end{array}\right],\left[
   \begin{array}{ccc}
     0.7&0.3&0.1\\
     0.4&0.8&0.2\\
-    0.1&0.2&0.9\\
-  \end{array}\right])\,=\,\left[
+    0.1&0.2&0.9
+  \end{array}\right]\right)\,=\,\left[
   \begin{array}{ccc}
     0.1&0.1&0.1\\
     0.4&0.8&0.2\\
     0.1&0.2&0.4
   \end{array}\right]
 \end{equation*}
-%begin{multicols}{2}
-%\begin{figure}[H]
-%  \centering
-%  \includegraphics[scale=0.25]{3RLateralRobot.png}
-%  \caption{Modelo Din\'amico General}
-%  \label{fig:modelo}
-%\end{figure}
+\begin{equation*}
+  \label{eq:relmax}
+  \mathcal{B}_{min}\,=\,max(min(ext_Y(\mathcal{A}),R))\,=\,proj_Y\left(min(ext_Y(\mathcal{A}),R)\right)\,=\,\left[0.4,0.8,0.4\right]
+\end{equation*}
+\par \textcolor{blue}{\texttt{Operador max-prod:}} 
+\begin{equation*}
+  \label{eq:relation}
+  prod(ext_Y(\mathcal{A}),R)\,=\,\left[
+  \begin{array}{ccc}
+    0.1&0.1&0.1\\
+    1.0&1.0&1.0\\
+    0.4&0.4&0.4
+  \end{array}\right]*\left[
+  \begin{array}{ccc}
+    0.7&0.3&0.1\\
+    0.4&0.8&0.2\\
+    0.1&0.2&0.9
+  \end{array}\right]\,=\,\left[
+  \begin{array}{ccc}
+    0.07&    0.03&    0.01\\
+    0.4&   0.8&    0.2\\
+    0.04&    0.08&    0.36
+  \end{array}\right]
+\end{equation*}
+\begin{equation*}
+  \label{eq:relmax}
+  \mathcal{B}_*\,=\,max(prod(ext_Y(\mathcal{A}),R))\,=\,proj_Y(prod\left(ext_Y(\mathcal{A}),R)\right)\,=\,\left[0.4,0.8,0.36\right]
+\end{equation*}
+$\therefore$ Para todo valor de $y\in Y$ se cumplir\'a siempre que $\mu_{\mathcal{B}_*}(y)\leq \mu_{\mathcal{B}_{min}}(y)$, es decir $\mathcal{B}_*$ esta contenido en $\mathcal{B}_{min}$.
+\par{\bf \large Punto 7:}\\
+\begin{equation*}
+  R_M \,=\,\min(ext_Y(\mathcal{A}),ext_X(\mathcal{B})\,=\,\min\left(\left[
+  \begin{array}{ccc}
+    0.1&0.1&0.1\\
+    0.4&0.4&0.4\\
+    1.0&1.0&1.0
+  \end{array}\right],\left[
+  \begin{array}{ccc}
+    0.0&1.0&0.2\\
+    0.0&1.0&0.2\\
+    0.0&1.0&0.2
+  \end{array}\right]\right)\,=\,
+\left[
+  \begin{array}{ccc}
+    0.0&0.1&0.1\\
+    0.0&0.4&0.2\\
+    0.0&1.0&0.2
+  \end{array}
+\right]
+\end{equation*}
+\begin{equation*}
+  R_L \,=\,min(1,1-ext_Y(\mathcal{A})+ext_X(\mathcal{B})\,=\,
+\left[
+  \begin{array}{ccc}
+    0.9&1.0&1.0\\
+    0.6&1.0&0.8\\
+    0.0&1.0&0.2  
+  \end{array}
+\right]
+\end{equation*}
+\par{\bf \large Punto 8:}\\
+
 %end{multicols}
+
 %\nocite{*}
 \bibliographystyle{nederlands}% apsr, agsm, dcu, kluwer, nederlands
 \bibliography{\myreferences}

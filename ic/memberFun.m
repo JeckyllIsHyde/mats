@@ -1,5 +1,6 @@
 function mu = memberFun( x,params )
 % MEMBERFUN
+% mu = max(0,min((x-a)/(b-a),min(1,(d-x)/(d-c)))
 
 a=params.a;
 b=params.b;
