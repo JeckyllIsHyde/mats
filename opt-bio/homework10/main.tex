@@ -1,0 +1,114 @@
+\documentclass[10pt,onecolumn,twoside,letterpaper]{article}
+\usepackage[text={7in,9.5in},centering]{geometry}
+\usepackage[spanish,es-nodecimaldot]{babel}
+
+\usepackage{hyperref}
+
+\usepackage{multicol}
+
+\usepackage{harvard}% bibliographystyle: apsr, agsm, dcu, kluwer, nederlands
+\newcommand{\myreferences}{../../../doc/review/review/library}
+\usepackage{graphicx}
+\graphicspath{{../../../doc/images/}}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{colortbl}
+\definecolor{gray}{cmyk}{0.0,0.0,0.0,0.60}
+
+\usepackage{float}
+
+%\usepackage{auto-pst-pdf}
+%\usepackage{pst-all}
+
+%\usepackage[numbered]{mcode}
+%\usepackage{lipsum}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO]{\small{\textcolor{gray}{\textsc{Hacia un framework de locomoci\'on b\'ipeda evolutiva y flexible}}}}
+\fancyhead[LO]{\includegraphics[scale=0.05]{unlogo.png}}
+\fancyhead[LE]{\includegraphics[scale=0.05]{unlogo.png}\quad\small{\textcolor{gray}{\textsc{Optimizacion Bio-inspirada}}}}
+\fancyhead[RE]{\small{\textcolor{gray}{\textsc{TAREA 02}}}}
+\fancyfoot[CO,CE]{\thepage}
+\fancyfoot[LO,RE]{\scriptsize{\textcolor{gray}{\emph{Version 0.1}}}}
+
+\title{\vspace{-0.8cm}\includegraphics[scale=0.12]{unescudobn.png}\\\vspace{-0.0cm}
+  \LARGE \textbf{Mecanismo de diversidad $\sigma_{share}$ del NSGA y esquema general del SPEA}}
+\author{J.A. Castillo-Le\'on\thanks{jacastillol@unal.edu.co}}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}\small
+Una peque\~na introducci\'on al tema de MOEA con sus retos iniciales es resumido. Luego se habla del mecanismo NSGA y su mecanimo de diversidad. Finalmente se habla del esquema SPEA y sus pol\'iticas elitistas.
+\end{abstract}
+\begin{multicols}{2}
+\section{Introduccion}
+En los primeros intentos de la soluci\'on de los problemas multiobjetivo (MOPs), seg\'un \cite{CarlosM.Fonseca1993,SrinivasN.1994} se utilizaron: 1) Objetivos ponderados, 2) Funciones de distancia y 3) Formulaci\'on Min-Max y se encontraron diferentes inconvenientes. Los tres plantean un problema mono-objetivo (SOPs), resultando en soluciones \'optimas \'unicas, este es el primer inconveniente ya que un MOP tiene muchas soluciones \'optimas pertenecientes a las soluciones \emph{no-dominadas} del \emph{frente \'optimo de Pareto}. 
+\par Desde los a\~nos 90 el uso de los algoritmos gen\'eticos GA, han sido usados ya que una poblaci\'on propone varias soluciones\cite{Zitzler1999}. El primer GA usado para los MOPs fue el VEGA que no ten\'ia encuenta la optimalidad de pareto. En ese momento quedo claro que a diferencia de los SOPs en los MOPs los criterios de fitness no eran las mismas funciones objetivo. Luego se propuso usar en la selecci\'on el criterio de las soluciones no-dominadas y unas t\'ecnicas de comuni\'on (compartir) con lo que surgieron las primeras versiones del algoritmos con dominaci\'on de Pareto: NSGA, el MOGA y el m\'etodo de selecci\'on de \emph{torneos de dominaci\'on de Pareto}.
+\par Para enfatizar, el NSGA solo modifica el operador de selecci\'on. El cruce y la mutaci\'on permanecen en su forma usual (ver Figura \ref{fig:NSGAalgorithm}). La selecci\'on comienza con un pre-ordenamiento de los individuos seg\'un el criterio de \emph{no-dominacion}, en donde se marcan los individuos no-dominados de la poblaci\'on actual y se les asigna un incremento considerable en el \emph{fitness} para asegurar su superviviencia. Estos individuos no-dominados en la primera poblaci\'on forman a su vez el primer frente de Pareto. Al final para intentar asegurar la diversidad de la poblaci\'on, los individuos del frente de Pareto $PF_i$ son puestos en comunidad con un valor modificado de \emph{fitness}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.25]{algorithmNSGA-I.png}
+  \caption{Algoritmo general del NSGA}
+  \label{fig:NSGAalgorithm}
+\end{figure}
+\par Seg\'un \cite{Deb2002} el NSGA requiere unas mejoras y son implementadas en su trabajo. Una de ellas incluye modificaciones respecto al $\sigma_{share}$, en donde se comenta el estudio de otros autores en la modificacion dinamica del par\'ametro, pero que al final optan por retirar dicho par\'ametro.
+\section{Mecanismo $\sigma_{share}$}
+\par El mecanismo de selecci\'on del NSGA se caractariza por los siguientes pasos: 1) se identifican los individuos no dominados de la poblaci\'on, 2) a estos se les asigna un valor inicial \emph{dummy} de fitness elevado e igual entre ellos y se les asigna la etiqueta de el primer frente de Pareto $PF_1$, a media que aparecen m\'as poblaciones el valor \emph{dummy} decrece para los siguientes $PF_i$. 3) para asegurar la diversidad el mecanismo de \emph{Fitness sharing} tiene como objetivo la promocion de formulacion y mantenimiento de subpoblaciones estables \emph{nichos}.
+\par La idea general de los nichos esta basada en que los individuos de un nicho particular tienen que compartir los recursos disponibles. Entre m\'as individuos se encuentren localizados en las cercanias de una regi\'on (\emph{vecindad}) de un individuo ejemplo, mayor sera el deterioro de la funcion de fitness. Una vecindad es definida en t\'erminos de la distancia $d_{ij}$ y el radio del nicho $\sigma_{share}$.
+\par Matem\'aticamente la \emph{funci\'on de fitness} se puede presentar por:
+\begin{equation}
+  \label{eq:share}
+  F(i)\,=\,\frac{F'(i)}{\sum_{j\in P}s_h(d_{ij})}
+\end{equation}
+\par La operaci\'on de compartir se realiza mediante la evaluaci\'on de una \emph{funci\'on de compartir} $S_h$ que relaciona dos individuos de un mismo frente de una poblaci\'on, seg\'un \cite{SrinivasN.1994} se propone,
+\begin{equation}
+  \label{eq:share}
+  s_h(d_{ij})\,=\,\left\{
+    \begin{array}{cl}
+      1-(\frac{d_{ij}}{\sigma_{share}})^2&,\text{si $d_{ij}<\sigma_{share}$}\\
+      0&,\text{otro caso}
+    \end{array}\right.
+\end{equation}
+en donde $d_{ij}$ es una distancia fenot\'ipica entre dos individuos $i$ y $j$ y el par\'ametro $\sigma_{share}$ es la distancia fenot\'ipica m\'axima permitida entre dos individuos para convertirse en miembros de un nicho.
+\section{Algortmo general del SPEA}
+El \emph{Strength Pareto Evolutionary Algorithm} (SPEA), busca el frente \'Optimo de Pareto. Se utiliza una pol\'itica elitista en la que una poblaci\'on $\overline{P}$ de soluciones no dominadas, es actalizada en cada generaci\'on y participa activamente en el mecanismo de secci\'on de la siguiente generaci\'on junto con la poblacion actal $P$ (Ver Figura \ref{fig:SPEAScheme})
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.18]{SPEAGeneralScheme.png}
+  \caption{Esquema general del SPEA}
+  \label{fig:SPEAScheme}
+\end{figure}
+\par Se describe a continuaci\'on el algoritmo paso a paso.
+\begin{enumerate}
+\item \textbf{Inicializaci\'on:} Crea dos poblaciones, $P_t$ que representa la poblaci\'on inicial, $\overline{P}_t=\emptyset$ que representa una poblacion externa que guardar\'a los individuous del frentes de Pareto de cada itearaci\'on. $t=0$
+\item \textbf{Actualizaci\'on del conjunto externo} En una $\overline{P}'=\overline{P}_t$ temporal, se realiza (ver Figura \ref{fig:clustering}.)
+  \begin{enumerate}
+  \item \textit{Copiar individuos} aquellos vectores no dominados en $\overline{P}'$.
+  \item \textit{Remover individuos} aquellos vectores de d\'ebil dominaci\'on de $\overline{P}'$.
+  \item \textit{Reducir el numero de individuos} presentes en $\overline{P}'$ de acuerdo a pol\'iticas de clustering. $\overline{P}_{i+1}\,=\,\overline{P}'$
+  \end{enumerate}
+\item \textbf{Asignaci\'on del fitness} En este paso cada $i\in\overline{P}_t$ se le asigna un $S(i)\in[0,1)$ llamado \emph{strength} o resistencia. $S(i)$ es proporcional al n\'umero de miembros de la poblaci\'on en los cuales el individuo $i$ domina a individuos $j$ del resto de la poblaci\'on.
+\item \textbf{Selecci\'on} Se toma un $P'=\emptyset$ se repite $N$ veces haciendo lo siguiente:
+  \begin{enumerate}
+  \item Selecionar dos individuos $i$ y $j$ $\in P_t+\overline{P}_t$ 
+  \item Si $F(i)<F(j)$ entonces agregar $i$ a $P'$ de lo contrario agregar $j$ (en el caso de minimizaci\'on).
+  \end{enumerate}
+\item \textbf{Recombinaci\'on}
+\item \textbf{Mutaci\'on}
+\item \textbf{Criterio de parada}
+\end{enumerate}
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.3]{SPEAClustering.png}
+  \caption{Clustering para poblaci\'on externa $\overline{P}_i$}
+  \label{fig:clustering}
+\end{figure}
+\end{multicols}
+%\nocite{*}
+\bibliographystyle{nederlands}% apsr, agsm, dcu, kluwer, nederlands
+\bibliography{\myreferences}
+\end{document}

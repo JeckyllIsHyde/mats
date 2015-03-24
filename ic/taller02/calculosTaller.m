@@ -120,17 +120,21 @@ A = [0.1,0.4,1.0]'
 B = [0.0,1.0,0.2]
 Rmin = min(repmat(A,1,n),repmat(B,n,1))
 Rlzw = min(1,1-repmat(A,1,n)+repmat(B,n,1))
-A_ = [0.1,0.4,1.0]'
+A_ = [0.3,1.0,0.3]'
 B_min = max(min(repmat(A_,1,n),Rmin),[],1)
-B_lzw = max(min(repmat(A_,1,n),Rlzw),[],1)
+B_lzw = max(max(0,repmat(A_,1,n)+Rlzw-1),[],1)
 figure(1)
 %[X,Y] = meshgrid([0.3,0.5,0.7]);
-surf(Rmin,'facecolor','interp'), colormap('gray'),hold on,grid on
-stem3(Rmin)
+surf(Rmin,'facecolor','g'), colormap('gray'),hold on,grid on
 %axis([0,1,0,1,0,1])
-figure(2)
-surf(Rlzw,'facecolor','interp'), colormap('gray'),hold on,grid on
-stem3(Rlzw)
+%figure(2)
+surf(Rlzw,'facecolor','r'), colormap('jet'),hold on,grid on
+stem3(Rmin,'linewidth',2)
+stem3(Rlzw,'linewidth',2)
+light
+xlabel('X'),ylabel('Y'),zlabel('Z')
+legend('t-norm: Min','t-norm: Lukasiewicz')
+title('Reglas con: Min vs Lukasiewicz')
 %axis([0,1,0,1,0,1])
 %% Punto 8
 % s = [B,M,A]; % Bajo, Medio, Alto: s \in [0,5]M
@@ -172,3 +176,6 @@ s = 0.1;d = 0.8;
 aggrS = max([mufun(s,P),mufun(s,M),mufun(s,G)])
 aggrD = max([mufun(d,B),mufun(d,Mn),mufun(d,A)])
 intSD = min([aggrS,aggrD])
+%%
+a = readfis('Punto8RG');
+gensurf(a)
