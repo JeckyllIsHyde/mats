@@ -27,24 +27,27 @@ fj = [f1obj(xj),f2obj(xj)];
 % first pareto front
 Spj = zeros(nP,nP);
 npj = zeros(nP,1);
+prank = zeros(nP,1);
 for j=1:nP
     Spj(:,j) = sum(repmat(fj(j,:),nP,1)<fj,2)==2;
     npj(j) = sum(sum(repmat(fj(j,:),nP,1)>fj,2)==2,1);
 end
 FP1 = (npj==0);
-FP = {FP1};
 pjidx = 1:nP;
+FP = {pjidx(FP1)};
+prank(FP{1}) = 1;
 figure(2)
 plot(fj(:,1),fj(:,2),'*'),hold on,grid on
 %% n-other pareto fronts
 i = 1;
 while ~isempty(FP{i})
     Q = [];
-    for p=pjidx(FP{i})
+    for p=FP{i}
         for q = pjidx(Spj(:,p)==1)
             npj(q) = npj(q)-1;
             if npj(q)==0
                 Q = [Q q];
+                prank(q) = i+1;
             end
         end
     end
@@ -55,5 +58,5 @@ end
 c = jet(length(FP)-1);
 for i=1:length(FP)-1
     plot(fj(FP{i},1),fj(FP{i},2),'LineStyle','*','Color',c(i,:))
-    disp(pjidx(FP{i}))
+    disp(FP{i})
 end
