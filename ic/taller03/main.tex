@@ -1,7 +1,7 @@
 \documentclass[10pt,onecolumn,twoside,letterpaper]{article}
 \usepackage[text={7.7in,9.5in},centering]{geometry}
-\usepackage[spanish,es-nodecimaldot]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
 
 \usepackage{hyperref}
 
@@ -50,44 +50,68 @@
 
 %\begin{multicols}{2}
 
-\par{\bf \large Punto 1:} Diagrama de bloques gen\'erico para un sistema difuso basado en reglas. Nombre y funcio\'n de sus diferentes componentes.\\
-Aquí utilizaría algo como en la presentación del profe (capítulo 3), página 14 en el documento que nos envió. Sin embargo para mí eso no es un diagrama de bloques, se tiene que cambiar los señales (y evitar el uso de un "BUS" de señales) y los símbolos de los elementos del sistema a bloques simples. No sé con cuál programa podemos hacerlo. Tú tienes una idea?\\
+\par{\bf \large Punto 1:} Diagrama de bloques gen\'erico para un sistema difuso basado en reglas. Nombre y funci\'on de sus diferentes componentes.\\
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.85\textwidth]{Rule-BasedFuzzySystem02.png}
+  \caption{Diagrama general de sistema difuso basado en reglas}
+  \label{fig:ruleBasedSystem}
+\end{figure}
 
+En la Figura \ref{fig:ruleBasedSystem}., se describe los componentes g\'enericos de un sistema MISO. Comenzando por \raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {1}}}, la entrada al sistema difuso es un vector $\mathbf{X}\,=\,\left[x_1,x_2,\ldots,x_i,\ldots,x_n\right]\in\mathcal{D}\subset\mathbb{R}^n$, dicho vector forma las \emph{variables base} del concepto de un conjuto de \emph{variables ling\"uisticas}. Esta entrada vectorial es analizada componente por componente \raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {2}}}, por el proceso llamado \emph{defuzificaci\'on}, en el cual se obtienen los valores de las \emph{funciones de pertenencia} que representan a las \emph{etiquetas ling\"uisticas} de cada variable ling\"uistica.\\
+\par En \raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {3}}}, la salida del fuzificador entrega los valores de pertenencia $\mu_{A_{ij}}(x_i)$ de cada una de las variables $x_i$ a sus respectivas reglas $\mathcal{R}_k$ de la base del conocimiento para que puedan ser evaluadas. Esta base de reglas es editada usando reglas \textbf{if-then}. Los antecedentes \raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {4}}} son proposiciones que utilizan operadores de conexi\'on \textbf{AND} y \textbf{OR} adem\'as de la operaci\'on de complemento \textbf{NOT} (como es el caso del modelo relacional), auque generalmente solo se usa la \textbf{AND} (este es el caso de los modelos de Mamdani, Singleton y T-S). \raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {5}}} Al momento de la implementaci\'on se usa \emph{t}-norma para la conjunci\'on y la \emph{t}-conorma para la disyunci\'on. El n\'umero de reglas que salen de un sistema con $n$ entradas y $p$ etiquetas ling\"uisticas para entrada, se tiene un m\'aximo de reglas-\textbf{AND}, $m\,=\,n^p$.\\
+\par \raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {6}}} El consecuente depende del modelo puede ser una proposici\'on que implica un conjuto difuso con en el caso Mamdani o una funci\'on concreta con en el caso T-S. En el caso T-S en la \emph{implicaci\'on}, \raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {7}}} a la final todas las reglas se deben tener en cuenta para hacer una ponderaci\'on de salida, en este se hace una suma ponderada de los valores de cumplimiento (\emph{degree of fulfillment}). \emph{Defuzificaci\'on} \raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {8}}} Cunado la salida es difusa se requiere un paso adicional de defuzificaci\'on, como en el caso Mamdani, que utiliza metodos de COG y MOM.
+
+%Aquí utilizaría algo como en la presentación del profe (capítulo 3), página 14 en el documento que nos envió. Sin embargo para mí eso no es un diagrama de bloques, se tiene que cambiar los señales (y evitar el uso de un "BUS" de señales) y los símbolos de los elementos del sistema a bloques simples. No sé con cuál programa podemos hacerlo. Tú tienes una idea?\\
 \par{\bf \large Punto 2:} Algorithmo Mamdani (\cite{Babuska1999}, página 37)\\
 Primero se tiene que calcular el grado de cumplimiento del conjunto en la entrada para cada regla. La fórmula general es $\beta_i = \max(\min(\mu_{A'}(x),\mu_{A_i}(x)))$. En el caso de una entrada concreta $x_0$ eso se simplifica a $\beta_i=\mu_{A_i}(x_0)$.\\
 En el segundo paso se calcula el conjunto que resulta para cada regla: $\mu_{B'_i}(y)=\beta_i\cdot \mu_{B_i}(y)$.\\
 Al final se agrega el resultado calculándo el máximo de todos los $\mu_{B'_i}$ en cada punto $y\in Y$: $\mu_{B'}(y)=\max(\mu_{B'_i}(y))$.\\
 Para una entrada $x_0=2$ y con las reglas establecidas en la tarea eso significa:
 \begin{enumerate}
-\item $\beta_1=0,6$ y $\beta_2=0,4$.
-\item $B'_1=[ 0,6/4; 0,6/5; 0,18/6]$ y $B'_2=[0,04/4; 0,36/5; 0,4/6]$.
-\item $B'=[0,6/4; 0,6/5; 0,4/6]$.
+\item $\beta_1=0.6$ y $\beta_2=0.4$.
+\item $B'_1=[ 0.6/4; 0.6/5; 0.18/6]$ y $B'_2=[0.04/4; 0.36/5; 0.4/6]$.
+\item $B'=[0.6/4; 0.6/5; 0.4/6]$.
 \end{enumerate}
 
-\par{\bf \large Punto 3:} $z = \frac{\sum_{i=1}^{K}\beta_i\cdot z_i(x,y)}{\sum_{i=1}^{K} \beta_i}$, donde $\beta_i$ es el grado de cumplimiento de una regla y $K$ el número de reglas. Para calcular el grado de cumplimiento de cada regla $i$ se utilizó $\beta_i=\min(\mu_{A_i}(x),\mu_{B_i}(y))$. Entonces $z= \frac{0,1\cdot 6+0,9\cdot 7+0,1\cdot 14+0,1\cdot 7}{0,1+0,9+0,1+0,1}=7,5$.\\
+\par{\bf \large Punto 3:} Modelo Takagi-Sugeno\\
+$z = \frac{\sum_{i=1}^{K}\beta_i\cdot z_i(x,y)}{\sum_{i=1}^{K} \beta_i}$, donde $\beta_i$ es el grado de cumplimiento de una regla y $K$ el número de reglas. Para calcular el grado de cumplimiento de cada regla $i$ se utilizó $\beta_i=\min(\mu_{A_i}(x),\mu_{B_i}(y))$. Entonces $z= \frac{0.1\cdot 6+0.9\cdot 7+0.1\cdot 14+0.1\cdot 7}{0.1+0.9+0.1+0.1}=7.5$.\\
 
-\par{\bf \large Punto 4:} Construcción de un modelo difuso basado en conocimiento (\cite{Babuska1999}, página 79)\\
+\par{\bf \large Punto 4:} Construcción de un modelo difuso basado en conocimiento (\cite{Babuska1999}, página 79)
 \begin{enumerate}
 \item Selección de los variables de entrada y salida, la estructura de las reglas y los métodos de inferencia y defusificación
 \item Decisión cuántos términos linguísticos se tendrá en el sistema y definición de las funciones de membrencia correspondientes
 \item Formulación del conocimiento en forma de reglas If-Then
-\item Validación del modelo (normalmente usando valores reales disponibles). Si el modelo no cumple con las expectaciones iteración de los pasos anteriores.
+\item Validación del modelo (normalmente usando valores reales disponibles). Si el modelo no cumple con las espectativas, entonces iteración de los pasos anteriores.
 \end{enumerate}
 
-\par{\bf \large Punto 5:} Sistema dinámico singleton
-\begin{enumerate}
-\item Este sistema necesita un filtro dinámico en la entrada (?), una difusificación de los valores en la entrada y el sistema de inferencia con la base de reglas. Las reglas tendrán la forma\\
-$R^{i}$: \textbf{If} $y(k)$ is $A_{ii}$ \textbf{and} $u(k)$ is $B_{jj}$ \textbf{then} $y(k+1)=c_i$.\\Los índices $ii$ y $jj$ ambos son en el rango $[1;3]$ y varían independientemente. Se necesita al máximo 9 reglas.
-\item Los parámetros libres de este modelo son todos los parámetros de las funciones de pertenencia de $A_{ii}$ y $B_{jj}$ y los valores de los $c_i$.
-\end{enumerate}
+\par{\bf \large Punto 5:} Sistema dinámico modelado con singleton: $y(k+1)\,=\,f(y(k),u(k))$\\
+\par{\bf 5.1: Ejemplo de modelo aproximado con singleton}
+\par Tomando el ejemplo 5.1 de \cite{Babuska1999} que utiliza un modelo T-S para aproximar sistema discreto $y(k+1)\,=\,y(k)+u(k)e^{-3\left|y(k)\right|}$ utiliza reglas de la forma:\\
+$R^{i}$: \textbf{If} $y(k)$ is $A_{i}$ \textbf{then} $y(k+1)=a_iy(k)+b_iu(k)$.
+\par Los p\'arametros $\left\{a_i,b_i\right\}$ son ajustados por \emph{m\'inimos cuadrados}. La ecuaci\'on 5.2 de \cite{Babuska1999} fue utilizada para comprobar el ejemplo de dichas notas. Se destaca que $\mathbf{X}_e$ se utiliz\'o sin el uso del vector unario (ver Figura \ref{fig:AproxTS}). Se utiliz\'o siete funciones de pertenecia para la \'unica variable de entrada
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.9\textwidth]{ApproxTS5-1.png}
+  \caption{Aproximaci\'on usando TS}
+  \label{fig:AproxTS}
+\end{figure}
 
-\par{\bf \large Punto 6:} No estoy seguro si también se tiene que incluir el $n_d$ en los términos de $y$, pero me imagino que sí porque se los usa para la parte autoregresiva (depende de si el elemento con el tiempo muerto está en el sistema o sólo en la medición del set point que tal vez viene de otro sistema?):\\ $y(k+1)=f_{NL}(y(k-n_d),y(k-n_d-1),\dots,y(k-n_d-n_y+1),u(k-n_d),u(k-n_d-1),\dots,u(k-n_d-n_u+1))$\\
-$y$ \dots valores de la salida (anteriores y futuro)\\
-$u$ \dots valores de la entrada anteriores\\
-$k$ \dots instante de tiempo actual\\
-$n_y$, $n_u$ \dots número de instantes anteriores que se tiene en cuenta para calcular $y(k+1)$\\
-$n_d$ número de instantes anteriores que no se puede utilizar por el tiempo muerto\\
-$f_{NL}$ \dots función (en general no lineal) que relaciona $y(k+1)$ con los valores anteriores de $y$ y $u$\\
+\par Para aproximar usando singleton, las reglas tomar\'ian la siguiente forma:\\
+$R^{i}$: \textbf{If} $y(k)$ is $A_{i}$ \textbf{and} $u(k)$ is $B_{j}$ \textbf{then} $y(k+1)=c_k$.\\
+\par Si se toman 3 funciones de pertenencia por entrada se tendrian 9 reglas. Se resuelven los parametros con m\'inimos cuadrados nuevamente, la ecuaci\'on 5.2 de \cite{Babuska1999} es tomada esta bvez con $\mathbf{X}_e\,=\,\mathbf{1}$ como el vector unario, para resolver unicamente los parametros del singleton (ver Figura \ref{fig:AproxTS}). La soluci\'on es bastante diferente comparada con la TS, sin embargo al subir de 3 a 5 funciones de pertenencia, la solucion es mas acertada pero sigue siendo inferior a la TS.\\
+\par{\bf 5.2: Parametros para afinar}
+\par Los coeficientes $c_i$ son los valores a encontrar y son hallados por m\'inimos cuadrados. Para las nueve reglas los singleton son: $c=[-1.1717,-0.9257, 1.9182,-1.5349, 0.0566, 1.4627,-1.6685, 0.6578, 1.2637]^T$, las funciones de pertenencias son triangulares y se distribuyen equidistantes en el rango de las variables. Para mejorar la soluci\'on se puede modificar los parametros de las funciones de pertenencia, pero esta b\'usqueda debe ser planteada como un problema de optimizaci\'on y se usa generalmente algorimos evolutivos. 
+
+\par{\bf \large Punto 6:} Ecuaci\'on general modelo dinamico tipo NARX para SISO\\
+%No estoy seguro si también se tiene que incluir el $n_d$ en los términos de $y$, pero me imagino que sí porque se los usa para la parte autoregresiva (depende de si el elemento con el tiempo muerto está en el sistema o sólo en la medición del set point que tal vez viene de otro sistema?):\\ 
+$y(k+1)=f_{NL}(y(k-n_d),y(k-n_d-1),\dots,y(k-n_d-n_y+1),u(k-n_d),u(k-n_d-1),\dots,u(k-n_d-n_u+1))$\\
+$y$: valores de la salida (anteriores y futuro)\\
+$u$: valores de la entrada anteriores\\
+$k$: instante de tiempo actual\\
+$n_y$, $n_u$: número de instantes anteriores que se tiene en cuenta para calcular $y(k+1)$\\
+$n_d$: número de instantes anteriores que no se puede utilizar por el tiempo muerto\\
+$f_{NL}$: función (en general no lineal) que relaciona $y(k+1)$ con los valores anteriores de $y$ y $u$\\
 
 \par{\bf \large Punto 7:} (fuente: \textit{FNControl 2009.pdf}, página 89) Un modelo semi-mecanístico es un modelo que combina partes "caja blanca" y "caja negra". Así se puede evitar que se utiliza métodos de aproximación y identificación en relaciones físicos que se conoce exactamente.
 
