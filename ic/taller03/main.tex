@@ -113,7 +113,12 @@ $n_y$, $n_u$: número de instantes anteriores que se tiene en cuenta para calcul
 $n_d$: número de instantes anteriores que no se puede utilizar por el tiempo muerto\\
 $f_{NL}$: función (en general no lineal) que relaciona $y(k+1)$ con los valores anteriores de $y$ y $u$\\
 
-\par{\bf \large Punto 7:} (fuente: \textit{FNControl 2009.pdf}, página 89) Un modelo semi-mecanístico es un modelo que combina partes "caja blanca" y "caja negra". Así se puede evitar que se utiliza métodos de aproximación y identificación en relaciones físicos que se conoce exactamente.
+\par{\bf \large Punto 7:} Modelo Semi-mechan\'istico\\
+\par(\cite{Babuska1999}, página 89) Un modelo semi-mecanístico es un modelo que combina partes \emph{caja blanca} y \emph{caja negra}. Así se puede evitar que se utiliza métodos de aproximación y identificación en relaciones físicos que se conoce exactamente.
+\par{\bf 7.1: Selecci\'on de estructura y estimaci\'on par\'ametros}\\
+Volviendo al ejemplo del punto 5 de esta tarea, el hecho de conocer la ecuaci\'on discreta del sistema $y(k+1)\,=\,y(k)+u(k)e^{-3\left|y(k)\right|}$ nos permite seleccionar una estructura de reglas mas apropiada que solo depende de $y(k)$, ya que la no linealidad del problema solo depende de $y(k)$ y modificar los minimos cuadraros para la estimaci\'on de los par\'ametros a solo siete parametros obteniendo una mejor aproximaci\'on con solo siete reglas. Mientras que al considerar dos entradas $y(k)$ y $u(k)$ se requiere de 9 reglas para singleton-3 y 25 reglas para singleton-5 (Figura \ref{fig:AproxTS}.) con un desempeño pobre.
+\par{\bf 7.2: Diferentes aspectos para tener en cuenta en la selecci\'on de la estructura}\\
+Primero: si se conoce $n_y$, $n_u$ y $n_d$, se puede reducir el numero de reglas. Segundo en las consecuencias se puede reducir el n\'umero de parametros, basta con mirar las no linealidades y su dependencias con $y$'s y $u$'s observar que los \emph{bias} del modelo del ejemplo 5.1 de \cite{Babuska1999}
 
 %\end{multicols}
 
