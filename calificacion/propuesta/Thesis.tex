@@ -1,0 +1,117 @@
+% -------------------------------------------------------------------------------------
+% Plantilla para escribir una tesis de la Universidad Nacional de Colombia en LaTeX
+% *************************************************************************************
+% -------------------------------------------------------------------------------------
+%\documentclass[spanish]{thesisUnal}
+\documentclass[spanish,harvard]{thesisUnal}
+% -------------------------------------------------------------------------------------
+% Espacio reservado para la carga de los paquetes por parte del autor
+% **** --------------------------------------------------------------------------------
+\usepackage{eurosym}
+\usepackage{listings}
+
+%\usepackage[utf8]{inputenc}
+\usepackage{dtk-logos}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+%\usepackage[hidelinks,pdfencoding=auto]{hyperref}
+\usepackage{pdflscape}
+
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio reservado para colocar las definiciones especiales por parte del autor
+% **** --------------------------------------------------------------------------------
+\newcommand{\myreferences}{../../../doc/review/review/library}
+%\renewcommand\harvardurl[1]{}
+%\bibliographystyle{nederlands}% apsr, agsm, dcu, kluwer, nederlands
+
+% Information boxes
+\newcommand*{\info}[4][16.3]{%
+  \node [ annotation, #3, scale=0.65, text width = #1em,
+          inner sep = 2mm ] at (#2) {%
+  \list{$\bullet$}{\topsep=0pt\itemsep=0pt\parsep=0pt
+    \parskip=0pt\labelwidth=8pt\leftmargin=8pt
+    \itemindent=0pt\labelsep=2pt}%
+    #4
+  \endlist
+  };
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \includeonly{cap1,cap2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% CUERPO DEL DOCUMENTO
+% **** --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+\begin{document}
+
+\logouniversity[45mm]{imagesThesis/logo_university_nacho}
+
+\infothesis[
+     author = {Jaime Andr\'es Castillo Le\'on},
+     degreeauthor = {Ingeniero Mec\'anico, M.Sc. Automatizaci\'on Industrial},
+     %code = {000000},
+     advisor = {Ricardo Emiro Ramirez Heredia, Ph.D.},
+     degreeadvisor = {Doctor en Ciencias de Ingenier\'ia Mec\'anica},
+     %coadvisor = {Jonatan Goméz Perdomo, Ph.D.},
+     %degreecoadvisor = {Doctor en Ciencias de la Computación},
+     %title = {\textbf{Control de locomoci\'on humanoide basado en comportamientos cognitivos y reflejos auto-organizados computados morfol\'ogicamente}},
+     title = {\textbf{Locomoci\'on humanoide basada en comportamientos cognitivos y reflejos auto-organizados usando computaci\'on morfol\'ogica}},
+     titledegree = {Propuesta de tesis para optar a candidato de},
+     degree = {Doctor en Ingenier\'ia Mec\'anica y Mecatr\'onica},
+     researchline = {Ingenier\'ia de control y mecatr\'onica},
+     researchgroup = {UNROBOT},
+     university = {Universidad Nacional de Colombia},
+     faculty = {Facultad de Ingenier\'ia},
+     department = {Departamento de Mec\'anica y Mecatr\'onica},
+     city = {Bogot\'a, D.C.},
+     date = {20 de Septiembre de 2016},%{Marzo de 2016},
+]
+
+%\abstractthesis[
+%    titlespanish = {Control de locomoci\'on b\'ipeda basado en reflejos auto-organizados y computados morfol\'ogicamente},
+%    titleenglish = {Self-organized reflex-based control and morphological computation for biped locomotion},
+%    abstractspanish = {Se presentan los pasos básicos y la explicación de los comandos para la utilización de la plantilla \texttt{thesisUnal.cls}.},
+%    abstractenglish = {Are presented the basic steps and the explanation of the commands to use the template \texttt{thesisUnal.cls}.},
+%    keywordspanish = {Plantilla, clases, Universidad Nacional de Colombia, \LaTeX, pdf\LaTeX, \TeX, \BibTeX.},
+%    keywordenglish = {Template, Classes, National University of Colombia, \LaTeX, pdf\LaTeX, \TeX, \BibTeX.},
+%]
+
+%\acceptationnote[
+%    note = {Aprobado},
+%    mention = {Meritoria o Laureada},
+%    jury = {Donald Knuth},
+%    jury = {Leslie Lamport},
+%    jury = {Michel Goossens},
+%    advisor = {Rodrigo de Castro Korgi},
+%    coadvisor = {Jonatan Goméz},
+%    date = {Bogotá, D.C., Diciembre 31 de 2013}
+%]
+
+\frontmatter
+%    \dedicatory{dedicatoria}
+%    \acknowledgement{agradecimientos}
+    \tableofcontents
+%    \listoftables
+    \listoffigures
+%    \introduction{introduccion}
+\mainmatter
+    \include{Problema}
+    \include{Antecedentes}
+    \include{Justificacion}
+%    \include{cap0}
+%    \include{cap2}
+%    \include{cap3}
+%\appendix
+%    \include{apendice}
+\backmatter
+%    \conclusion{conclusiones}
+%    \futurework{trabajofuturo}
+%    \glossary{glosario}
+%\nocite{*}
+%    \bibliography{bibliografia}
+\bibliography{\myreferences}
+    %\printindex
+\end{document}
