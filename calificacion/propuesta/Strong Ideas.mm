@@ -147,7 +147,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="SPSA" ID="ID_1882910099" CREATED="1473033975869" MODIFIED="1474818224045"><richcontent TYPE="NOTE">
@@ -162,7 +161,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -204,7 +202,7 @@
 <node TEXT="Inverse Reinforcement Learning" ID="ID_1671626175" CREATED="1472666433828" MODIFIED="1472666445596">
 <node TEXT="Learning Locomotion Rewards" ID="ID_793059597" CREATED="1472728652186" MODIFIED="1472746546795">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_790568083" STARTINCLINATION="688;1018;" ENDINCLINATION="899;468;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
-<node TEXT="Example of optimal rewards" ID="ID_1418076320" CREATED="1473194499976" MODIFIED="1473195197704">
+<node TEXT="Example of optimal rewards" ID="ID_1418076320" CREATED="1473194499976" MODIFIED="1476642127949">
 <icon BUILTIN="image"/>
 <richcontent TYPE="DETAILS" HIDDEN="true">
 

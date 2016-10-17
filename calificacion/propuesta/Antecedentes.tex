@@ -41,7 +41,7 @@ Con los trabajos anteriores se demostró la presencia de la computación morfológi
 
 Martius y Ralf Der con sus playful machines, mecionar el trabajo con Hauser.
 
-Nihat Ay plantea el lazo sensoriomotor mediante un modelo gráfico (o red bayesiana) causal, en donde los fenómenos estocásticos de la interacción de un agente y su entorno, pueden ser modelados y las políticas o estratégias de control, pueden ser buscadas mediante el aprendizaje por refuerzo y el control óptimo estocástico pero donde la información que fluye a través del lazo debe de ser organizada.
+Nihat Ay plantea el lazo sensoriomotor mediante un modelo gráfico (o red bayesiana) causal, en donde los fenómenos estocásticos de la interacción de un agente y su entorno, pueden ser modelados y las políticas o estratégias de control, pueden ser buscadas mediante el aprendizaje por refuerzo y el control óptimo estocástico pero donde la información que fluye a través del lazo debe de ser organizada. Modelos de CRBM.
 
 Elmar Rückert, Calanca y Peters, modelo PMP, redes bayesianas.
 
@@ -51,3 +51,16 @@ Exploración de redes bayesianas.
 \label{sec:cognition}
 
 La cinemática inversa (IK) no requiere de ser calculada bajo la lógica morfológica~\cite{Li2013a},
+
+Representación y selección de características para la locomoción y el comportamiento coordinado. Definición de Aprendizaje de Maquina.
+
+Introducción del Deep Learning en RL. Trabajos relevantes.
+
+El \emph{aprendizaje de máquina} surgió luego de que los avances en el área de la \emph{inteligencia artificial} (AI), se vieran estancados en el desarrollo de \emph{sistemas basados en conocimiento}. Estos sistemas requerían una gran cantidad de código manual para la representación de los problemas, resultando en sistemas de inferencia lógica basados en reglas, que no eran muy buenos para desempeñar tareas fáciles y comunes que sí lo son para cualquier persona, como el \emph{reconocimiento de patrones} presentes en actividades como por ejemplo el habla, el reconocimiento de rostros u objetos. La necesidad de que los sistemas inteligentes tuvieran la habilidad de adquirir conocimiento por la extracción de patrones a partir de datos en bruto se denominó aprendizaje de máquina. Los algoritmos de aprendizaje de máquina tiene dos propiedades importantes: (1) \emph{la representación} de los datos y (2) \emph{las caracteristicas} que en su conjunto constituyen la representación, que tiene que ver de forma contundente con el desempeño del sistema inteligente~\cite{Goodfellow2016}.
+
+Diseñar o encontrar un conjunto de características, al igual que una apropiada morfología, permite reducir la complejidad de la toma de decisiones o el control de una tarea como la locomoción bípeda. Este conjunto de caracteristicas se puede encontrara a mano (por ejemplo ZMP, LIPM o FRI) o mediante algoritmos de \emph{aprendizaje de la representación}, como es el caso de los autoencoders en donde las ideas de auto-organización son intrínsecas. En este punto el \emph{Deep Learnning} o aprendizaje profundo, es una herramienta del aprendizaje de máquina que permite el aprendizaje de la representación mediante la construcción de una estructura de caracteristicas o conceptos sencillos, que cada vez se reutilizan para formar conceptos más complejos.
+
+Distributed representation and factors of variation.
+
+La locomoción como un modelo de secuencias de posturas y su relación con los LSTM.
+
