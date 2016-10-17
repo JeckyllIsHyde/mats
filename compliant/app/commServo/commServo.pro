@@ -8,3 +8,4 @@ SOURCES += main.cpp
 include(deployment.pri)
 qtcAddDeployment()
 
+CPP_FLAGS += -fpermissive
