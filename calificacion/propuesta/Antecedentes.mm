@@ -1,6 +1,6 @@
 <map version="freeplane 1.3.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Antecedentes" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1474898241780" MAX_WIDTH="600" STYLE="bubble" FORMAT="STANDARD_FORMAT"><hook NAME="MapStyle">
+<node TEXT="Antecedentes" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1474898241780" MAX_WIDTH="600" STYLE="bubble" FORMAT="STANDARD_FORMAT"><hook NAME="MapStyle" zoom="0.75">
     <properties show_note_icons="true"/>
 
 <map_styles>
