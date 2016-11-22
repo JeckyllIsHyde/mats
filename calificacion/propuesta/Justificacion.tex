@@ -1,7 +1,9 @@
 \chapter{Justificaci\'on}
 \label{chp:just}
 
-La locomoci\'on de las especies y el comportamiento de las mismas est\'an fuertemente relacionados. Su evoluci\'on y desarrollo est\'an guiados por su necesidad de adaptaci\'on al entorno. La adaptaci\'on es guiada principalmente por prueba-y-error a todo momento. La naturaleza del entorno por su complejidad hace que un individuo no tenga pleno conocimiento de su entorno y ante ello sus comportamientos deben ser robustos ante eventos imprevistos del entorno y su propio cuerpo.
+\section{De la AI para los humanoides}
+\label{sec:AIhumanoid}
+La locomoción de las especies y el comportamiento de las mismas est\'an fuertemente relacionados. Su evoluci\'on y desarrollo est\'an guiados por su necesidad de adaptaci\'on al entorno. La adaptaci\'on es guiada principalmente por prueba-y-error a todo momento. La naturaleza del entorno por su complejidad hace que un individuo no tenga pleno conocimiento de su entorno y ante ello sus comportamientos deben ser robustos ante eventos imprevistos del entorno y su propio cuerpo.
 
 La forma en que un individuo percibe su entorno se encuentra llena de perturbaciones y ruidos, que no le permiten tener total certeza del estado de s\'i mismo y del entorno. Sin embargo con esa informaci\'on incompleta y ruidosa, ese ser vivo debe tomar decisiones que lo mantengan internamente satisfecho. Los seres vivos no solo toman decisiones de lo que perciben en un instante, para ellos las percepciones inmediatamente pasadas y las experiencias de acciones o secuencia de acciones tomadas en situaciones anteriores son de suma importancia.
 
@@ -9,41 +11,30 @@ El individuo o agente vivo debe ser capaz no solo de percibir, sino tambien de t
 
 As\'i como sus percepciones no son certeras sus modelos tampoco lo ser\'an, pero tendr\'an un grado o porcentaje de acierto. Los modelos del mundo le servir\'an para hacer prediciones de acciones hipot\'eticas y con base en los estados hipot\'eticos obtenidos por dichas acciones, el agente podr\'a tomar la decisi\'on que m\'as le convenga. La conveniencia esta ligada a un objetivo. La representaci\'on y entendimiento interno del agente de dicho objetivo permite plantear en el individuo un mecanismo de aprendizaje y su tipo de aprendizaje.
 
-Por otro lado en el diseño de humanoides actual, la motricidad gruesa requiere de un gran esfuerzo en la programación de sus comportamientos. Sin embargo se cree que al dotar al humanoide en su morfología con características bio-inspiradas procedentes del sistema NMS, es posible solucionar varios problemas presentes en la locomoción humanoide y proponer nuevas estructuras de control jerárquicas que reutilicen lo aprendido.
+\section{Hacia cognici\'on y reflejos encarnado}
+\label{sec:hacia}
+En el diseño de humanoides actual, la motricidad gruesa requiere de un gran esfuerzo en la programación de sus comportamientos. Sin embargo se cree que al dotar al humanoide en su morfología con características bio-inspiradas procedentes del sistema NMS, es posible solucionar varios problemas presentes en la locomoción humanoide y proponer nuevas estructuras de control jerárquicas que reutilicen lo aprendido.
 
-La morfología del NMS, sobre el cual sobre su composición neuronal, se puede construir un controlador jerárquico con cualidades cognitivas, que permita extraer características de forma automática. Éstas características como el ZMP, que duró años la ingeniería en proponer para lograr una locomoción sub-óptima, es un claro ejemplo de una característica diseñada manualmente que vigila el balance de la caminata y con base a su valor tomar una decisión de control.
+La morfología del NMS, sobre el cual sobre su composición neuronal, se puede construir un controlador jerárquico con cualidades cognitivas, que permita extraer características de forma automática. Éstas características como el ZMP, que duró años la ingeniería en proponer para lograr una locomoción sub-óptima, es un claro ejemplo de una característica diseñada manualmente que vigila el balance de la caminata y con base a su valor tomar una decisión de control. Problemas abiertos como la búsqueda de restricciones virtuales de forma \emph{on-line} en HZD o caracterizar mejor la fase de doble soporte~\cite{Grizzle2014} son problemas abordables al analizar las señales del NMS como lazo sensoriomotor.
 
 % para justificación el sistema NMS permite trabajar diferentes escalas de retardos
 El sistema NMS permite configurar diferentes retardos de actuación y sensado con un significado neuro-mecánico. Debido a estos retardos, las acciones puede que no tengan efectos instantáneos y que solo sean observables varios intervalos de tiempo posteriores, estos retardos violan los supuestos de MDPs. Lo cual hace este modelo interesante para analizar transferencias de políticas del RRL utilizando \emph{ensayos mentales}\footnote{mental rehearsal}. Las estructuras de diferentes manejos del tiempo, permiten tambien estructurar el controlador en aciones reflexivas y otras que requieren mas estrategia~\cite{Maniadakis2014}. Mas aún esta característica sirve para estudiar la propiedad auto-estabilizante del sistema NMS. % para justificación del lazo sensoriomotor y algoritmos RL sobre plataformas reales.
 Para tareas donde los sistemas son auto-estabilizantes, es decir que no requieren de un control activo para llegar o regresar a una posición de seguridad, generalmente la transferencia de políticas simuladas trabaja bien en el mundo real. Cuando el sistema físico real realiza una tarea  auto-estabilizante los algoritmos se puede utilizar directamente. En tareas inestables una pequeña variación puede tener consecuencias drásticas y la transferencia de políticas resulta en malos desempeños. 
 
+\section{Algunas aplicaciones, motivaciones y problemas abiertos}
+\label{sec:motivaciones}
 % para justificación de estructuras cognitivas al interior de la encarnación.
 Utilizar modelos aproximados, como ZMP, IPM o HZD, sirve para: verificar y probar algoritmos en simulación, establecer proximidad a soluciones teóricamente óptimas, calcular gradientes aproximados para el mejoramiento de políticas locales, identificar estrategias para recolectar más datos y realizar \emph{ensayos mentales}. 
 
-De igual manera el analizar el lazo sensoriomotor, que modela el sistema NMS, mediante el Control Óptimo y el RRL basado en el modelo gráfico, para la extracción de características; se cree que aportaría en biomecánica y neuromecánica, como modelo general para análisis y diseño de por ejemplo prótesis o el análisis de marcha.
- 
 % para justificación del Deep learning, RL y el IRL 
 En lugar de proponer funciones de recompensa simples binarias, frecuentemente se incluye recompensas intermedias, para guiar un proceso de aprendizaje a una solución razonable, mediante \emph{reward shaping}. Existe un intercambio entre la complejidad de la función de recompensa y la complejidad del problema de aprendizaje. El comportamiento humano que parece respetar las prioridades de tiempo y riesgo, puede lograrse mediante una señal de recompensa que describa el mapeo de las características que describen cada estado. Cuando las funciones recompensa son lineales en el conjunto de características, esas funciones imponen una limitación restrictiva sobre la solución del problema IRL. La noción de construir políticas complejas a partir de unas más simples, las cuales son fácilmente resueltas por el control óptimo al explorar funciones de recompensa parametrizadas. Políticas complejas derivadas de la adaptación de una función de recompensas para problemas simples de control óptimo han sido utilizada en conjunto con PS. % para justificación de estructuras de LSTM en secuencias de posturas
 La locomoción como un modelo de secuencias de posturas y su relación con estructuras del Deep Learnning usando los \emph{memorias de corto y largo plazo} (LSTM) para aspectos temporales; Deep RBM y \emph{Deep Belief Networks} (DBN) para aproximación de distribuciones complejas. Según la revisión del estado del arte, es un tema que esta sin aplicar a los humanoides.
 
-Los retos de aprendizaje que se enfrentan al utilizar
-
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[width=1.0\textwidth]{images/ObjetivoGeneral.png}
-  \caption{Estructura general de emergencia y aprendizaje de locomoci\'on basada en cognici\'on y reflejos}
-  \label{fig:ObjGen}
-\end{figure}
-
 %Importante: Resaltar el aporte del objetivo general en la ciencia.
+De igual manera el analizar el lazo sensoriomotor, que modela el sistema NMS, mediante el Control Óptimo y el RRL basado en el modelo gráfico, para la extracción de características; se cree que aportaría en biomecánica y neuromecánica, como modelo general para análisis y diseño de por ejemplo prótesis o el análisis de marcha.
 
-Algunas aplicaciones recientes que muestran la importancia del trabajo sobre la problematica planteada son
-
-(Geyer)
-Sobre prótesis transfemorales se estudia la recuperación del balance de la marcha utilizando un control NM~\cite{Thatte2015}, logrando una mayor robustez en la marcha comparado con los controladores de impedancia, los cuales se destacan en prótesis actuadas. Esta comparación se realiza mediante simulación y hardware, obteniendo como resultado una mejor comunicación entre el usuario y la prótesis, pero al final se plantea que es necesario estudiar mejor dicha política de control analizando la marcha anormal de un amputado.
-
-\cite{Dzeladini2016}(Ijspeert)
-Dzeladini, F. et al., 2016. Effects of a neuromuscular controller on a powered ankle exoskeleton during human walking. In Proceedings of the IEEE RAS and EMBS International Conference on Biomedical Robotics and Biomechatronics. pp. 617
+Una aplicación reciente que muestran la importancia de investigar sobre la problemática planteada en es sobre prótesis transfemorales, que estudia la recuperación del balance de la marcha utilizando un control NM~\cite{Thatte2015}, logrando una mayor robustez en la marcha comparado con los controladores de impedancia, los cuales se destacan en prótesis actuadas. Esta comparación se realiza mediante simulación y hardware, obteniendo como resultado una mejor comunicación entre el usuario y la prótesis, pero al final se plantea que es necesario estudiar mejor dicha política de control analizando la marcha anormal de un amputado. Un trabajo similar es comprobado por \cite{Dzeladini2016}, para un exoesqueleto que mejora la eficiencia del talon durante la marcha empleando un control neuromuscular.
+%Dzeladini, F. et al., 2016. Effects of a neuromuscular controller on a powered ankle exoskeleton during human walking. In Proceedings of the IEEE RAS and EMBS International Conference on Biomedical Robotics and Biomechatronics. pp. 617
 
 % Ademas de utilizar hipotesis de las neurociencias y la psicolog\'ia, la rob\'otica ahora es utilizada para pruebas de hipotesis propuestas por estas dos ciencias, dando por creado la neuro-rob\'otica.
 
@@ -138,8 +129,6 @@ Dzeladini, F. et al., 2016. Effects of a neuromuscular controller on a powered a
 
 %Por \'ulitimo se argumenta que los aspectos temporarles de la cognicion permiten integrar las otras propiedades cognitivas como: Memoria, aprendizaje, razonamiento, planeacion, action, comunicacion y atencion
 
-\section{Hacia cognici\'on y reflejos encarnado}
-\label{sec:hacia}
 % Russell en espanol (1) "...the first robotic embodiment..." es "...el primer robot construido ..."
 % Russell en espanol (2) "...are physical embodiments..." es "...son una manifestacion fisica ..."
 % Russell en espanol (3) "...provides a natural embodiment of Ockham's razor..." es "...incluye de forma natural la navaja de Ockham ..."
@@ -148,21 +137,13 @@ Dzeladini, F. et al., 2016. Effects of a neuromuscular controller on a powered a
 % Russell en espanol (6) "...agent programs that embody the principles..." es "...programas para agentes que encarnan los principios ..."
 % Russell en espanol (7) "...that comes fairly close to embodying the declarative ideal..." es "...que esta bastante relacionada con abarcar el ideal declarativo ..."
 
-La encarnacion permite el calculo distribuido de reducciones dimensionales que deben irse adaptando con el fin de mejorar la capacidad predictiva del ajente y con esto acelerar el proceso de aprendizaje y optimizacion de las tareas que realiza.
+% La encarnacion permite el calculo distribuido de reducciones dimensionales que deben irse adaptando con el fin de mejorar la capacidad predictiva del ajente y con esto acelerar el proceso de aprendizaje y optimizacion de las tareas que realiza. 
 
-Problema abierto Busqueda de restriciones virtuales de forma on-line \cite{Grizzle2014}. 
-
-hipotesis como heuristica para aprender mas rapido de trabajos como el de \cite{Kuo2001}.
-
-Se debe caracterizar mejor la fase de doble soporte \cite{Grizzle2014}, esto seria una aplicacion para extraccion de caracteristicas analizando las se\~nales sensormotrices.
+%hipotesis como heuristica para aprender mas rapido de trabajos como el de \cite{Kuo2001}.
 
 %Justificacion: Las politcas de destrezas y conocimiento se tiene que heredar atraves de una condificacion en el adn o mediante apredizaje con maestre usando imitacion. PI$2$ Policy improvement with path integrals for RL. Predicion de fallas con DMP-ASM!!!. Sensor Data mining  con ASM para encontrar causalidades, reduccion de representacion, extraccion de caracteristicas. Creacion automatica de modelos de comportamiento!!!. Exploracion de datos masivos por ejempo de la RoboCup.
 
-El trabajo de marquez con iida pero aplicado a un modelo SMA hacia la caminata figura 2.9 \cite{HauserS2013}. ""Se puede aplicar para la locomocion en general""
-
-
-\section{Algunas aplicaciones y motivaciones}
-\label{sec:motivaciones}
+%El trabajo de marquez con iida pero aplicado a un modelo SMA hacia la caminata figura 2.9 \cite{HauserS2013}. ""Se puede aplicar para la locomocion en general""
 
 % Aplicaciones e impacto en: rehabilitacion neuromotora, mejoramiejto del desempe\~no de atletas, o en la reproduccion de habilidades o destrezas humanas en sistemas artificiales comk robots.
 % Automatizacion de tareas y optimizacion de las mismas
@@ -176,4 +157,11 @@ El trabajo de marquez con iida pero aplicado a un modelo SMA hacia la caminata f
 %parte de la metodología
 M\\
 La combinación de aprendizaje por imitación y RL, denominado \emph{aprendizaje de principiante}, se caracteriza por la necesidad de un profesor y la practica realizada por el aprendiz. Es posible a partir de las demostraciones encontrar óptimos locales que nos permitan tomar las demostraciones como políticas iniciales de partida. Muchas veces las demostraciones humanas a humanoides deben ser adaptadas teniendo en cuenta las diferencias cinemáticas entre el profesor y el robot. Otras veces el profesor controla directamente el robot  poder obtener una demostración.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1.0\textwidth]{images/ObjetivoGeneral.png}
+  \caption{Estructura general de emergencia y aprendizaje de locomoci\'on basada en cognici\'on y reflejos}
+  \label{fig:ObjGen}
+\end{figure}
 
