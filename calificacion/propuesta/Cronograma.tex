@@ -1,49 +1,64 @@
 
-\chapter{Cronograma}
-\label{chap:chrome}
+\chapter{Cronograma y Actividades}
+\label{chp:chrome}
 
-\definecolor{RoyalBlue}{rgb}{0.0, 0.14, 0.4}
-\definecolor{OliveGreen}{rgb}{0.33, 0.42, 0.18}
-\definecolor{Maroon}{rgb}{0.5, 0.0, 0.0}
-\begin{ganttchart}[
-  y unit title=0.4cm,
-  y unit chart=0.5cm,
-  vgrid,
-  time slot format=isodate-yearmonth,
-  compress calendar,
-  title/.append style={draw=none, fill=RoyalBlue!50!black},
-  title label font=\sffamily\bfseries\color{white},
-  title label node/.append style={below=-1.6ex},
-  title left shift=.05,
-  title right shift=-.05,
-  title height=1,
-  bar/.append style={draw=none, fill=OliveGreen!75},
-  bar height=.6,
-  bar label font=\normalsize\color{black!50},
-  group right shift=0,
-  group top shift=.6,
-  group height=.3,
-  group peaks height=.2,
-  bar incomplete/.append style={fill=Maroon}
-  ]{2010-09}{2011-12}
-  \gantttitlecalendar{year} \\
-  \ganttbar[
-  progress=100,
-  bar progress label font=\small\color{OliveGreen!75},
-  bar progress label node/.append style={right=4pt},
-  bar label font=\normalsize\color{OliveGreen},
-  name=pp
-  ]{Preliminary Project}{2010-09}{2010-12} \\
-  \ganttset{progress label text={}, link/.style={black, -to}}
-  \ganttgroup{Objective 1}{2011-01}{2011-12} \\
-  \ganttbar[progress=4, name=T1A]{Task A}{2011-01}{2011-06} \\
-  \ganttlinkedbar[progress=0]{Task B}{2011-07}{2011-12} \\
-  \ganttgroup{Objective 2}{2011-01}{2011-12} \\
-  \ganttbar[progress=15, name=T2A]{Task A}{2011-01}{2011-09} \\
-  \ganttlinkedbar[progress=0]{Task B}{2011-10}{2011-12} \\
-  \ganttgroup{Objective 3}{2011-05}{2011-08} \\
-  \ganttbar[progress=0]{Task A}{2011-05}{2011-08}
-  \ganttset{link/.style={OliveGreen}}
-  \ganttlink[link mid=.4]{pp}{T1A}
-  \ganttlink[link mid=.159]{pp}{T2A}
-\end{ganttchart}
+
+\section{Actividades}
+\label{sec:activities}
+
+
+\section{Cronograma}
+\label{sec:chrone}
+% \begin{landscape}
+\begin{table}[!hbt]
+  \centering
+  \definecolor{RoyalBlue}{rgb}{0.0, 0.14, 0.4}
+  \definecolor{OliveGreen}{rgb}{0.33, 0.42, 0.18}
+  \definecolor{Maroon}{rgb}{0.5, 0.0, 0.0}
+  \begin{ganttchart}[
+    y unit title=0.4cm,
+    y unit chart=0.5cm,
+    vgrid,
+    time slot format=isodate-yearmonth,
+    compress calendar,
+    title/.append style={draw=none, fill=RoyalBlue!50!black},
+    title label font=\sffamily\bfseries\color{white},
+    title label node/.append style={below=-1.6ex},
+    title left shift=.05,
+    title right shift=-.05,
+    title height=1,
+    bar/.append style={draw=none, fill=OliveGreen!75},
+    bar height=.6,
+    bar label font=\normalsize\color{black!50},
+    group right shift=0,
+    group top shift=.6,
+    group height=.3,
+    group peaks height=.2,
+    bar incomplete/.append style={fill=Maroon},
+    compress calendar
+    ]{2016-9}{2018-6}
+    \gantttitlecalendar{year} \\
+    \ganttbar[
+    progress=95,
+    bar progress label font=\small\color{OliveGreen!75},
+    bar progress label node/.append style={right=4pt},
+    bar label font=\normalsize\color{OliveGreen},
+    name=pp
+    ]{Obj. 0}{2016-9}{2016-12} \\
+    \ganttset{progress label text={}, link/.style={black, -to}}
+    \ganttgroup{Obj. 1}{2017-01}{2017-12} \\
+    \ganttbar[progress=4, name=T1A]{Task A}{2017-01}{2017-06} \\
+    \ganttlinkedbar[progress=0]{Task B}{2017-07}{2017-12} \\
+    \ganttgroup{Obj. 2}{2017-01}{2017-12} \\
+    \ganttbar[progress=15, name=T2A]{Task A}{2017-01}{2017-09} \\
+    \ganttlinkedbar[progress=0]{Task B}{2017-10}{2017-12} \\
+    \ganttgroup{Obj. 3}{2017-05}{2017-08} \\
+    \ganttbar[progress=0]{Task A}{2017-05}{2017-08}
+    \ganttset{link/.style={OliveGreen}}
+    \ganttlink[link mid=.4]{pp}{T1A}
+    \ganttlink[link mid=.159]{pp}{T2A}
+  \end{ganttchart}    
+  \caption{Cronograma del desarrollo de la metodolog\'ia}
+  \label{tab:method}
+\end{table}
+%\end{landscape}
