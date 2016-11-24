@@ -44,19 +44,29 @@
     bar progress label node/.append style={right=4pt},
     bar label font=\normalsize\color{OliveGreen},
     name=pp
-    ]{Obj. 0}{2016-9}{2016-12} \\
+    ]{Obj. 0}{2016-9}{2016-11} \\
     \ganttset{progress label text={}, link/.style={black, -to}}
-    \ganttgroup{Obj. 1}{2017-01}{2017-12} \\
-    \ganttbar[progress=4, name=T1A]{Task A}{2017-01}{2017-06} \\
-    \ganttlinkedbar[progress=0]{Task B}{2017-07}{2017-12} \\
-    \ganttgroup{Obj. 2}{2017-01}{2017-12} \\
-    \ganttbar[progress=15, name=T2A]{Task A}{2017-01}{2017-09} \\
-    \ganttlinkedbar[progress=0]{Task B}{2017-10}{2017-12} \\
-    \ganttgroup{Obj. 3}{2017-05}{2017-08} \\
-    \ganttbar[progress=0]{Task A}{2017-05}{2017-08}
+    \ganttgroup{Obj. 1}{2016-12}{2017-5} \\
+    \ganttbar[progress=4, name=T1A]{Task A}{2016-12}{2017-02} \\
+    \ganttlinkedbar[progress=0]{Task C}{2017-03}{2017-5} \\
+    \ganttbar[progress=4, name=T1B]{Task B}{2016-12}{2017-02} \\
+    \ganttlinkedbar[progress=0, name=T1D]{Task D}{2017-03}{2017-5} \\
+%    \ganttbar[progress=4, name=T1A]{Task A}{2016-12}{2017-04} \\
+%    \ganttlinkedbar[progress=0]{Task B}{2017-07}{2017-12} \\
+%    \ganttbar[progress=4, name=T1C]{Task C}{2016-12}{2017-04} \\
+    \ganttgroup{Obj. 2}{2017-3}{2017-10} \\
+    \ganttbar[progress=4, name=T2A]{Task A}{2017-3}{2017-8} \\
+    \ganttbar[progress=4, name=T2B]{Task B}{2017-6}{2017-10} \\
+%    \ganttbar[progress=15, name=T2A]{Task A}{2017-01}{2017-09} \\
+%    \ganttlinkedbar[progress=0]{Task B}{2017-10}{2017-12} \\
+    \ganttgroup{Obj. 3}{2017-10}{2017-12} \\
+    \ganttbar[progress=4, name=T3A]{Task A}{2017-10}{2017-12} \\
+%    \ganttbar[progress=0]{Task A}{2017-05}{2017-08}
     \ganttset{link/.style={OliveGreen}}
-    \ganttlink[link mid=.4]{pp}{T1A}
-    \ganttlink[link mid=.159]{pp}{T2A}
+    \ganttlink[link mid=.8]{pp}{T1A}
+    \ganttlink[link mid=.8]{T1B}{T2A}
+    \ganttlink[link mid=.8]{T1D}{T2B}
+%    \ganttlink[link mid=.159]{pp}{T2A}
   \end{ganttchart}    
   \caption{Cronograma del desarrollo de la metodolog\'ia}
   \label{tab:method}

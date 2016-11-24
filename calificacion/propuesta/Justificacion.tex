@@ -1,7 +1,7 @@
 \chapter{Justificaci\'on}
 \label{chp:just}
 
-\section{De la AI para los humanoides}
+\section{Inclusión de la AI en los humanoides}
 \label{sec:AIhumanoid}
 La locomoción de las especies y el comportamiento de las mismas est\'an fuertemente relacionados. Su evoluci\'on y desarrollo est\'an guiados por su necesidad de adaptaci\'on al entorno. La adaptaci\'on es guiada principalmente por prueba-y-error a todo momento. La naturaleza del entorno por su complejidad hace que un individuo no tenga pleno conocimiento de su entorno y ante ello sus comportamientos deben ser robustos ante eventos imprevistos del entorno y su propio cuerpo.
 
@@ -11,11 +11,14 @@ El individuo o agente vivo debe ser capaz no solo de percibir, sino tambien de t
 
 As\'i como sus percepciones no son certeras sus modelos tampoco lo ser\'an, pero tendr\'an un grado o porcentaje de acierto. Los modelos del mundo le servir\'an para hacer prediciones de acciones hipot\'eticas y con base en los estados hipot\'eticos obtenidos por dichas acciones, el agente podr\'a tomar la decisi\'on que m\'as le convenga. La conveniencia esta ligada a un objetivo. La representaci\'on y entendimiento interno del agente de dicho objetivo permite plantear en el individuo un mecanismo de aprendizaje y su tipo de aprendizaje.
 
-\section{Hacia cognici\'on y reflejos encarnado}
+% Falta un parrafo de conclusión que se acople con el titulo de la sección
+
+\section{Hacia la cognici\'on y los reflejos encarnado}
 \label{sec:hacia}
 En el diseño de humanoides actual, la motricidad gruesa requiere de un gran esfuerzo en la programación de sus comportamientos. Sin embargo se cree que al dotar al humanoide en su morfología con características bio-inspiradas procedentes del sistema NMS, es posible solucionar varios problemas presentes en la locomoción humanoide y proponer nuevas estructuras de control jerárquicas que reutilicen lo aprendido.
 
-La morfología del NMS, sobre el cual sobre su composición neuronal, se puede construir un controlador jerárquico con cualidades cognitivas, que permita extraer características de forma automática. Éstas características como el ZMP, que duró años la ingeniería en proponer para lograr una locomoción sub-óptima, es un claro ejemplo de una característica diseñada manualmente que vigila el balance de la caminata y con base a su valor tomar una decisión de control. Problemas abiertos como la búsqueda de restricciones virtuales de forma \emph{on-line} en HZD o caracterizar mejor la fase de doble soporte~\cite{Grizzle2014} son problemas abordables al analizar las señales del NMS como lazo sensoriomotor.
+%Éstas características como el ZMP, que duró años la ingeniería en proponer para lograr una locomoción sub-óptima, es un claro ejemplo de una característica diseñada manualmente que vigila el balance de la caminata y con base a su valor tomar una decisión de control.
+La morfología del NMS, sobre el cual sobre su composición neuronal, se puede construir un controlador jerárquico con cualidades cognitivas, que permita extraer características de forma automática. Éstas características como el ZMP, que duró años la ingeniería en proponer para lograr una locomoción sub-óptima, es un claro ejemplo de una característica diseñada manualmente que vigila el balance de la caminata y con base en su valor tomar una decisión de control. Problemas abiertos como la búsqueda de restricciones virtuales de forma \emph{on-line} en HZD o caracterizar mejor la fase de doble soporte~\cite{Grizzle2014} son problemas abordables al analizar las señales del NMS como lazo sensoriomotor.
 
 % para justificación el sistema NMS permite trabajar diferentes escalas de retardos
 El sistema NMS permite configurar diferentes retardos de actuación y sensado con un significado neuro-mecánico. Debido a estos retardos, las acciones puede que no tengan efectos instantáneos y que solo sean observables varios intervalos de tiempo posteriores, estos retardos violan los supuestos de MDPs. Lo cual hace este modelo interesante para analizar transferencias de políticas del RRL utilizando \emph{ensayos mentales}\footnote{mental rehearsal}. Las estructuras de diferentes manejos del tiempo, permiten tambien estructurar el controlador en aciones reflexivas y otras que requieren mas estrategia~\cite{Maniadakis2014}. Mas aún esta característica sirve para estudiar la propiedad auto-estabilizante del sistema NMS. % para justificación del lazo sensoriomotor y algoritmos RL sobre plataformas reales.
