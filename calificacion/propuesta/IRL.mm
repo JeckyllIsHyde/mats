@@ -65,7 +65,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Previous challenges" ID="ID_1437141092" CREATED="1481834422055" MODIFIED="1481834431284">
 <node TEXT="Convergence without optimal examples" ID="ID_223757359" CREATED="1481834433464" MODIFIED="1481834455644"/>
@@ -80,7 +79,20 @@
 <node TEXT="Gaussian process GP" ID="ID_460654161" CREATED="1481843167292" MODIFIED="1481844927809"/>
 </node>
 </node>
-<node TEXT="IRL MaxEnt" ID="ID_1754879417" CREATED="1481835431119" MODIFIED="1481835440036">
+<node TEXT="IRL MaxEnt" ID="ID_1754879417" CREATED="1481835431119" MODIFIED="1481896499137"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      \cite{Ziebart2008}
+    </p>
+  </body>
+</html>
+
+</richcontent>
 <node TEXT="$P(\mathbf{u}|\mathbf{x}_0)=\frac{1}{Z}\exp{\sum_t{r(\mathbf{x}_t,\mathbf{u}_t)}}$" ID="ID_1356895515" CREATED="1481835457796" MODIFIED="1481837149583" FORMAT="latexPatternFormat">
 <node TEXT="Z is Intractable for High-dim" ID="ID_1457709785" CREATED="1481837165867" MODIFIED="1481837221694"/>
 </node>
@@ -90,6 +102,10 @@
 <node TEXT="Simplest IOC" ID="ID_1202513903" CREATED="1481833858305" MODIFIED="1481833860876">
 <node TEXT="Linear systems" ID="ID_264567932" CREATED="1481833547528" MODIFIED="1481833555695"/>
 <node TEXT="Quadratic reward" ID="ID_1866514796" CREATED="1481833556094" MODIFIED="1481833565408"/>
+</node>
+<node TEXT="Solving IRL MaxEnt using Laplace approx. of reward log likelihood with" ID="ID_1615793284" CREATED="1481898396087" MODIFIED="1481898696064" MAX_WIDTH="300">
+<node TEXT="quadratic rewards" ID="ID_789665851" CREATED="1481898565767" MODIFIED="1481898595987"/>
+<node TEXT="locally linearized dynamics" ID="ID_1789791479" CREATED="1481898544611" MODIFIED="1481898565218"/>
 </node>
 <node TEXT="Adding info from a non-linear reward by" ID="ID_93056940" CREATED="1481833866844" MODIFIED="1481833926647">
 <node TEXT="Hessian" ID="ID_741049470" CREATED="1481833886481" MODIFIED="1481833893077"/>
@@ -111,6 +127,39 @@
 <node TEXT="Design rewards" ID="ID_323677383" CREATED="1481834895022" MODIFIED="1481834912720">
 <node TEXT="meaningful features" ID="ID_926208354" CREATED="1481834912739" MODIFIED="1481834944894"/>
 <node TEXT="generalizable featues" ID="ID_801153117" CREATED="1481834926452" MODIFIED="1481834937081"/>
+</node>
+</node>
+<node TEXT="IOC for humanoid locomotion" ID="ID_1350785897" CREATED="1481896332091" MODIFIED="1481896378616"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      \cite{Park2013a}
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="Prev. Challanges" ID="ID_947951039" CREATED="1481897497431" MODIFIED="1481897507197">
+<node TEXT="Genaralize for new situations" ID="ID_1482160577" CREATED="1481897508773" MODIFIED="1481897522118"/>
+<node TEXT="Avoid hand-crafted control laws" ID="ID_1941607984" CREATED="1481897550174" MODIFIED="1481897564882"/>
+<node TEXT="Using Cost functions" ID="ID_1197539595" CREATED="1481897606208" MODIFIED="1481897619234"/>
+</node>
+<node TEXT="From" ID="ID_1277230231" CREATED="1481896778420" MODIFIED="1481896784341">
+<node TEXT="motion-captured running as demo" ID="ID_103862373" CREATED="1481896784344" MODIFIED="1481896838004"/>
+</node>
+<node TEXT="Results" ID="ID_1830473932" CREATED="1481897984713" MODIFIED="1481898009296">
+<node TEXT="get reward func able to" ID="ID_1650729455" CREATED="1481898009298" MODIFIED="1481898226872">
+<node TEXT="repro. smooth, realistic and highly dyns running" ID="ID_1755334637" CREATED="1481898034096" MODIFIED="1481898060894"/>
+<node TEXT="generalizable representation to" ID="ID_1196892435" CREATED="1481898061519" MODIFIED="1481898087928">
+<node TEXT="perturbations" ID="ID_185821813" CREATED="1481898087930" MODIFIED="1481898095711"/>
+<node TEXT="changes in terrain" ID="ID_1112679746" CREATED="1481898096136" MODIFIED="1481898104028"/>
+</node>
+<node TEXT="avoid local poor optima present in hand-crafted" ID="ID_49970279" CREATED="1481898228977" MODIFIED="1481898251303"/>
+</node>
 </node>
 </node>
 </node>
