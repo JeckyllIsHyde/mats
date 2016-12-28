@@ -19,6 +19,8 @@
 \usepackage{xcolor}
 \usepackage{pgfgantt}
 
+\usepackage{keyval}
+
 % //// --------------------------------------------------------------------------------
 % -------------------------------------------------------------------------------------
 % Espacio reservado para colocar las definiciones especiales por parte del autor
@@ -38,6 +40,31 @@
   \endlist
   };
 }
+
+\makeatletter
+\def\myacceptationnote{\@ifnextchar[\@valueNote{}}
+\def\@valueNote[#1]{\setkeys{valuesNote}{#1}
+\begin{minipage}[c][\textheight][c]{\textwidth}
+    \raggedleft\parbox{8cm}{\centering\begin{Large}\textbf{\if@spanish Nota de aceptación\else Acceptation Note\fi}\end{Large}}
+    \@mynote
+    \@note
+	\@mention
+    \@juries
+    \@advisornote
+    \@coadvisornote
+    \@datenote
+\end{minipage}
+    \pagestyle{empty}
+    \clearpage
+    \if@twoside
+        \vphantom{\qquad}
+        \thispagestyle{empty}%
+    \fi
+}
+
+\define@key{valuesNote}{mynote}{\def\@mynote{\\\bigskip\smallskip\parbox{8cm}{\centering\begin{large}\begin{spacing}{1.2}
+\if@spanish Propuesta de Tesis\\{\it #1}\else Thesis Proposal\\{\it #1}\fi\end{spacing}\end{large}}}}
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \includeonly{cap1,cap2}
@@ -71,25 +98,38 @@
      date = {25 de Diciembre de 2016},%{Marzo de 2016},
 ]
 
-%\abstractthesis[
-%    titlespanish = {Locomoción humanoide basada en comportamientos cognitivos y reflejos auto-organizados usando computación morfológica},
+\abstractthesis[
+    titlespanish = {Locomoción humanoide basada en comportamientos cognitivos y reflejos auto-organizados usando computación morfológica},
 %    titleenglish = {Self-organized reflex-based control and morphological computation for biped locomotion},
-%    abstractspanish = {Se presentan los pasos básicos y la explicación de los comandos para la utilización de la plantilla \texttt{thesisUnal.cls}.},
+    abstractspanish = {Se presentan los pasos básicos y la explicación de los comandos para la utilización de la plantilla \texttt{thesisUnal.cls}.},
 %    abstractenglish = {Are presented the basic steps and the explanation of the commands to use the template \texttt{thesisUnal.cls}.},
-%    keywordspanish = {Plantilla, clases, Universidad Nacional de Colombia, \LaTeX, pdf\LaTeX, \TeX, \BibTeX.},
+    keywordspanish = {Locomoción Humanoide, Sistema Neuro-Músculo-Esquelético (NMS), Computación Morfológica, Aprendizaje por Refuerzo Inverso (IRL), Control Óptimo Estocástico (SOC) Inverso, Extracción de Características, Deep Learning},
 %    keywordenglish = {Template, Classes, National University of Colombia, \LaTeX, pdf\LaTeX, \TeX, \BibTeX.},
-%]
+]
 
 %\acceptationnote[
-%    note = {Aprobado},
+%    note = {Propuesta},
 %    mention = {Meritoria o Laureada},
-%    jury = {Donald Knuth},
-%    jury = {Leslie Lamport},
-%    jury = {Michel Goossens},
-%    advisor = {Rodrigo de Castro Korgi},
+%    jury = {Máximo Alejandro Roa},
+%    jury = {Carlos Felipe Rengifo},
+%    jury = {Jaebum Son},
+%    jury = {Fabio Gonzalez},
+%    advisor = {Ricardo Emiro Ramirez Heredia},
 %    coadvisor = {Jonatan Goméz},
-%    date = {Bogotá, D.C., Diciembre 31 de 2013}
+%    date = {Bogotá, D.C., Diciembre 25 de 2016}
 %]
+
+\myacceptationnote[
+    mynote = {\textbf{Locomoción humanoide basada en comportamientos cognitivos y reflejos auto-organizados usando computación morfológica}},
+%    mention = {Meritoria o Laureada},
+    jury = {Máximo Alejandro Roa},
+    jury = {Carlos Felipe Rengifo},
+    jury = {Jaebum Son},
+    jury = {Fabio Gonzalez},
+    advisor = {Ricardo Emiro Ramirez Heredia},
+%    coadvisor = {Jonatan Goméz},
+    date = {Bogotá, D.C., Diciembre 25 de 2016}
+]
 
 \frontmatter
 %    \dedicatory{dedicatoria}
