@@ -1,6 +1,7 @@
 <map version="freeplane 1.3.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="RRL" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1481650461804"><hook NAME="MapStyle">
+    <properties show_note_icons="true"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node">
@@ -95,10 +96,37 @@
 <node TEXT="Batch" ID="ID_339341085" CREATED="1481659872694" MODIFIED="1481659879722">
 <node TEXT="REINFORCE" ID="ID_1685551362" CREATED="1481675953119" MODIFIED="1481675957565"/>
 <node TEXT="TNPG" ID="ID_413232306" CREATED="1481675958302" MODIFIED="1481675982752">
-<node TEXT="eNAC" ID="ID_1417591426" CREATED="1481675982755" MODIFIED="1481675988883"/>
+<node TEXT="eNAC" ID="ID_1417591426" CREATED="1481675982755" MODIFIED="1483108991672"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      \cite{Peters2008}
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 <node TEXT="Conjugated Gradient" ID="ID_560210293" CREATED="1481679835815" MODIFIED="1481679845026"/>
 </node>
-<node TEXT="RWR" ID="ID_424436735" CREATED="1481676418091" MODIFIED="1481676420999">
+<node TEXT="RWR" ID="ID_424436735" CREATED="1481676418091" MODIFIED="1483108568572"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      \cite{Peters2007}
+    </p>
+  </body>
+</html>
+
+</richcontent>
 <node TEXT="EM" ID="ID_574121559" CREATED="1481679868289" MODIFIED="1481679869595">
 <node TEXT="No learning-rates parameters" ID="ID_1038641822" CREATED="1481723434381" MODIFIED="1481723454855"/>
 </node>
@@ -112,7 +140,20 @@
 </node>
 </node>
 </node>
-<node TEXT="REPS" ID="ID_938679011" CREATED="1481676431471" MODIFIED="1481680022931">
+<node TEXT="REPS" ID="ID_938679011" CREATED="1481676431471" MODIFIED="1483108451353"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      \cite{Peters2010}
+    </p>
+  </body>
+</html>
+
+</richcontent>
 <node TEXT="Limit the loss of information" ID="ID_55664313" CREATED="1481732951789" MODIFIED="1481732980467"/>
 <node TEXT="Apps" ID="ID_690268705" CREATED="1481732983827" MODIFIED="1481732989418">
 <node TEXT="Hierarchical" ID="ID_1109917787" CREATED="1481724692568" MODIFIED="1481724697562"/>
@@ -120,7 +161,20 @@
 <node TEXT="Online" ID="ID_1807598830" CREATED="1481724703601" MODIFIED="1481724708322"/>
 </node>
 </node>
-<node TEXT="TRPO" ID="ID_483959017" CREATED="1481682622392" MODIFIED="1481682648606">
+<node TEXT="TRPO" ID="ID_483959017" CREATED="1481682622392" MODIFIED="1483108370594"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      \cite{Schulman2015}
+    </p>
+  </body>
+</html>
+
+</richcontent>
 <node TEXT="10.000 params" ID="ID_1929035784" CREATED="1481687512329" MODIFIED="1481687533498"/>
 <node TEXT="Monotonic improvement" ID="ID_1979370500" CREATED="1481820263684" MODIFIED="1481820272951">
 <node TEXT="Divergence TV: Total variation" ID="ID_1825460590" CREATED="1481821421827" MODIFIED="1481821440790"/>
