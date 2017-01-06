@@ -108,7 +108,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="Conjugated Gradient" ID="ID_560210293" CREATED="1481679835815" MODIFIED="1481679845026"/>
@@ -125,7 +124,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="EM" ID="ID_574121559" CREATED="1481679868289" MODIFIED="1481679869595">
 <node TEXT="No learning-rates parameters" ID="ID_1038641822" CREATED="1481723434381" MODIFIED="1481723454855"/>
@@ -152,7 +150,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Limit the loss of information" ID="ID_55664313" CREATED="1481732951789" MODIFIED="1481732980467"/>
 <node TEXT="Apps" ID="ID_690268705" CREATED="1481732983827" MODIFIED="1481732989418">
@@ -173,7 +170,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="10.000 params" ID="ID_1929035784" CREATED="1481687512329" MODIFIED="1481687533498"/>
 <node TEXT="Monotonic improvement" ID="ID_1979370500" CREATED="1481820263684" MODIFIED="1481820272951">
