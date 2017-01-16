@@ -45,14 +45,13 @@
 }
 
 \makeatletter
-\def\myacceptationnote{\@ifnextchar[\@valueNote{}}
+\def\@extraadvisornote{}
+\def\directornote{\@ifnextchar[\@valueNote{}}
 \def\@valueNote[#1]{\setkeys{valuesNote}{#1}
 \begin{minipage}[c][\textheight][c]{\textwidth}
-    \raggedleft\parbox{8cm}{\centering\begin{Large}\textbf{\if@spanish Nota de aceptación\else Acceptation Note\fi}\end{Large}}
+    \raggedleft\parbox{8cm}{\centering\begin{Large}\textbf{\if@spanish Nota del Director\else Director Note\fi}\end{Large}}
     \@mynote
-    \@note
-	\@mention
-    \@juries
+    \@extraadvisornote
     \@advisornote
     \@coadvisornote
     \@datenote
@@ -67,6 +66,8 @@
 
 \define@key{valuesNote}{mynote}{\def\@mynote{\\\bigskip\smallskip\parbox{8cm}{\centering\begin{large}\begin{spacing}{1.2}
 \if@spanish Propuesta de Tesis\\{\it #1}\else Thesis Proposal\\{\it #1}\fi\end{spacing}\end{large}}}}
+\define@key{valuesNote}{extraadvisor}{\def\@extraadvisornote{\vfill\raggedleft\parbox{14cm}{\rule{14cm}{0.0pt}\\\rule{14cm}{0.8pt}\\\vspace{0.4cm}\\\rule{14cm}{0.8pt}\\\vspace{0.4cm}\\\rule{14cm}{0.8pt}\\\vspace{0.4cm}\\\rule{14cm}{0.8pt}\\\vspace{0.4cm}\\\rule{14cm}{0.8pt}\\\vspace{0.4cm}\\\rule{14cm}{0.8pt}\\\vspace{0.4cm}}\\\vspace{3.0cm}\raggedleft\parbox{8cm}{\rule{8cm}{0.8pt}\\\if@spanish Director \else Advisor \fi\\Ricardo Emiro Ramírez Heredia}\\\vspace{2.0cm}\raggedleft\parbox{8cm}{\rule{8cm}{0.8pt}\\\if@spanish Autor \else Author \fi\\Jaime Andrés Castillo León}\\\vspace{1.0cm}}}
+%\define@key{valuesNote}{advisor}{\def\@advisornote{\vfill\raggedleft\parbox{8cm}{\rule{8cm}{0.8pt}\\\if@spanish Director \else Advisor \fi\\#1\\}}}
 \makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,7 +105,7 @@
 \abstractthesis[
     titlespanish = {Locomoción humanoide basada en comportamientos cognitivos y reflejos auto-organizados usando computación morfológica},
 %    titleenglish = {Self-organized reflex-based control and morphological computation for biped locomotion},
-    abstractspanish = {Se propone desarrollar un método para generar locomoción coordinada en un humanoide, que independientemente de su estructura mecánica, pero identificando unas propiedades mínimas sobre su sistema sensoriomotor, le permita asegurar la ejecución de un comportamiento específico y representarlo mediante una función de costo o recompensa, la cual es compuesta de características y patrones sensoriales básicos, que simbolizan el conocimiento de la interacción del humanoide con el entorno, encarnando un conjunto de restricciones y criterios de desempeño, formando así un lenguaje natural para la transferencia de comportamientos entre humanoides con diferencias morfológicas, todo lo anterior con el fin de estructurar y transferir controladores con reducidas necesidades de programación sobre humanoides. La metodología para obtener lo anterior parte de dos casos de estudio para una marcha humanoide, compuestos por (1) ponerse en pie manteniendo el balance, como comportamiento auto-organizado; y (2) marcha con control de dirección, como comportamiento aprendido por imitación. Utilizando un modelo del sistema neuro-músculo-esquelético acoplado a una estructura humanoide, se dota su cerebro o controlador principal, con capacidades de (1) aprender mediante prueba-y-error, demostración e imitación; y (2) explorar utilizando características de curiosidad, motivación intrínseca y autonomía. Ambas capacidades basadas en modelos probabilísticos, teoría de la información, control óptimo estocástico y aprendizaje por refuerzo. Estas capacidades cerebrales son, con la finalidad de analizar y sintetizar la información fluyente por el canal sensoriomotor mediante modelos aprendidos de la experiencia y transferencia de conocimiento. La extracción de características del lazo sensoriomotor representado como el sistema neuro-músculo-esquelético, el cual encarna el canal de comunicación entre el entorno y el cerebro del humanoide, es llevada a cabo por las capacidades cognitivas del sistema, y es la piedra angular de la representación del comportamiento mediante funciones de costo, las cuales son construidas mediante control óptimo estocástico inverso. Parte de las acciones coordinadas por el cerebro, son delegas al lazo sensoriomotor ejecutando acciones morfológicamente computadas, como: reflexivas, predictivas y algunas de estrategia. Por último la transferencia de controladores mediante un lenguaje de características para la definición de funciones de costo de varios comportamientos, se propone para analizar la emergencia de control de forma autónoma de asimetrías y disfunciones articulares, presentes por ejemplo en lesiones o prótesis, generando así un control autónomo si la necesidad de una programación exhaustiva.},
+    abstractspanish = {Se propone desarrollar un método para generar locomoción coordinada en un humanoide, que independientemente de su estructura mecánica, pero identificando unas propiedades mínimas sobre su sistema sensoriomotor, le permita asegurar la ejecución de un comportamiento específico y representarlo mediante una función de costo o recompensa, la cual es compuesta de características y patrones sensoriales básicos, que simbolizan el conocimiento de la interacción del humanoide con el entorno, encarnando un conjunto de restricciones y criterios de desempeño, formando así un lenguaje natural para la transferencia de comportamientos entre humanoides con diferencias morfológicas, todo lo anterior con el fin de estructurar y transferir controladores con reducidas necesidades de programación sobre humanoides. La metodología para obtener lo anterior parte de dos casos de estudio para una marcha humanoide, compuestos por (1) ponerse en pie manteniendo el balance, como comportamiento auto-organizado; y (2) marcha con control de dirección, como comportamiento aprendido por imitación. Utilizando un modelo del sistema neuro-músculo-esquelético acoplado a una estructura humanoide, se dota su cerebro o controlador principal, con capacidades de (1) aprender mediante prueba-y-error, demostración e imitación; y (2) explorar utilizando características de curiosidad, motivación intrínseca y autonomía. Ambas capacidades basadas en modelos probabilísticos, teoría de la información, control óptimo estocástico y aprendizaje por refuerzo. Éstas capacidades cerebrales son, con la finalidad de analizar y sintetizar la información que fluye por el canal sensoriomotor mediante modelos aprendidos de la experiencia y transferencia de conocimiento. La extracción de características del lazo sensoriomotor representado como el sistema neuro-músculo-esquelético, el cual encarna el canal de comunicación entre el entorno y el cerebro del humanoide, es llevada a cabo por las capacidades cognitivas del sistema, y es la piedra angular de la representación del comportamiento mediante funciones de costo, las cuales son construidas mediante control óptimo estocástico inverso. Parte de las acciones coordinadas por el cerebro, son delegas al lazo sensoriomotor ejecutando acciones morfológicamente computadas, como: reflexivas, predictivas y algunas de estrategia. Por último, la transferencia de controladores mediante un lenguaje de características para la definición de funciones de costo de varios comportamientos, se propone para analizar la emergencia del control de forma autónoma en asimetrías y disfunciones articulares, presentes por ejemplo en lesiones o prótesis, generando así un control autónomo sin la necesidad de una programación exhaustiva.},
 %    abstractenglish = {Are presented the basic steps and the explanation of the commands to use the template \texttt{thesisUnal.cls}.},
     keywordspanish = {Locomoción Humanoide, Sistema Neuro-Músculo-Esquelético (NMS), Computación Morfológica, Aprendizaje por Refuerzo Inverso (IRL), Control Óptimo Estocástico (SOC) Inverso, Extracción de Características, Deep Learning},
 %    keywordenglish = {Template, Classes, National University of Colombia, \LaTeX, pdf\LaTeX, \TeX, \BibTeX.},
@@ -122,15 +123,11 @@
 %    date = {Bogotá, D.C., Diciembre 25 de 2016}
 %]
 
-\myacceptationnote[
+\directornote[
     mynote = {\textbf{Locomoción humanoide basada en comportamientos cognitivos y reflejos auto-organizados usando computación morfológica}},
-%    mention = {Meritoria o Laureada},
-    jury = {Máximo Alejandro Roa},
-    jury = {Carlos Felipe Rengifo},
-    jury = {Jaebum Son},
-    jury = {Fabio Gonzalez},
-    advisor = {Ricardo Emiro Ramirez Heredia},
-%    coadvisor = {Jonatan Goméz},
+    extraadvisor = {},
+%    advisor = {Ricardo Emiro Ramirez Heredia},
+%    Coadvisor = {Jonatan Goméz},
     date = {Bogotá, D.C., Diciembre 31 de 2016}
 ]
 
