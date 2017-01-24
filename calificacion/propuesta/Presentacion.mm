@@ -16,7 +16,7 @@
   </body>
 </html>
 </richcontent>
-<hook NAME="MapStyle">
+<hook NAME="MapStyle" zoom="1.5">
     <properties show_note_icons="true"/>
 
 <map_styles>
@@ -222,7 +222,11 @@
 </node>
 </node>
 <node TEXT="Primitivas de Movimiento" ID="ID_1845102385" CREATED="1483372869657" MODIFIED="1483404553296" MAX_WIDTH="300" MIN_WIDTH="170">
-<node TEXT="CPGs" ID="ID_1976705321" CREATED="1483372890015" MODIFIED="1483378101167" MAX_WIDTH="300"/>
+<node TEXT="CPGs" ID="ID_1976705321" CREATED="1483372890015" MODIFIED="1483378101167" MAX_WIDTH="300">
+<node TEXT="Matsuoka" ID="ID_551347896" CREATED="1485257710968" MODIFIED="1485257723922"/>
+<node TEXT="Kuramoto" ID="ID_729187775" CREATED="1485257725598" MODIFIED="1485257730996"/>
+<node TEXT="DMP" ID="ID_855995663" CREATED="1485257953111" MODIFIED="1485257961194"/>
+</node>
 <node TEXT="DMP" ID="ID_1060183451" CREATED="1483372893024" MODIFIED="1483378101169" MAX_WIDTH="300">
 <node TEXT="PMP" ID="ID_102860601" CREATED="1483372897726" MODIFIED="1483378101170" MAX_WIDTH="300"/>
 </node>
@@ -260,7 +264,33 @@
 <node TEXT="Estoc&#xe1;stica $u_k\sim \pi_\theta(u_k|x_k)$" ID="ID_1427354562" CREATED="1485208099441" MODIFIED="1485208127695" FORMAT="latexPatternFormat"/>
 <node TEXT="Determinista $u_k=\mu_\theta(x_k)$" ID="ID_1180431549" CREATED="1485208167423" MODIFIED="1485208258652" FORMAT="latexPatternFormat"/>
 </node>
-<node TEXT="Recompensa total $J(\theta)=\frac{1}{a_\Sigma}\mathbb{E}\left[\sum_{k=0}^T a_kr_k\right]$" ID="ID_1355285518" CREATED="1485208312158" MODIFIED="1485208702639" FORMAT="latexPatternFormat"/>
+<node TEXT="Recompensa esperada total $J(\theta)$" ID="ID_1355285518" CREATED="1485208312158" MODIFIED="1485256268269" FORMAT="latexPatternFormat">
+<node TEXT="$\frac{1}{a_\Sigma}\mathbb{E}\left[\sum_{k=0}^T a_kr_k\right]$" ID="ID_842570731" CREATED="1485219133186" MODIFIED="1485257404281" FORMAT="latexPatternFormat">
+<node TEXT=" con $a_k$ debe cumplir $a_ka_l=a_{k+l}$" ID="ID_1366826741" CREATED="1485257407798" MODIFIED="1485257421009" FORMAT="latexPatternFormat">
+<node TEXT="descontado $a_k=\gamma^k$ con $\gamma\in(0,1)$ y $a_\Sigma=\frac{1}{1-\gamma}$" ID="ID_293391137" CREATED="1485219644279" MODIFIED="1485219937898" FORMAT="latexPatternFormat"/>
+<node TEXT="promedio $a_k=1$ y $a_\Sigma=T$" ID="ID_1786483014" CREATED="1485219950435" MODIFIED="1485220079632" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="gradiente de diferencias finito" ID="ID_1197743232" CREATED="1485256559816" MODIFIED="1485256592461" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="$\int_\mathbb{T}p_\theta(\tau)r(\tau)\,d\tau$" ID="ID_1040426837" CREATED="1485256311991" MODIFIED="1485257458117" FORMAT="latexPatternFormat">
+<node TEXT=" con $\tau\sim p_\theta(\tau)=p(\tau|\theta)$ y recompensa $r(\tau)=\sum_{k=0}^T a_kr_k$" ID="ID_1738412261" CREATED="1485257461895" MODIFIED="1485257483138" FORMAT="latexPatternFormat"/>
+<node TEXT="$p_\theta(\tau)=p(x_0)\prod_{k=0}^Tp(x_{k+1}|x_k,u_k)\pi_\theta(u_k|x_k)$" ID="ID_620745143" CREATED="1485262587466" MODIFIED="1485262818866" FORMAT="latexPatternFormat"/>
+<node TEXT="gradiente basado en likelihood" ID="ID_700599336" CREATED="1485257494376" MODIFIED="1485257551633" FORMAT="latexPatternFormat">
+<node TEXT="$\nabla_\theta J=\int_\mathbb{T}\nabla_\theta p_\theta(\tau) r(\tau)\,d\tau$" ID="ID_351356317" CREATED="1485258125273" MODIFIED="1485258358624" FORMAT="latexPatternFormat">
+<node TEXT="simplificando $\nabla_\theta J=\mathbb{E}\left[r(\tau)\,\nabla_\theta \log p_\theta(\tau)\right]$" ID="ID_63668249" CREATED="1485258460701" MODIFIED="1485258812424" FORMAT="latexPatternFormat"/>
+<node TEXT="con baseline $\nabla_\theta J=\mathbb{E}\left[(r(\tau)-b)\,\nabla_\theta \log p_\theta(\tau)\right]$" ID="ID_1815190194" CREATED="1485262233012" MODIFIED="1485262267737" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="$\nabla_\theta \log p_\theta(\tau)=\sum_{k=0}^T\log \pi_\theta(u_k|x_k)$" ID="ID_1223443224" CREATED="1485262927044" MODIFIED="1485263058129" FORMAT="latexPatternFormat"/>
+</node>
+</node>
+</node>
+<node TEXT="Funciones de valor" ID="ID_1017285826" CREATED="1485279799640" MODIFIED="1485279854938" FORMAT="latexPatternFormat">
+<node TEXT="To estimate $J(\theta)$" ID="ID_821537110" CREATED="1485279856799" MODIFIED="1485279893246" FORMAT="latexPatternFormat">
+<node TEXT="make indirec use of past experience on future actions" ID="ID_211909486" CREATED="1485279897971" MODIFIED="1485279988285" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="value $V(x)$ fcn, V-function" ID="ID_1347332720" CREATED="1485280041467" MODIFIED="1485280067020" FORMAT="latexPatternFormat"/>
+<node TEXT="action-value $Q(x,u)$ fcn, Q-function" ID="ID_802011863" CREATED="1485279995797" MODIFIED="1485280067020" FORMAT="latexPatternFormat"/>
+</node>
 </node>
 <node TEXT="Retos" ID="ID_363820230" CREATED="1483374150329" MODIFIED="1483378101199" MAX_WIDTH="300">
 <node TEXT="maldici&#xf3;n de la dimensionalidad" ID="ID_737188665" CREATED="1483387023875" MODIFIED="1483387037870">
