@@ -15,7 +15,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <hook NAME="MapStyle">
 
@@ -66,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="2"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="3"/>
 <node TEXT="Introduction" POSITION="right" ID="ID_1906068532" CREATED="1485279701658" MODIFIED="1485279707365">
 <edge COLOR="#0000ff"/>
 <node TEXT="Actor-only" ID="ID_718711366" CREATED="1485280163243" MODIFIED="1485280168389">
@@ -78,6 +77,52 @@
 </node>
 </node>
 </node>
+<node TEXT="Critic-only" ID="ID_591083115" CREATED="1485299236389" MODIFIED="1485299363184">
+<node TEXT="Temporal differences learning" ID="ID_1815628010" CREATED="1485299377103" MODIFIED="1485299384900">
+<node TEXT="lower-variance" ID="ID_1580927513" CREATED="1485299393353" MODIFIED="1485299398002"/>
+</node>
+<node TEXT="policies from value functions" ID="ID_13751288" CREATED="1485299413895" MODIFIED="1485299431979">
+<node TEXT="greedy actions" ID="ID_1311912799" CREATED="1485299431981" MODIFIED="1485299436919">
+<node TEXT="optimization process over each state" ID="ID_457726067" CREATED="1485299457155" MODIFIED="1485299485156">
+<node TEXT="enumerations for finite spaces" ID="ID_419861868" CREATED="1485299585492" MODIFIED="1485299601438"/>
+</node>
+<node TEXT="computational intensive" ID="ID_36580791" CREATED="1485299517754" MODIFIED="1485299523385">
+<node TEXT="not for continuous action spaces" ID="ID_878082872" CREATED="1485299534933" MODIFIED="1485299555718"/>
+</node>
+</node>
+</node>
+<node TEXT="policy is implemented implicitly by the critic" ID="ID_1293871758" CREATED="1485300418218" MODIFIED="1485300451766"/>
+</node>
+<node TEXT="Actor-critic" ID="ID_533817148" CREATED="1485299635582" MODIFIED="1485299640491">
+<node TEXT="advantages of both" ID="ID_1848886633" CREATED="1485299719818" MODIFIED="1485299741037">
+<node TEXT="A-only:" ID="ID_193690487" CREATED="1485299741039" MODIFIED="1485299791199">
+<node TEXT="parametrized policies admits continuous actions without need of value functions" ID="ID_1823480451" CREATED="1485299801367" MODIFIED="1485299865700"/>
+</node>
+<node TEXT="C-only:" ID="ID_102111604" CREATED="1485299791833" MODIFIED="1485299798756">
+<node TEXT="parametrized critics get low-variances knowledge of performance" ID="ID_1008206501" CREATED="1485299889359" MODIFIED="1485299971476">
+<node TEXT="gradients to update actor" ID="ID_261110764" CREATED="1485300015911" MODIFIED="1485300027101"/>
+<node TEXT="speed up learning processes" ID="ID_1815500811" CREATED="1485300040427" MODIFIED="1485300049036"/>
+</node>
+</node>
+</node>
+<node TEXT="good convegences properties over C-only" ID="ID_1683522065" CREATED="1485300088309" MODIFIED="1485300153673"/>
+<node TEXT="two parametrization fncs" ID="ID_471797393" CREATED="1485300482758" MODIFIED="1485300502336">
+<node TEXT="value or critic" ID="ID_1305775246" CREATED="1485300502338" MODIFIED="1485300508763"/>
+<node TEXT="policy or actor" ID="ID_1334544492" CREATED="1485300509296" MODIFIED="1485300514614"/>
+</node>
+<node TEXT="policy gradient-based" ID="ID_586673349" CREATED="1485300239145" MODIFIED="1485300271737">
+<node TEXT="standard &apos;vanilla&apos;" ID="ID_76525176" CREATED="1485300286477" MODIFIED="1485300295333"/>
+<node TEXT="natural" ID="ID_1327188721" CREATED="1485300295856" MODIFIED="1485300306286"/>
+</node>
+</node>
+</node>
+<node TEXT="Markov decision processes MDP" POSITION="right" ID="ID_1967390515" CREATED="1485300844669" MODIFIED="1485300861640">
+<edge COLOR="#00ff00"/>
+<node TEXT="is a tuple $\langle X,U,f,\rho\rangle$" ID="ID_293711373" CREATED="1485300868775" MODIFIED="1485300976929" FORMAT="latexPatternFormat">
+<node TEXT="if not chage in time, is a stationary MDP" ID="ID_413631658" CREATED="1485300988476" MODIFIED="1485301011722"/>
+<node TEXT="otherwise is a non-stationary MDP" ID="ID_1648494729" CREATED="1485301012908" MODIFIED="1485301021958"/>
+</node>
+<node TEXT="" ID="ID_209293137" CREATED="1485300981934" MODIFIED="1485300981934"/>
 </node>
 <node TEXT="Discussion" POSITION="right" ID="ID_1659543106" CREATED="1485264088011" MODIFIED="1485264501923" FORMAT="STANDARD_FORMAT">
 <edge COLOR="#ff0000"/>
