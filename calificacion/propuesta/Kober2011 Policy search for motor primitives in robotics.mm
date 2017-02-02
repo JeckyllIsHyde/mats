@@ -130,8 +130,43 @@
 <node TEXT="2. policy search for self-improvement" ID="ID_1828707312" CREATED="1485734667291" MODIFIED="1485734729407"/>
 </node>
 <node TEXT="RL problem" ID="ID_1050121545" CREATED="1485789532061" MODIFIED="1485789550254">
-<node TEXT="General setting" ID="ID_421409848" CREATED="1485789581698" MODIFIED="1485789620357"/>
-<node TEXT="episodic RL approach" ID="ID_1374197164" CREATED="1485789593146" MODIFIED="1485789641966"/>
+<node TEXT="General setting" ID="ID_421409848" CREATED="1485789581698" MODIFIED="1485789620357">
+<node TEXT="for parametrized policies, linear in parameteres" ID="ID_694305080" CREATED="1485803369330" MODIFIED="1485803391752"/>
+<node TEXT="$x_t$, $u_t$, $r_t$, $T$" ID="ID_1229938359" CREATED="1485803141553" MODIFIED="1485803234429" FORMAT="latexPatternFormat"/>
+<node TEXT="stochastic policy $u_t\sim\pi_\theta(u_t|x_t,t)$" ID="ID_1202990283" CREATED="1485802982658" MODIFIED="1485803313352" FORMAT="latexPatternFormat">
+<node TEXT="Allows a natural exploration by $\theta$" ID="ID_1888216567" CREATED="1485803102027" MODIFIED="1485803334462" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="expected return for a policy $\pi$ with parameter $\theta$" ID="ID_613650422" CREATED="1485803400707" MODIFIED="1485803456927" FORMAT="latexPatternFormat">
+<node TEXT="$J(\theta)=\int_\mathbb{T}\,p_\theta(\tau)R(\tau)d\tau$" ID="ID_342378389" CREATED="1485803461800" MODIFIED="1485803525203" FORMAT="latexPatternFormat"/>
+<node TEXT="with rollout as $\tau=[x_{1:T},u_{1:T}]$" ID="ID_1323419839" CREATED="1485803534487" MODIFIED="1485803612548" FORMAT="latexPatternFormat"/>
+<node TEXT="standar markov assuption $p_\theta(\tau)=p(x_1)\prod_{t=1}^Tp(x_{t+1}|x_t,u_t)\pi_\theta(u_t|x_t,t)$" ID="ID_721149295" CREATED="1485803755603" MODIFIED="1485804014417" FORMAT="latexPatternFormat">
+<node TEXT="distribuci&#xf3;n estado inicial: $x_1\sim p(x_1)$" ID="ID_457838831" CREATED="1485806372879" MODIFIED="1485806685291" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="additive acumulative reward $R(\tau)=T^{-1}\sum_{t=1}^Tr(x_t,u_t,s_{t+1},r_t)$" ID="ID_716073953" CREATED="1485806157561" MODIFIED="1485806254160" FORMAT="latexPatternFormat"/>
+</node>
+</node>
+<node TEXT="episodic RL approach" ID="ID_1374197164" CREATED="1485789593146" MODIFIED="1485789641966">
+<node TEXT="Finite horizons and episodic restart" ID="ID_170902331" CREATED="1485803237047" MODIFIED="1485803276169"/>
+<node TEXT="bounds on policy improvement" ID="ID_474358993" CREATED="1485807455336" MODIFIED="1485807464103">
+<node TEXT="maximizing the lower bounds of the cost function" ID="ID_296137579" CREATED="1485807495585" MODIFIED="1485807529142">
+<node TEXT="with EM" ID="ID_1909785805" CREATED="1485807535920" MODIFIED="1485807539010">
+<node TEXT="if the lower bound also becomes an equality for the sampling policy, the we can garantee that the policy will be improved by maximizing the lower bound" ID="ID_1670545225" CREATED="1485807581912" MODIFIED="1485807705018" MAX_WIDTH="300" MIN_WIDTH="300"/>
+</node>
+<node TEXT="can use supervised learning methods" ID="ID_1035735126" CREATED="1485807736355" MODIFIED="1485807747507"/>
+</node>
+<node TEXT="1. generate rollouts $\tau$ with $\theta$ and weighted with $R(\tau)$" ID="ID_1105044311" CREATED="1485808093342" MODIFIED="1485808246809" FORMAT="latexPatternFormat"/>
+<node TEXT="2. match it  with a new parametrized $\theta&apos;$" ID="ID_184783429" CREATED="1485808248461" MODIFIED="1485808291283" FORMAT="latexPatternFormat">
+<node TEXT="Def: $D_{KL}(p(\tau)\,||\,q(\tau))=\int p(\tau)\log \frac{p(\tau)}{q(\tau)}d\tau$" ID="ID_1852816375" CREATED="1485809406917" MODIFIED="1485809569633" FORMAT="latexPatternFormat"/>
+<node TEXT="Kullback-Leibler divergence $D_{KL}(p_\theta(\tau)R(\tau)\,||\,p_{\theta&apos;}(\tau))$ of reward-weighted $p_\theta(\tau)R(\tau)$ and new path $p_{\theta&apos;}(\tau)$" ID="ID_869359487" CREATED="1485808378620" MODIFIED="1485809401160" FORMAT="latexPatternFormat" MAX_WIDTH="300" MIN_WIDTH="300"/>
+<node TEXT="Lower bound of the expected return $L_\theta(\theta&apos;)=-D_{KL}(p_\theta(\tau)R(\tau)\,||\,p_{\theta&apos;}(\tau))$" ID="ID_1096251946" CREATED="1485811047590" MODIFIED="1485811219848" MAX_WIDTH="300" MIN_WIDTH="300" FORMAT="latexPatternFormat"/>
+<node TEXT="policy improvement by maximizing $L_\theta(\theta&apos;)$" ID="ID_146243884" CREATED="1485811241568" MODIFIED="1485811299100" MAX_WIDTH="300" MIN_WIDTH="300" FORMAT="latexPatternFormat"/>
+</node>
+</node>
+<node TEXT="resulting policy updates" ID="ID_1923927091" CREATED="1485811321289" MODIFIED="1485811330181">
+<node TEXT="PG can be derived from $L_\theta(\theta&apos;)$" ID="ID_305252845" CREATED="1485811751896" MODIFIED="1485811814338" FORMAT="latexPatternFormat"/>
+<node TEXT="PS via EM" ID="ID_1325195621" CREATED="1485812056978" MODIFIED="1485812220553"/>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="common framework using DMPs for" POSITION="right" ID="ID_943785856" CREATED="1485733321146" MODIFIED="1485733578206">
