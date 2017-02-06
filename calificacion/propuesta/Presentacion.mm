@@ -122,19 +122,55 @@
 <node TEXT="Control &#xd3;ptimo" ID="ID_1067183779" CREATED="1483386416416" MODIFIED="1485732101780">
 <node TEXT="LQR" ID="ID_1771953472" CREATED="1483386447730" MODIFIED="1483386450725"/>
 <node TEXT="LQG" ID="ID_1227850089" CREATED="1483386451696" MODIFIED="1483386453931">
-<node TEXT="iLQG" ID="ID_827949031" CREATED="1483386455718" MODIFIED="1483386460143"/>
+<node TEXT="iLQG" ID="ID_827949031" CREATED="1483386455718" MODIFIED="1483386460143">
+<node TEXT="is a locally-optimal feedback control" ID="ID_1979248012" CREATED="1486339188681" MODIFIED="1486339388585"/>
+<node TEXT="for nonlinear stochastic systems" ID="ID_397709744" CREATED="1486339389204" MODIFIED="1486339404069"/>
+<node TEXT="with control constraints" ID="ID_1930552671" CREATED="1486339404936" MODIFIED="1486339438534"/>
+<node TEXT="and with non-quadratic cost functions" ID="ID_1547572096" CREATED="1486340693348" MODIFIED="1486340707314"/>
+<node TEXT="Gauss-Newton method for non-linear least-squares optimization" ID="ID_1700504295" CREATED="1486337064155" MODIFIED="1486337094791"/>
+<node TEXT="a variant of Differential Dynamic Programming" ID="ID_1803226874" CREATED="1486337386226" MODIFIED="1486337420567"/>
+</node>
 <node TEXT="AICO" ID="ID_1084912685" CREATED="1484921992916" MODIFIED="1484921997280"/>
 </node>
-<node TEXT="Programaci&#xf3;n din&#xe1;mica" ID="ID_233237676" CREATED="1483386468083" MODIFIED="1483386476524"/>
+<node TEXT="Programaci&#xf3;n din&#xe1;mica" ID="ID_233237676" CREATED="1483386468083" MODIFIED="1483386476524">
+<node TEXT="MPC" ID="ID_1240075578" CREATED="1486213851786" MODIFIED="1486213854360">
+<node TEXT="online trajectory optimization" ID="ID_1328594169" CREATED="1486224428946" MODIFIED="1486224443969">
+<node TEXT="finite horizon model" ID="ID_413336636" CREATED="1486337009662" MODIFIED="1486337016470"/>
+</node>
+<node TEXT="basado en modelo" ID="ID_1079992887" CREATED="1486334688867" MODIFIED="1486334699861"/>
+<node TEXT="optimos locales" ID="ID_1638028594" CREATED="1486334757905" MODIFIED="1486334765102"/>
+<node TEXT="identificacion de sistemas" ID="ID_1239945082" CREATED="1486334771816" MODIFIED="1486334778457">
+<node TEXT="para el modelo" ID="ID_762504526" CREATED="1486334785396" MODIFIED="1486334789342"/>
+</node>
+<node TEXT="controladores en lazo abierto" ID="ID_1356992289" CREATED="1486334798136" MODIFIED="1486334808710">
+<node TEXT="depende de la posicion inicial" ID="ID_1392474254" CREATED="1486334840796" MODIFIED="1486334848418"/>
+<node TEXT="no-estacionario" ID="ID_1354811234" CREATED="1486334850884" MODIFIED="1486334856956"/>
+</node>
+</node>
+<node TEXT="RL" ID="ID_285592341" CREATED="1486334680767" MODIFIED="1486334682667"/>
+</node>
 </node>
 <node TEXT="RL" ID="ID_985883590" CREATED="1484922007519" MODIFIED="1484922011151">
+<node TEXT="Algoritmos" ID="ID_729739506" CREATED="1486211744460" MODIFIED="1486211750661">
 <node TEXT="eRWR" ID="ID_1229672905" CREATED="1485732112341" MODIFIED="1485732118787"/>
 <node TEXT="PoWER" ID="ID_743276692" CREATED="1485732119920" MODIFIED="1485732127518"/>
 <node TEXT="eNAC" ID="ID_1064753927" CREATED="1484922015679" MODIFIED="1484922035103"/>
 <node TEXT="REPS" ID="ID_1424129428" CREATED="1484922035631" MODIFIED="1484922037693"/>
+<node TEXT="PI&#xb2;" ID="ID_1074934809" CREATED="1486129284716" MODIFIED="1486129292586"/>
+<node TEXT="CMA-ES" ID="ID_203528530" CREATED="1486129295481" MODIFIED="1486129299725"/>
 <node TEXT="GPS" ID="ID_454974373" CREATED="1484922038326" MODIFIED="1484922046354"/>
 <node TEXT="TRPO" ID="ID_822442990" CREATED="1484922046930" MODIFIED="1484922052626"/>
 <node TEXT="DDPG" ID="ID_535874131" CREATED="1484922336214" MODIFIED="1484922350670"/>
+</node>
+<node TEXT="Deep learning" ID="ID_1731971364" CREATED="1486211755218" MODIFIED="1486211775858">
+<node TEXT="End-to-end learning for" ID="ID_469158267" CREATED="1486211779239" MODIFIED="1486211785677">
+<node TEXT="vision" ID="ID_458677466" CREATED="1486211794789" MODIFIED="1486211850866"/>
+<node TEXT="habla" ID="ID_461922192" CREATED="1486211852525" MODIFIED="1486211861021"/>
+<node TEXT="text" ID="ID_911053478" CREATED="1486211787373" MODIFIED="1486211794341"/>
+<node TEXT="control" ID="ID_848978416" CREATED="1486211863357" MODIFIED="1486211865762"/>
+</node>
+<node TEXT="for state representation" ID="ID_1957215523" CREATED="1486212119914" MODIFIED="1486212132197"/>
+</node>
 </node>
 </node>
 <node TEXT="Justificiaci&#xf3;n" POSITION="right" ID="ID_387575251" CREATED="1483367001649" MODIFIED="1483475757100" MAX_WIDTH="300" MIN_WIDTH="100" FORMAT="STANDARD_FORMAT">
@@ -142,11 +178,105 @@
 </node>
 <node TEXT="Objetivos" POSITION="right" ID="ID_1781279928" CREATED="1483366985085" MODIFIED="1483475757103" MAX_WIDTH="300" MIN_WIDTH="100" FORMAT="STANDARD_FORMAT">
 <edge COLOR="#0000ff"/>
-<node TEXT="General" ID="ID_1264614468" CREATED="1483367212307" MODIFIED="1483378101094" MAX_WIDTH="300"/>
+<node TEXT="General" ID="ID_1264614468" CREATED="1483367212307" MODIFIED="1486130140733" MAX_WIDTH="300"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Proponer una metodolog&#237;a para analizar y organizar la informaci&#243;n procedente de la
+    </p>
+    <p>
+      comunicaci&#243;n entre el entorno y el cerebro a trav&#233;s del lazo sensoriomotor, que permita
+    </p>
+    <p>
+      extraer caracter&#237;sticas naturales de locomoci&#243;n de comportamientos ya aprendidos, con el
+    </p>
+    <p>
+      fin de formar modelos internos que permitan estructurar controladores y estimadores, del
+    </p>
+    <p>
+      comportamiento de su morfolog&#237;a e interacci&#243;n con el entorno de forma predictiva.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 <node TEXT="Espec&#xed;ficos" ID="ID_1251063170" CREATED="1483367222303" MODIFIED="1483378101095" MAX_WIDTH="300">
-<node TEXT="Obj 1. Construcci&#xf3;n del modelo humanoide" ID="ID_1435321531" CREATED="1483367392495" MODIFIED="1483732054734" MAX_WIDTH="310" MIN_WIDTH="310"/>
-<node TEXT="Obj 2. Modelos internos del lazo sensoriomotor" ID="ID_626358253" CREATED="1483367397114" MODIFIED="1483732054733" MAX_WIDTH="310" MIN_WIDTH="310"/>
-<node TEXT="Obj 3. Transferencia de controladores" ID="ID_320318515" CREATED="1483367401361" MODIFIED="1483732054731" MAX_WIDTH="310" MIN_WIDTH="310"/>
+<node TEXT="Obj 1. Construcci&#xf3;n del modelo humanoide" ID="ID_1435321531" CREATED="1483367392495" MODIFIED="1486130780317" MAX_WIDTH="330" MIN_WIDTH="330"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Construir un modelo computacional de un humanoide con un sistema NMS, sobre el
+    </p>
+    <p>
+      cual se pueda aprender comportamientos por auto-organizaci&#243;n y por demostraci&#243;n,
+    </p>
+    <p>
+      con la finalidad de formar un generador de muestras estad&#237;sticas de comportamientos
+    </p>
+    <p>
+      humanoides para analizar posteriormente.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Obj 2. Modelos internos del lazo sensoriomotor" ID="ID_626358253" CREATED="1483367397114" MODIFIED="1486130780318" MAX_WIDTH="330" MIN_WIDTH="330"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Construir un controlador jer&#225;rquico, que aprenda modelos internos del lazo sensorio-
+    </p>
+    <p>
+      motor y su din&#225;mica interna, cuyo objetivo principal sea codicar sus comportamien-
+    </p>
+    <p>
+      tos mediante funciones de costo, de forma tal que le permitan mejorar su desempe&#241;o
+    </p>
+    <p>
+      y predecir situaciones de fallas a medida que interact&#250;a con su entorno, el cual puede
+    </p>
+    <p>
+      ser ligeramente no-estructurado.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Obj 3. Transferencia de controladores" ID="ID_320318515" CREATED="1483367401361" MODIFIED="1486130780318" MAX_WIDTH="330" MIN_WIDTH="330"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Proponer un m&#233;todo de transferencia de un controlador NMS a una arquitectura
+    </p>
+    <p>
+      humanoide, donde se defina las reglas de similitud de patrones sensoriales en el lazo
+    </p>
+    <p>
+      sensoriomotor sin importar las diferencias morfol&#243;gicas, de forma que se aseguren el
+    </p>
+    <p>
+      desarrollo de un comportamiento.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 </node>
 <node TEXT="Metodolog&#xed;a" POSITION="right" ID="ID_475407544" CREATED="1483366973628" MODIFIED="1483475757105" MAX_WIDTH="300" MIN_WIDTH="100" FORMAT="STANDARD_FORMAT">
@@ -383,7 +513,32 @@
 <node TEXT="iid" ID="ID_362540831" CREATED="1483387188202" MODIFIED="1483387194261"/>
 </node>
 </node>
-<node TEXT="aprendizaje de la representacion del estado" ID="ID_618545056" CREATED="1486040212520" MODIFIED="1486040229665"/>
+<node TEXT="aprendizaje de la representacion del estado" ID="ID_618545056" CREATED="1486040212520" MODIFIED="1486040229665">
+<node TEXT="aprendizaje no supervizado" ID="ID_517037453" CREATED="1486139899298" MODIFIED="1486139905980">
+<node TEXT="observation-to-state map $f:O\to S$" ID="ID_1686834110" CREATED="1486140459346" MODIFIED="1486140497550" FORMAT="latexPatternFormat"/>
+<node TEXT="de los datos" ID="ID_105851832" CREATED="1486140526679" MODIFIED="1486140533442"/>
+<node TEXT="tipos" ID="ID_1310604679" CREATED="1486140702869" MODIFIED="1486140705173">
+<node TEXT="auto-encoders" ID="ID_206231601" CREATED="1486139909598" MODIFIED="1486139916159"/>
+<node TEXT="SFA (slow feature analysis)" ID="ID_1146436484" CREATED="1486140707122" MODIFIED="1486140730243"/>
+<node TEXT="Robotic Priors" ID="ID_317057496" CREATED="1486140744047" MODIFIED="1486140749401">
+<node TEXT="cada prior define una funcion de p&#xe9;rdida" ID="ID_1417640995" CREATED="1486140975660" MODIFIED="1486140991403"/>
+<node TEXT="una red de observacion-a-estado  es entrenada al minimizar una funcion de perdidad combinada de priores" ID="ID_40716851" CREATED="1486141030669" MODIFIED="1486141135888" MAX_WIDTH="300" MIN_WIDTH="300"/>
+<node TEXT="acelear el aprendiaje al utilzar representaciones del estado" ID="ID_721302137" CREATED="1486141163293" MODIFIED="1486141193934" MAX_WIDTH="300" MIN_WIDTH="300"/>
+<node TEXT="tipos" ID="ID_577573995" CREATED="1486140883554" MODIFIED="1486140885870">
+<node TEXT="simplicidad" ID="ID_1928351470" CREATED="1486140942279" MODIFIED="1486140951336"/>
+<node TEXT="coherencia temporal" ID="ID_121034171" CREATED="1486140892052" MODIFIED="1486140941899"/>
+<node TEXT="proporcionalidad" ID="ID_957958377" CREATED="1486140913975" MODIFIED="1486140918819"/>
+<node TEXT="causalidad" ID="ID_1553570938" CREATED="1486140902071" MODIFIED="1486140904813"/>
+<node TEXT="repetibilidad" ID="ID_1522614285" CREATED="1486140887237" MODIFIED="1486140891598"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="representaciones de estado dise&#xf1;ados a mano" ID="ID_229335248" CREATED="1486139996689" MODIFIED="1486140017283">
+<node TEXT="ZMP" ID="ID_1858992181" CREATED="1486140017285" MODIFIED="1486140059249"/>
+<node TEXT="ipm" ID="ID_856768142" CREATED="1486140022911" MODIFIED="1486140034226"/>
+</node>
+</node>
 </node>
 <node TEXT="Implementaci&#xf3;n" ID="ID_1026620042" CREATED="1483374355722" MODIFIED="1483378101200" MAX_WIDTH="300">
 <node TEXT="Evaluaci&#xf3;n de pol&#xed;tica" ID="ID_64265578" CREATED="1483383372012" MODIFIED="1483383404075">
@@ -446,23 +601,27 @@
 </node>
 <node TEXT="Metodolog&#xed;a Obj. 1:&#xa;Construcci&#xf3;n modelo humanoide" ID="ID_1711562237" CREATED="1483377858861" MODIFIED="1483475757175" MAX_WIDTH="300" MIN_WIDTH="300" FORMAT="STANDARD_FORMAT">
 <node TEXT="Objetivo de los casos" ID="ID_315132462" CREATED="1483732784973" MODIFIED="1483732794748">
-<node TEXT="datos sensoriomotores" ID="ID_1294527887" CREATED="1483732794762" MODIFIED="1483732823201"/>
+<node TEXT="generar datos sensoriomotores de comportamientos" ID="ID_1294527887" CREATED="1483732794762" MODIFIED="1486130455816"/>
 <node TEXT="aprendizaje de principiante 1ra fase por imitaci&#xf3;n" ID="ID_1514472135" CREATED="1483732849068" MODIFIED="1483733969314"/>
 <node TEXT="extracci&#xf3;n de politicas de la imitaci&#xf3;n" ID="ID_237901256" CREATED="1483734994832" MODIFIED="1483735014967"/>
+<node TEXT="comportamientos por auto-organizacion" ID="ID_13136674" CREATED="1486130420225" MODIFIED="1486130431219"/>
 </node>
 <node TEXT="Caso 1:&#xa;Caminata sobre plano con control de direcci&#xf3;n" ID="ID_849460697" CREATED="1483383281895" MODIFIED="1483731898345" MAX_WIDTH="300" MIN_WIDTH="290" FORMAT="STANDARD_FORMAT">
 <node TEXT="Partir del modelo de Wang-Chevallereau-Rengifo" ID="ID_162293551" CREATED="1483389508182" MODIFIED="1483390947944" MAX_WIDTH="250">
-<node TEXT="Implementa HZD-ZMP" ID="ID_101590416" CREATED="1483389624368" MODIFIED="1483389633429"/>
+<node TEXT="que implementa" ID="ID_101590416" CREATED="1483389624368" MODIFIED="1486142533557">
+<node TEXT="HZD-ZMP" ID="ID_415575796" CREATED="1486130307542" MODIFIED="1486130311329"/>
+<node TEXT="control de direccion" ID="ID_1219177368" CREATED="1486130283929" MODIFIED="1486130296250"/>
+</node>
 </node>
 <node TEXT="Por demostraci&#xf3;n encontrar las politicas para NMS" ID="ID_93445551" CREATED="1483389634896" MODIFIED="1483390947949" MAX_WIDTH="250"/>
-<node TEXT="Mantener balance dinamico pero" ID="ID_1442753" CREATED="1483395640691" MODIFIED="1483395667619">
+<node TEXT="AL OBJ 2!!! Mantener balance din&#xe1;mico pero" ID="ID_1442753" CREATED="1483395640691" MODIFIED="1486142679001">
 <node TEXT="evolcionar ZMP" ID="ID_643804041" CREATED="1483395653389" MODIFIED="1483395709541">
 <node TEXT="a rotaci&#xf3;n del pie" ID="ID_292775660" CREATED="1483395772152" MODIFIED="1483395780919"/>
 <node TEXT="obtener eficiencia" ID="ID_367663773" CREATED="1483395917869" MODIFIED="1483395930476"/>
 </node>
 <node TEXT="elimine flexion de rodilla" ID="ID_1476256740" CREATED="1483395746438" MODIFIED="1483395759605"/>
 </node>
-<node TEXT="con RRL" ID="ID_1323385178" CREATED="1483389531857" MODIFIED="1483390997253">
+<node TEXT="NO ES OBJ 1!!! con RRL" ID="ID_1323385178" CREATED="1483389531857" MODIFIED="1486142743034">
 <node TEXT="Configurar el mejor algoritmo" ID="ID_1198695521" CREATED="1483394605280" MODIFIED="1483394615164"/>
 <node TEXT="encontrar politicas optimas" ID="ID_1681151956" CREATED="1483390997268" MODIFIED="1483391012304"/>
 <node TEXT="proponer manualmente funciones de costo" ID="ID_1448920698" CREATED="1483391205280" MODIFIED="1483396015619">
@@ -475,7 +634,7 @@
 </node>
 </node>
 </node>
-<node TEXT="con IRRL" ID="ID_651946046" CREATED="1483391015393" MODIFIED="1483391020952">
+<node TEXT="NO ES OBJ 1!!! con IRRL" ID="ID_651946046" CREATED="1483391015393" MODIFIED="1486149024629">
 <node TEXT="Configurar el mejor algoritmo" ID="ID_1279433861" CREATED="1483394617667" MODIFIED="1483394628619"/>
 <node TEXT="encontrar costos" ID="ID_856144784" CREATED="1483391054278" MODIFIED="1483391192332">
 <node TEXT="comb. lineal" ID="ID_516035727" CREATED="1483394436222" MODIFIED="1483394447182"/>
@@ -485,9 +644,13 @@
 </node>
 <node TEXT="Caso 2:&#xa;Ponerse en pie, manteniendo el balance" ID="ID_590558292" CREATED="1483388435978" MODIFIED="1483475757205" MAX_WIDTH="300" MIN_WIDTH="290" FORMAT="STANDARD_FORMAT">
 <node TEXT="utilizando" ID="ID_1267467717" CREATED="1483465379796" MODIFIED="1483465452712">
-<node TEXT="posicionamiento del pie" ID="ID_533145043" CREATED="1483465452725" MODIFIED="1483465469456"/>
+<node TEXT="posicionamiento del pie" ID="ID_533145043" CREATED="1483465452725" MODIFIED="1483465469456">
+<node TEXT="lugares de seguridad" ID="ID_434432302" CREATED="1486149132235" MODIFIED="1486149138068"/>
+</node>
 <node TEXT="postura de los brazos" ID="ID_533526474" CREATED="1483465470423" MODIFIED="1483465483933"/>
-<node TEXT="sostenimiento con los brazos" ID="ID_842384786" CREATED="1483465484450" MODIFIED="1483465558769"/>
+<node TEXT="sostenimiento con los brazos" ID="ID_842384786" CREATED="1483465484450" MODIFIED="1483465558769">
+<node TEXT="minimizando la energia de los brazos" ID="ID_973172548" CREATED="1486149091908" MODIFIED="1486149122326"/>
+</node>
 </node>
 <node TEXT="levantarse con" ID="ID_1629509477" CREATED="1483465561816" MODIFIED="1483465581216">
 <node TEXT="maximizaci&#xf3;n de la altura" ID="ID_601761211" CREATED="1483465581220" MODIFIED="1483465593786">
@@ -561,14 +724,14 @@
 </node>
 </node>
 <node TEXT="Tipos de modelos" ID="ID_1365546775" CREATED="1483733195250" MODIFIED="1483733203568">
-<node TEXT="Comportamientos a traves de funciones de costo" ID="ID_985475459" CREATED="1483733203584" MODIFIED="1483733222168">
+<node TEXT="Comportamientos a trav&#xe9;s de funciones de costo" ID="ID_985475459" CREATED="1483733203584" MODIFIED="1486129989218">
 <node TEXT="Empleando IRL" ID="ID_1202939561" CREATED="1483734833370" MODIFIED="1483734837805"/>
 <node TEXT="Buscando" ID="ID_801419700" CREATED="1483734849554" MODIFIED="1483734866505">
 <node TEXT="modularidad" ID="ID_1027625710" CREATED="1483734866529" MODIFIED="1483734869003"/>
 <node TEXT="estructura jer&#xe1;rquica" ID="ID_1341928425" CREATED="1483734869525" MODIFIED="1483734881486"/>
 </node>
 </node>
-<node TEXT="Modelos dinamicos" ID="ID_1445912314" CREATED="1483733223031" MODIFIED="1483733233297">
+<node TEXT="Modelos din&#xe1;micos" ID="ID_1445912314" CREATED="1483733223031" MODIFIED="1486129741731">
 <node TEXT="inversos" ID="ID_335898739" CREATED="1483733233312" MODIFIED="1483733237351">
 <node TEXT="para control" ID="ID_1686420768" CREATED="1483733247904" MODIFIED="1483733250494"/>
 </node>
@@ -583,7 +746,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Proposito de los modelos" ID="ID_1538081728" CREATED="1483733364466" MODIFIED="1483733371835">
+<node TEXT="Prop&#xf3;sito de los modelos" ID="ID_1538081728" CREATED="1483733364466" MODIFIED="1486129752166">
 <node TEXT="predicci&#xf3;n" ID="ID_28532645" CREATED="1483733371849" MODIFIED="1483733377933">
 <node TEXT="para ensayos mentales" ID="ID_1467422289" CREATED="1483733620468" MODIFIED="1483733632010"/>
 <node TEXT="detecci&#xf3;n de fallas" ID="ID_852881171" CREATED="1483733632446" MODIFIED="1483733637957"/>
