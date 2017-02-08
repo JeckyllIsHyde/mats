@@ -66,7 +66,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="7"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="8"/>
 <node TEXT="Problema" POSITION="right" ID="ID_1815121283" CREATED="1483367016626" MODIFIED="1483475757095" MAX_WIDTH="300" MIN_WIDTH="100" FORMAT="STANDARD_FORMAT">
 <edge COLOR="#00ffff"/>
 <node TEXT="Locomoci&#xf3;n humanoide" ID="ID_1294224074" CREATED="1483374985203" MODIFIED="1483378101054" MAX_WIDTH="300">
