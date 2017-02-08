@@ -12,7 +12,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <hook NAME="MapStyle">
     <properties show_note_icons="true"/>
@@ -64,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="2"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="3"/>
 <richcontent TYPE="NOTE">
 
 <html>
@@ -134,9 +133,17 @@
 <node TEXT="2. Mood, A. M.; Grabill, F. A.; Boes, Duane. INTRODUCTION TO THE THEORY OF STATISTICS. Third Edition. Mc Graw-Hill International Editions. 1974." ID="ID_622259442" CREATED="1486041211240" MODIFIED="1486041415816" MAX_WIDTH="400" MIN_WIDTH="400"/>
 <node TEXT="3. Taha, Hamdy. INVESTIGACION DE OPERACIONES: UNA INTRODUCCION. Sexta Edicion. Pearson  1998." ID="ID_835049180" CREATED="1486041337627" MODIFIED="1486041428942" MAX_WIDTH="400" MIN_WIDTH="400"/>
 <node TEXT="4. Bunge, Mario. La ciencia. Su m&#xe9;todo y su filosof&#xed;a" ID="ID_1876488428" CREATED="1486041600390" MODIFIED="1486042137295" MAX_WIDTH="400" MIN_WIDTH="400">
-<node TEXT="ENSAYO 1. qu&#xe9; es la ciencia" ID="ID_1427758779" CREATED="1486041612831" MODIFIED="1486041752744"/>
-<node TEXT="ENSAYO 2. cu&#xe1;l es el m&#xe9;todo de la ciencia" ID="ID_1439381176" CREATED="1486041619231" MODIFIED="1486041731426"/>
-<node TEXT="ENSAYO 3. qu&#xe9; significa ley cient&#xed;fica" ID="ID_138316466" CREATED="1486041624753" MODIFIED="1486041717725"/>
+<node TEXT="ENSAYO 1. &#xbf;qu&#xe9; es la ciencia?" ID="ID_1427758779" CREATED="1486041612831" MODIFIED="1486472211679">
+<node TEXT="1. Introducci&#xf3;n" ID="ID_98771708" CREATED="1486472213337" MODIFIED="1486472431566"/>
+<node TEXT="2. Ciencia formal y ciencia f&#xe1;ctica" ID="ID_1131478211" CREATED="1486472256956" MODIFIED="1486472434271"/>
+<node TEXT="3. Inventario de las principales caracter&#xed;sticas de la ciencia f&#xe1;ctica" ID="ID_1092952679" CREATED="1486472293725" MODIFIED="1486472438108">
+<node TEXT="1. El conocimiento cient&#xed;fico es f&#xe1;ctico" ID="ID_1936972463" CREATED="1486472339525" MODIFIED="1486472465128"/>
+<node TEXT="2. El conocimiento cient&#xed;fico trasciende  los hechos" ID="ID_518959035" CREATED="1486472356324" MODIFIED="1486472469383"/>
+<node TEXT="3. La ciencia es anal&#xed;tica" ID="ID_231918133" CREATED="1486472389760" MODIFIED="1486472472475"/>
+</node>
+</node>
+<node TEXT="ENSAYO 2. &#xbf;cu&#xe1;l es el m&#xe9;todo de la ciencia?" ID="ID_1439381176" CREATED="1486041619231" MODIFIED="1486472487060"/>
+<node TEXT="ENSAYO 3. &#xbf;qu&#xe9; significa ley cient&#xed;fica?" ID="ID_138316466" CREATED="1486041624753" MODIFIED="1486472498973"/>
 <node TEXT="ENSAYO 4. hacer ciencia filosoficamente y filosofar la ciencia" ID="ID_1382093630" CREATED="1486041678680" MODIFIED="1486041702252"/>
 </node>
 </node>
@@ -148,6 +155,83 @@
 </node>
 <node TEXT="2. Opcional Leer un ensayo" ID="ID_1227241656" CREATED="1486043247567" MODIFIED="1486043278111">
 <node TEXT="Hardy, G. H. Apolog&#xed;a de un matem&#xe1;tico" ID="ID_1208196444" CREATED="1486043298698" MODIFIED="1486043527092"/>
+</node>
+<node TEXT="3. Opcional Probar el programa de seleccion de puntos de clase" ID="ID_329451275" CREATED="1486472110861" MODIFIED="1486472148717">
+<node TEXT="Realizar el histograma" ID="ID_684119435" CREATED="1486472148727" MODIFIED="1486472158207"/>
+</node>
+<node TEXT="4. Jorge Luis Borges: Ficciones" ID="ID_1851667317" CREATED="1486472730760" MODIFIED="1486472770386">
+<node TEXT="La loteria de Babilonia" ID="ID_200502730" CREATED="1486472770398" MODIFIED="1486472792815">
+<node TEXT="Azar y aletoriedad?" ID="ID_1932888251" CREATED="1486472798208" MODIFIED="1486472812524"/>
+</node>
+</node>
+<node TEXT="5.Ejercicio Espacios de probabilidad" ID="ID_1798740709" CREATED="1486474638251" MODIFIED="1486486287138">
+<node TEXT="Proponer al menos 5 experimentos aleatorios $\Epsilon$" ID="ID_1662741598" CREATED="1486475100508" MODIFIED="1486486303041" FORMAT="latexPatternFormat">
+<node TEXT="en el campo de la computaci&#xf3;n y las redes de computadores" ID="ID_1582617378" CREATED="1486474706322" MODIFIED="1486474733080"/>
+</node>
+<node TEXT="Determinar $\Omega$" ID="ID_420254787" CREATED="1486475069602" MODIFIED="1486486309720" FORMAT="latexPatternFormat"/>
+</node>
+</node>
+<node TEXT="1.1 Espacios de Probabilidad" POSITION="right" ID="ID_51684248" CREATED="1486472518724" MODIFIED="1486486340921">
+<edge COLOR="#00ff00"/>
+<node TEXT="Vocabulario" ID="ID_376817754" CREATED="1486472697933" MODIFIED="1486472703498">
+<node ID="ID_1074936259" CREATED="1486472680214" MODIFIED="1486472680214"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Experimento aleatorio
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Es diferente a un experimento determin&#xed;stico" ID="ID_512422584" CREATED="1486472609254" MODIFIED="1486472625234"/>
+<node TEXT="Procedimiento o actividad que al ser ejecutado bajo las mismas (aparentes) circunstancias, puede producir diferentes resultados" ID="ID_1311816934" CREATED="1486472552347" MODIFIED="1486472593393"/>
+<node TEXT="Imposible predecir un resultado" ID="ID_620464" CREATED="1486472594298" MODIFIED="1486472605445"/>
+</node>
+<node TEXT="riesgo" ID="ID_48545555" CREATED="1486472703512" MODIFIED="1486472709558"/>
+<node TEXT="azar" ID="ID_1876443654" CREATED="1486472715781" MODIFIED="1486472717739"/>
+<node TEXT="incertidumbre" ID="ID_820927549" CREATED="1486472709986" MODIFIED="1486472715258"/>
+<node TEXT="suerte" ID="ID_196686571" CREATED="1486472718284" MODIFIED="1486472719679"/>
+</node>
+<node TEXT="Espacio de probabilidad" ID="ID_1674563644" CREATED="1486473048658" MODIFIED="1486473055748">
+<node TEXT="elemento matematico con tres elementos" ID="ID_1876685651" CREATED="1486473055759" MODIFIED="1486473067110">
+<node TEXT="el conjuto $\Omega$" ID="ID_250473887" CREATED="1486473067120" MODIFIED="1486473458884" FORMAT="latexPatternFormat">
+<node TEXT="son todos los elementos $\left\{\omega_i\right\}_{i\in I}$" ID="ID_538369230" CREATED="1486473096517" MODIFIED="1486473475776" FORMAT="latexPatternFormat"/>
+<node TEXT="donde $I$ pude ser $(\mathbb{N},\mathbb{R},...)$" ID="ID_1756450417" CREATED="1486473241169" MODIFIED="1486473294223" FORMAT="latexPatternFormat">
+<node TEXT="tipos" ID="ID_1874411374" CREATED="1486473355601" MODIFIED="1486473359677">
+<node TEXT="continuos" ID="ID_1160231137" CREATED="1486473359687" MODIFIED="1486473363955"/>
+<node TEXT="discretos" ID="ID_1135701799" CREATED="1486473364258" MODIFIED="1486473366584"/>
+<node TEXT="mixtos" ID="ID_527289668" CREATED="1486473367314" MODIFIED="1486473369571"/>
+</node>
+</node>
+<node TEXT="donde $\omega_i=(\omega_{i1},\omega_{i2},\ldots,\omega_{ij},\ldots,\omega_{in_i})$ es una tupla" ID="ID_1373523590" CREATED="1486473145721" MODIFIED="1486473294228" FORMAT="latexPatternFormat">
+<node TEXT="donde $n_i$ es el numero de elementos del i-esimo resultado" ID="ID_1881573627" CREATED="1486473386869" MODIFIED="1486473432740" FORMAT="latexPatternFormat"/>
+<node TEXT="$\omega_{ij}$ es el j-esimo elemento del i-esimo resultado" ID="ID_498124356" CREATED="1486474589513" MODIFIED="1486474630351" FORMAT="latexPatternFormat"/>
+<node TEXT="la tupla es un elemento ordenado a diferencia de un conjunto general que no lo es" ID="ID_501195403" CREATED="1486473556913" MODIFIED="1486473584975"/>
+</node>
+<node TEXT="Ejemplos:" ID="ID_588009131" CREATED="1486473712913" MODIFIED="1486473966228">
+<node TEXT="1" OBJECT="java.lang.Long|1" ID="ID_928132847" CREATED="1486473968742" MODIFIED="1486473972923">
+<node TEXT="$\Epsilon$: Lanzamiento de una moneda" ID="ID_907659701" CREATED="1486473717421" MODIFIED="1486473948071" FORMAT="latexPatternFormat"/>
+<node TEXT="$\Omega=\left\{(c),(s)\right\}$, $I=\left\{1,2\right\}$ con $n_1=n_2=1$" ID="ID_220862804" CREATED="1486473752282" MODIFIED="1486473903195" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="2" OBJECT="java.lang.Long|2" ID="ID_92647223" CREATED="1486473979213" MODIFIED="1486473982718">
+<node TEXT="$\Epsilon$: Lanzamiento de un dado de 4 caras" ID="ID_315933544" CREATED="1486473717421" MODIFIED="1486474006583" FORMAT="latexPatternFormat"/>
+<node TEXT="$\Omega=\left\{(1),(2),(3),(4)\right\}$, $I=\left\{1,2,3,4\right\}$ con $n_1=n_2=1$" ID="ID_331265435" CREATED="1486473752282" MODIFIED="1486474064933" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="3" OBJECT="java.lang.Long|3" ID="ID_1026924063" CREATED="1486473982727" MODIFIED="1486474068742">
+<node TEXT="$\Epsilon$: Lanzamiento de un dado de 4 caras hasta obtener el (2)" ID="ID_1488791046" CREATED="1486473717421" MODIFIED="1486474086334" FORMAT="latexPatternFormat"/>
+<node TEXT="$\Omega=\left\{(2),(1,2),(3,2),(4,2),(1,1,2),(1,3,2),\ldots,(4,\ldots,4,2)\right\}$, $I=\left\{1,2,3,4\right\}$ con $n_1=1,n_2=n_3=n_4=2,\ldots$" ID="ID_660107986" CREATED="1486473752282" MODIFIED="1486474551468" FORMAT="latexPatternFormat" MAX_WIDTH="300" MIN_WIDTH="300"/>
+</node>
+</node>
+</node>
+<node TEXT="$A$, formalmente $\sigma$-Algebra" ID="ID_1345948102" CREATED="1486473075494" MODIFIED="1486486245859" FORMAT="latexPatternFormat">
+<node TEXT="" ID="ID_52076146" CREATED="1486475226232" MODIFIED="1486475226232"/>
+</node>
+<node TEXT="$P$" ID="ID_1702115123" CREATED="1486473085196" MODIFIED="1486473089208"/>
+</node>
 </node>
 </node>
 </node>
