@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="3"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="4"/>
 <richcontent TYPE="NOTE">
 
 <html>
@@ -138,8 +138,26 @@
 <node TEXT="2. Ciencia formal y ciencia f&#xe1;ctica" ID="ID_1131478211" CREATED="1486472256956" MODIFIED="1486472434271"/>
 <node TEXT="3. Inventario de las principales caracter&#xed;sticas de la ciencia f&#xe1;ctica" ID="ID_1092952679" CREATED="1486472293725" MODIFIED="1486472438108">
 <node TEXT="1. El conocimiento cient&#xed;fico es f&#xe1;ctico" ID="ID_1936972463" CREATED="1486472339525" MODIFIED="1486472465128"/>
-<node TEXT="2. El conocimiento cient&#xed;fico trasciende  los hechos" ID="ID_518959035" CREATED="1486472356324" MODIFIED="1486472469383"/>
+<node TEXT="2. El conocimiento cient&#xed;fico trasciende los hechos" ID="ID_518959035" CREATED="1486472356324" MODIFIED="1486644287573"/>
 <node TEXT="3. La ciencia es anal&#xed;tica" ID="ID_231918133" CREATED="1486472389760" MODIFIED="1486472472475"/>
+<node TEXT="4. La investigaci&#xf3;n cient&#xed;fica es especializada" ID="ID_1234999697" CREATED="1486643775451" MODIFIED="1486643790803"/>
+<node TEXT="5. El conocimiento cient&#xed;fico es claro y preciso" ID="ID_1051430290" CREATED="1486643801592" MODIFIED="1486644336833">
+<node TEXT="a. los problemas se formulan de manera clara" ID="ID_1113689222" CREATED="1486643840273" MODIFIED="1486643923438"/>
+<node TEXT="b. la ciencia parte de nociones que parecen claras para los no iniciados" ID="ID_1715139418" CREATED="1486643970020" MODIFIED="1486644069889"/>
+<node TEXT="c. la ciencia define la mayoria de sus conceptos" ID="ID_599123953" CREATED="1486644028517" MODIFIED="1486644037924"/>
+<node TEXT="d. la ciencia crea lenguajes artificiales inventado simbolos" ID="ID_986479042" CREATED="1486644071173" MODIFIED="1486644140745"/>
+<node TEXT="e. la ciencia procura siempre medir y registrar los fen&#xf3;menos" ID="ID_725586488" CREATED="1486644150728" MODIFIED="1486644187924"/>
+</node>
+<node TEXT="6. El conocimiento cient&#xed;fico es comunicable" ID="ID_1426867857" CREATED="1486644196108" MODIFIED="1486644318597"/>
+<node TEXT="7. El conocimiento cient&#xed;fico es verificable" ID="ID_435440060" CREATED="1486644229603" MODIFIED="1486644324706"/>
+<node TEXT="8. La investigaci&#xf3;n cient&#xed;fica es met&#xf3;dica" ID="ID_1259962267" CREATED="1486644365816" MODIFIED="1486644402371"/>
+<node TEXT="9. El conocimiento cient&#xed;fico es sistem&#xe1;tico" ID="ID_273671304" CREATED="1486644413540" MODIFIED="1486644434522"/>
+<node TEXT="10. El conocimiento cient&#xed;fico es general" ID="ID_1001289498" CREATED="1486644957635" MODIFIED="1486644966426"/>
+<node TEXT="11. El conocimiento cient&#xed;fico es legal" ID="ID_231693615" CREATED="1486644966922" MODIFIED="1486644986080"/>
+<node TEXT="12. La ciencia es explicativa" ID="ID_1849464145" CREATED="1486644995345" MODIFIED="1486645003164"/>
+<node TEXT="13. El conocimiento cient&#xed;fico es predictivo" ID="ID_14129724" CREATED="1486645004011" MODIFIED="1486645027418"/>
+<node TEXT="14. La ciencia es abierta" ID="ID_1288035549" CREATED="1486645039335" MODIFIED="1486645046638"/>
+<node TEXT="15. La ciencia es &#xfa;til" ID="ID_1471868736" CREATED="1486645052332" MODIFIED="1486645058997"/>
 </node>
 </node>
 <node TEXT="ENSAYO 2. &#xbf;cu&#xe1;l es el m&#xe9;todo de la ciencia?" ID="ID_1439381176" CREATED="1486041619231" MODIFIED="1486472487060"/>
@@ -164,11 +182,37 @@
 <node TEXT="Azar y aletoriedad?" ID="ID_1932888251" CREATED="1486472798208" MODIFIED="1486472812524"/>
 </node>
 </node>
-<node TEXT="5.Ejercicio Espacios de probabilidad" ID="ID_1798740709" CREATED="1486474638251" MODIFIED="1486486287138">
+<node TEXT="5. Ejercicio Espacios de probabilidad" ID="ID_1798740709" CREATED="1486474638251" MODIFIED="1486645918247">
 <node TEXT="Proponer al menos 5 experimentos aleatorios $\Epsilon$" ID="ID_1662741598" CREATED="1486475100508" MODIFIED="1486486303041" FORMAT="latexPatternFormat">
 <node TEXT="en el campo de la computaci&#xf3;n y las redes de computadores" ID="ID_1582617378" CREATED="1486474706322" MODIFIED="1486474733080"/>
 </node>
 <node TEXT="Determinar $\Omega$" ID="ID_420254787" CREATED="1486475069602" MODIFIED="1486486309720" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="6. Proponer una relacion(funcion) que cumpla los axiomas" ID="ID_1751741447" CREATED="1486645918667" MODIFIED="1486645945134"/>
+<node TEXT="7. El duelo de Galois simulado" ID="ID_292524149" CREATED="1486646991684" MODIFIED="1486647018946">
+<node TEXT="C++" ID="ID_1870289641" CREATED="1486647032596" MODIFIED="1486647035428"/>
+<node TEXT="$u_1$, $u_2$ numeros aleatorios \in [0,1]" ID="ID_583503469" CREATED="1486647071488" MODIFIED="1486647514920" FORMAT="latexPatternFormat"/>
+<node TEXT="$x_1$, $x_2$ variables aleatorias" ID="ID_880577065" CREATED="1486647204851" MODIFIED="1486647493123" FORMAT="latexPatternFormat"/>
+<node TEXT="$\zeta$: tiempo de espera, con $\text{abs}|x_1-x_2|\leq\zeta$" ID="ID_1168122777" CREATED="1486647133816" MODIFIED="1486648217475" FORMAT="latexPatternFormat"/>
+<node TEXT="$A$: duelistas se encuentran" ID="ID_1069461651" CREATED="1486648162848" MODIFIED="1486648183358" FORMAT="latexPatternFormat"/>
+<node TEXT="solucion analitica: $f(\zeta)=1-(1-\zeta)^2=P[A|\zeta]$" ID="ID_1393210240" CREATED="1486647258319" MODIFIED="1486647716532" FORMAT="latexPatternFormat"/>
+<node TEXT="$\Delta\zeta=0.1$" ID="ID_1135744975" CREATED="1486647354538" MODIFIED="1486647742652" FORMAT="latexPatternFormat">
+<node TEXT="construir una tabla ($\zeta,P[A|\zeta]$" ID="ID_84096425" CREATED="1486647434285" MODIFIED="1486647760130" FORMAT="latexPatternFormat"/>
+</node>
+</node>
+<node TEXT="8. Raices complejas" ID="ID_1389181191" CREATED="1486648287376" MODIFIED="1486648301387">
+<node TEXT="Considere la ecuacion cuadratica" ID="ID_1463366432" CREATED="1486648301396" MODIFIED="1486667204780" FORMAT="latexPatternFormat"/>
+<node TEXT="$x^2+2bx+c=0$" ID="ID_1900894747" CREATED="1486648316699" MODIFIED="1486667199272" FORMAT="latexPatternFormat"/>
+<node TEXT="donde" ID="ID_873069331" CREATED="1486648348052" MODIFIED="1486648354287">
+<node TEXT="$\beta\in\mathbb{R}^+$" ID="ID_293665553" CREATED="1486648354296" MODIFIED="1486667211102" FORMAT="latexPatternFormat"/>
+<node TEXT="$x\leftarrow u(a,b)$" ID="ID_187125887" CREATED="1486648441784" MODIFIED="1486667169721" FORMAT="latexPatternFormat"/>
+<node TEXT="$x\leftarrow a+(b-a)u$" ID="ID_109244431" CREATED="1486648454964" MODIFIED="1486667272546" FORMAT="latexPatternFormat"/>
+<node TEXT="$\lim_{\beta\to+\infty}(P(A|\beta))=?$" ID="ID_588331097" CREATED="1486648487491" MODIFIED="1486667291676" FORMAT="latexPatternFormat"/>
+<node TEXT="$b\leftarrow u(-\beta,+\beta)$" ID="ID_329723117" CREATED="1486648371441" MODIFIED="1486667272536" FORMAT="latexPatternFormat"/>
+<node TEXT="$c\leftarrow u(-\beta,+\beta)$" ID="ID_781535812" CREATED="1486648414266" MODIFIED="1486667272532" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="Cual es la probabilidad de obtener una raiz real?" ID="ID_988697874" CREATED="1486648570592" MODIFIED="1486667411285" FORMAT="latexPatternFormat"/>
+<node TEXT="Encontrar soluci&#xf3;n analitica y simulada" ID="ID_708710234" CREATED="1486648599917" MODIFIED="1486667411290" FORMAT="latexPatternFormat"/>
 </node>
 </node>
 <node TEXT="1.1 Espacios de Probabilidad" POSITION="right" ID="ID_51684248" CREATED="1486472518724" MODIFIED="1486486340921">
@@ -228,9 +272,36 @@
 </node>
 </node>
 <node TEXT="$A$, formalmente $\sigma$-Algebra" ID="ID_1345948102" CREATED="1486473075494" MODIFIED="1486486245859" FORMAT="latexPatternFormat">
-<node TEXT="" ID="ID_52076146" CREATED="1486475226232" MODIFIED="1486475226232"/>
+<node TEXT="propiedades" ID="ID_52076146" CREATED="1486475226232" MODIFIED="1486645255888"/>
+<node TEXT="Ejemplos" ID="ID_869115758" CREATED="1486645258268" MODIFIED="1486645263255"/>
 </node>
-<node TEXT="$P$" ID="ID_1702115123" CREATED="1486473085196" MODIFIED="1486473089208"/>
+<node TEXT="$P$, la funcion de probabilidad" ID="ID_1702115123" CREATED="1486473085196" MODIFIED="1486648278524" FORMAT="latexPatternFormat">
+<node TEXT="$P:A\to[0,1]$, $A\to P[A]$" ID="ID_1003130564" CREATED="1486645285916" MODIFIED="1486645482524" FORMAT="latexPatternFormat">
+<node TEXT="se define como $P[A] := \frac{\text{med}(A)}{\text{med}(\Omega)}$" ID="ID_326294561" CREATED="1486645510866" MODIFIED="1486645608531" FORMAT="latexPatternFormat">
+<node TEXT="seg&#xfa;n Laplace: probabilidad vs posibilidad" ID="ID_989518938" CREATED="1486645580324" MODIFIED="1486645821071">
+<node TEXT="mundo discreto" ID="ID_459044309" CREATED="1486645970539" MODIFIED="1486645973709"/>
+<node TEXT="mundo continuo" ID="ID_1196658001" CREATED="1486645974204" MODIFIED="1486645980169">
+<node TEXT="probabilidad cero pero es posible" ID="ID_621032598" CREATED="1486646835548" MODIFIED="1486646843356"/>
+</node>
+</node>
+<node TEXT="el universo tiene una medida, no se debe cambiar para calcular la P[A]" ID="ID_617093090" CREATED="1486645822267" MODIFIED="1486645881621">
+<node TEXT="hipervolumen" ID="ID_1318492761" CREATED="1486645831708" MODIFIED="1486645836806"/>
+<node TEXT="volumen" ID="ID_1608256301" CREATED="1486645837165" MODIFIED="1486645839053"/>
+<node TEXT="&#xe1;rea" ID="ID_1946615630" CREATED="1486645839476" MODIFIED="1486645898164"/>
+<node TEXT="longitud" ID="ID_1272836390" CREATED="1486645847192" MODIFIED="1486645849640"/>
+</node>
+</node>
+</node>
+<node TEXT="propiedades" ID="ID_1450950076" CREATED="1486645324634" MODIFIED="1486645328524">
+<node TEXT="1. $P[A]\geq 0$, $\forall\,A$" ID="ID_778303886" CREATED="1486645328535" MODIFIED="1486645467156" FORMAT="latexPatternFormat"/>
+<node TEXT="2. $P[\Omega]=1$" ID="ID_1713497845" CREATED="1486645490567" MODIFIED="1486645713992" FORMAT="latexPatternFormat"/>
+<node TEXT="3" OBJECT="java.lang.Long|3" ID="ID_1334706812" CREATED="1486645717962" MODIFIED="1486645787912"/>
+</node>
+<node TEXT="El duelo de Evaristo Galois" ID="ID_1681661041" CREATED="1486646062015" MODIFIED="1486646401026">
+<icon BUILTIN="info"/>
+<node TEXT="En la ciudad de la {\it Discreci&#xf3;n} los duelos son raramente fatales. All&#xed; cada contrincante llega aleatoriamente entre las 5a.m. y las 6a.m. el dia acordado y espera exactamente 5 minutos (&#xa1;Honor servido!) a menos que su oponente llegue en ese intervalo de tiempo (o haya llegado antes y lo est&#xe9; esperando) caso en el cual habr&#xe1; pelea y uno de ellos morir&#xe1;." ID="ID_531127976" CREATED="1486646088907" MODIFIED="1486646459392" FORMAT="latexPatternFormat"/>
+</node>
+</node>
 </node>
 </node>
 </node>
