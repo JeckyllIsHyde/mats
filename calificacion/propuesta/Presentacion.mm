@@ -66,7 +66,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="8"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="7"/>
 <node TEXT="Problema" POSITION="right" ID="ID_1815121283" CREATED="1483367016626" MODIFIED="1483475757095" MAX_WIDTH="300" MIN_WIDTH="100" FORMAT="STANDARD_FORMAT">
 <edge COLOR="#00ffff"/>
 <node TEXT="Locomoci&#xf3;n humanoide" ID="ID_1294224074" CREATED="1483374985203" MODIFIED="1483378101054" MAX_WIDTH="300">
@@ -729,9 +729,25 @@
 <node TEXT="neuronales" ID="ID_1339010757" CREATED="1487107114951" MODIFIED="1487107159485"/>
 <node TEXT="sinapticos" ID="ID_1194817758" CREATED="1487107120458" MODIFIED="1487107169572"/>
 </node>
+<node TEXT="soluciona el problema de" ID="ID_962426508" CREATED="1487107263201" MODIFIED="1487107371143">
+<node TEXT="auto-actualizaci&#xf3;n" ID="ID_1204898412" CREATED="1487107380833" MODIFIED="1487107390874"/>
+<node TEXT="realiza de forma sistematica la auto-exploracion jugetona de objetos roboticos complejos" ID="ID_406640739" CREATED="1487107391392" MODIFIED="1487107442497"/>
+<node TEXT="busqueda emergente" ID="ID_197450805" CREATED="1487107543612" MODIFIED="1487107547654"/>
+<node TEXT="coordinaci&#xf3;n sensoriomotora" ID="ID_295798576" CREATED="1487107511812" MODIFIED="1487107518035"/>
 </node>
 </node>
-<node TEXT="" ID="ID_962426508" CREATED="1487107263201" MODIFIED="1487107263201"/>
+</node>
+<node TEXT="auto-organizaci&#xf3;n guiada" ID="ID_749689870" CREATED="1487107664397" MODIFIED="1487107675971">
+<node TEXT="como integrar influencias externas para guiar la auto-organizacion en una determinada direccion" ID="ID_384000760" CREATED="1487107801428" MODIFIED="1487107850048"/>
+<node TEXT="por ejemplo, emergencia de patrones de locomoci&#xf3;n especificos" ID="ID_286556935" CREATED="1487107696045" MODIFIED="1487107858995"/>
+<node TEXT="principios de guiansa" ID="ID_575987211" CREATED="1487107871910" MODIFIED="1487107877872">
+<node TEXT="mediante" ID="ID_108129344" CREATED="1487107927928" MODIFIED="1487107931300">
+<node TEXT="influencia directa de patrones motrices" ID="ID_1061171296" CREATED="1487107931309" MODIFIED="1487107947248"/>
+<node TEXT="por relaciones de fase al inducir roturas simetricas" ID="ID_570278870" CREATED="1487107947731" MODIFIED="1487107984634"/>
+<node TEXT="o por refuerzo" ID="ID_1904317384" CREATED="1487107985049" MODIFIED="1487107991631"/>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="max. de la informaci&#xf3;n predictiva" ID="ID_766892942" CREATED="1483465616549" MODIFIED="1483465630592"/>
 </node>
