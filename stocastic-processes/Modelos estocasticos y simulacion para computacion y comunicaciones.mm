@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="4"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="5"/>
 <richcontent TYPE="NOTE">
 
 <html>
@@ -170,6 +170,7 @@
 <edge COLOR="#0000ff"/>
 <node TEXT="1. Ejercicio No. 56, P&#xe1;g 48. de Mood" ID="ID_1355659307" CREATED="1486041446313" MODIFIED="1486043650443">
 <node TEXT="(Juego de craps) soluci&#xf3;n anal&#xed;tica y soluci&#xf3;n simulada" ID="ID_870800427" CREATED="1486041531598" MODIFIED="1486043582073"/>
+<node TEXT="revisar con el teorema de probabilidad total" ID="ID_625949634" CREATED="1487080533482" MODIFIED="1487080544193"/>
 </node>
 <node TEXT="2. Opcional Leer un ensayo" ID="ID_1227241656" CREATED="1486043247567" MODIFIED="1486043278111">
 <node TEXT="Hardy, G. H. Apolog&#xed;a de un matem&#xe1;tico" ID="ID_1208196444" CREATED="1486043298698" MODIFIED="1486043527092"/>
@@ -202,7 +203,9 @@
 </node>
 <node TEXT="8. Raices complejas" ID="ID_1389181191" CREATED="1486648287376" MODIFIED="1486648301387">
 <node TEXT="Considere la ecuacion cuadratica" ID="ID_1463366432" CREATED="1486648301396" MODIFIED="1486667204780" FORMAT="latexPatternFormat"/>
-<node TEXT="$x^2+2bx+c=0$" ID="ID_1900894747" CREATED="1486648316699" MODIFIED="1486667199272" FORMAT="latexPatternFormat"/>
+<node TEXT="$x^2+2bx+c=0$" ID="ID_1900894747" CREATED="1486648316699" MODIFIED="1486667199272" FORMAT="latexPatternFormat">
+<node TEXT="$b^2-4c\geq0$" ID="ID_221143893" CREATED="1486957759305" MODIFIED="1486958126629" FORMAT="latexPatternFormat"/>
+</node>
 <node TEXT="donde" ID="ID_873069331" CREATED="1486648348052" MODIFIED="1486648354287">
 <node TEXT="$\beta\in\mathbb{R}^+$" ID="ID_293665553" CREATED="1486648354296" MODIFIED="1486667211102" FORMAT="latexPatternFormat"/>
 <node TEXT="$x\leftarrow u(a,b)$" ID="ID_187125887" CREATED="1486648441784" MODIFIED="1486667169721" FORMAT="latexPatternFormat"/>
@@ -213,6 +216,14 @@
 </node>
 <node TEXT="Cual es la probabilidad de obtener una raiz real?" ID="ID_988697874" CREATED="1486648570592" MODIFIED="1486667411285" FORMAT="latexPatternFormat"/>
 <node TEXT="Encontrar soluci&#xf3;n analitica y simulada" ID="ID_708710234" CREATED="1486648599917" MODIFIED="1486667411290" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="9. Lazamiento dado" ID="ID_1375887931" CREATED="1487078152476" MODIFIED="1487078165244">
+<node TEXT="6 lados, usando la probabilidad elemental de $p_j= 2p_{j-1}$" ID="ID_114523491" CREATED="1487078165256" MODIFIED="1487078328307" FORMAT="latexPatternFormat"/>
+<node TEXT="1. calcular las probablidades de los eventos elementales" ID="ID_380132725" CREATED="1487078172397" MODIFIED="1487078328310" FORMAT="latexPatternFormat"/>
+<node TEXT="2. cacular la probabilidad de que sea par &#xbf;es igual que sea impar?" ID="ID_1612030821" CREATED="1487078187708" MODIFIED="1487078328312" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="10. Teoremas Total y multiplicacion" ID="ID_1322515302" CREATED="1487080132528" MODIFIED="1487080160504">
+<node TEXT="cuantas formas hay para escribir $P[\bigcap_{i=1}^nA_i]$ para cualquier $n$" ID="ID_324037864" CREATED="1487080208308" MODIFIED="1487080377996" FORMAT="latexPatternFormat"/>
 </node>
 </node>
 <node TEXT="1.1 Espacios de Probabilidad" POSITION="right" ID="ID_51684248" CREATED="1486472518724" MODIFIED="1486486340921">
@@ -241,7 +252,7 @@
 <node TEXT="suerte" ID="ID_196686571" CREATED="1486472718284" MODIFIED="1486472719679"/>
 </node>
 <node TEXT="Espacio de probabilidad" ID="ID_1674563644" CREATED="1486473048658" MODIFIED="1486473055748">
-<node TEXT="elemento matematico con tres elementos" ID="ID_1876685651" CREATED="1486473055759" MODIFIED="1486473067110">
+<node TEXT="es un elemento matematico con tres elementos" ID="ID_1876685651" CREATED="1486473055759" MODIFIED="1487076369131">
 <node TEXT="el conjuto $\Omega$" ID="ID_250473887" CREATED="1486473067120" MODIFIED="1486473458884" FORMAT="latexPatternFormat">
 <node TEXT="son todos los elementos $\left\{\omega_i\right\}_{i\in I}$" ID="ID_538369230" CREATED="1486473096517" MODIFIED="1486473475776" FORMAT="latexPatternFormat"/>
 <node TEXT="donde $I$ pude ser $(\mathbb{N},\mathbb{R},...)$" ID="ID_1756450417" CREATED="1486473241169" MODIFIED="1486473294223" FORMAT="latexPatternFormat">
@@ -304,6 +315,46 @@
 </node>
 </node>
 </node>
+<node TEXT="eventos elementales y compuestos" ID="ID_1135446526" CREATED="1487076826266" MODIFIED="1487076834567">
+<node TEXT="$\Omega=\left{\omega_i\right}_{i=1}^n$, $\mathbf{A}=\left{A_j\right}_{j=1}^m$" ID="ID_1327204111" CREATED="1487076840096" MODIFIED="1487078056624" FORMAT="latexPatternFormat"/>
+<node TEXT="elementales" ID="ID_1231873299" CREATED="1487077059692" MODIFIED="1487077062265">
+<node TEXT="ej: {{cara}, {cruz}}, $p_j = 1/2$" ID="ID_206002759" CREATED="1487077127472" MODIFIED="1487077487752" FORMAT="latexPatternFormat"/>
+<node TEXT="la regla es que la probabilidad de cada evento no es equiprobable, y la excepcion es que lo sean" ID="ID_1937958174" CREATED="1487077560837" MODIFIED="1487077593128"/>
+<node TEXT="ej:" ID="ID_1085605683" CREATED="1487077796888" MODIFIED="1487077801696">
+<node TEXT="una regla puede ser el elemento j-esimo es el doble del (j-1)-esimo de n elementos" ID="ID_963114570" CREATED="1487077784530" MODIFIED="1487078008219"/>
+<node TEXT="A_k = {\omega_1,\ldots,\omega_k}" ID="ID_1791178339" CREATED="1487078009407" MODIFIED="1487078039320"/>
+</node>
+</node>
+<node TEXT="compuestos" ID="ID_170129307" CREATED="1487077062692" MODIFIED="1487077065741">
+<node TEXT="ej:{{vacio},{cara, cruz}}" ID="ID_1695887987" CREATED="1487077151032" MODIFIED="1487077165223"/>
+<node TEXT="cuala es la probabilidad de un evento compuesto?" ID="ID_1686961320" CREATED="1487077536020" MODIFIED="1487077558057"/>
+</node>
+<node TEXT="nota: el evento A_r ocurre cuando el resultado de \Epsilon pertenece a A_r, $\omega_r\in A_r$" ID="ID_853966376" CREATED="1487077066925" MODIFIED="1487077523687" FORMAT="latexPatternFormat"/>
+<node TEXT="nota: recordar las series geometricas" ID="ID_1103241878" CREATED="1487077172126" MODIFIED="1487078386194">
+<node TEXT="Infinita $\sum_{k=0}^{n-1} ar^k = a\frac{1}{1-r}$, $|r|\leq1$" ID="ID_540695477" CREATED="1487077187439" MODIFIED="1487077497904" FORMAT="latexPatternFormat"/>
+<node TEXT="finita $\sum_{k=0}^{n-1} ar^k = a\frac{1-r^n}{1-r}$" ID="ID_1744865725" CREATED="1487077194927" MODIFIED="1487077504988" FORMAT="latexPatternFormat"/>
+</node>
+<node TEXT="ejemplos" ID="ID_1895167951" CREATED="1487076970352" MODIFIED="1487076983189">
+<node TEXT="" ID="ID_196851509" CREATED="1487076983203" MODIFIED="1487076983203"/>
+</node>
+</node>
+<node TEXT="funcion indicadora" ID="ID_1243358123" CREATED="1487078391136" MODIFIED="1487078402794">
+<node TEXT="$\mathbb{P}=(\Omega,A,P)$ con \omega\in\Omega, A\in A" ID="ID_1699075259" CREATED="1487078404457" MODIFIED="1487078473847"/>
+<node TEXT="I_A(\omega)=\case 0,\omega\notin A\\1,\omega\in A" ID="ID_8465976" CREATED="1487078474325" MODIFIED="1487078542928"/>
+</node>
+</node>
+<node TEXT="1.2 Espacios de probabilidad condicional" POSITION="right" ID="ID_1505700863" CREATED="1487078887982" MODIFIED="1487078898776">
+<edge COLOR="#00ffff"/>
+<node TEXT="introduccion" ID="ID_319300436" CREATED="1487078908803" MODIFIED="1487078912624">
+<node TEXT="ante eventos ocurridos redefinir los espacios de probabilidad" ID="ID_1689320466" CREATED="1487079052628" MODIFIED="1487079070779"/>
+</node>
+<node TEXT="teorema de la probabilidad total" ID="ID_1282999920" CREATED="1487079421804" MODIFIED="1487079430167">
+<node TEXT="" ID="ID_599430015" CREATED="1487079430178" MODIFIED="1487079430178"/>
+</node>
+<node TEXT="teorema de la multiplicaci&#xf3;n" ID="ID_844604786" CREATED="1487079848809" MODIFIED="1487079860409">
+<node TEXT="teorema version univariada de la simulaci&#xf3;n" ID="ID_1692117175" CREATED="1487079796536" MODIFIED="1487079814631"/>
+</node>
+<node TEXT="formula de bayes" ID="ID_233626319" CREATED="1487080562665" MODIFIED="1487080568933"/>
 </node>
 </node>
 </map>
