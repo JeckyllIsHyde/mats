@@ -12,7 +12,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <hook NAME="MapStyle">
     <properties show_note_icons="true"/>
@@ -83,7 +82,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Abstract" POSITION="right" ID="ID_420217976" CREATED="1486762779196" MODIFIED="1486762784016">
 <edge COLOR="#ff0000"/>
@@ -118,10 +116,11 @@
 <node TEXT="Introduction" POSITION="right" ID="ID_738209775" CREATED="1486762784714" MODIFIED="1486762788074">
 <edge COLOR="#0000ff"/>
 <node TEXT="Motivation" ID="ID_991427004" CREATED="1486762884678" MODIFIED="1486762891572">
+<node TEXT="5 paragraphs" ID="ID_786119510" CREATED="1487352947257" MODIFIED="1487352960385"/>
 <node TEXT="autonomy as" ID="ID_579676229" CREATED="1486773122852" MODIFIED="1486773318978">
 <node TEXT="the ability of independent exploration" ID="ID_119065652" CREATED="1486773318988" MODIFIED="1486773321409"/>
-<node TEXT="the ability to modify its own pattern activity for" ID="ID_1601574096" CREATED="1486773322070" MODIFIED="1486773356948">
-<node TEXT="adaptation in new situations" ID="ID_933985394" CREATED="1486773356958" MODIFIED="1486773379201"/>
+<node TEXT="the ability to modify its own pattern activity" ID="ID_1601574096" CREATED="1486773322070" MODIFIED="1487604177037">
+<node TEXT="for adaptation in new situations" ID="ID_933985394" CREATED="1486773356958" MODIFIED="1487604181207"/>
 </node>
 <node TEXT="a learning system with novel information" ID="ID_1884921981" CREATED="1486773397120" MODIFIED="1486773445982">
 <node TEXT="improving its cognitive capabilities" ID="ID_1931988597" CREATED="1486773445991" MODIFIED="1486773476310"/>
@@ -132,7 +131,10 @@
 <node TEXT="the challenges for high-dimensional spaces" ID="ID_649267355" CREATED="1486773662108" MODIFIED="1486773689705"/>
 <node TEXT="exploration-explotation trade-off in reinforcement learning" ID="ID_701669389" CREATED="1486773696576" MODIFIED="1486773726726"/>
 <node TEXT="solving with" ID="ID_1204675069" CREATED="1486773776353" MODIFIED="1486774082950">
-<node TEXT="Bayesian formulation is intractable" ID="ID_1900824588" CREATED="1486774082961" MODIFIED="1486774085863"/>
+<node TEXT="Bayesian formulation is" ID="ID_1900824588" CREATED="1486774082961" MODIFIED="1487604393750">
+<node TEXT="can be optimally solved" ID="ID_1826467974" CREATED="1487604395752" MODIFIED="1487604426334"/>
+<node TEXT="but intractable" ID="ID_910352811" CREATED="1487604393751" MODIFIED="1487604399941"/>
+</node>
 <node TEXT="Intrinsic motivation for focusing search" ID="ID_723867912" CREATED="1486774044826" MODIFIED="1486774330348">
 <node TEXT="on certain things and constraining to smaller space" ID="ID_262918976" CREATED="1486774330358" MODIFIED="1486774399639"/>
 </node>
@@ -153,6 +155,14 @@
 <node TEXT="Methods" POSITION="right" ID="ID_686128525" CREATED="1486762788876" MODIFIED="1486762813023">
 <edge COLOR="#00ff00"/>
 <node TEXT="Predictive information" ID="ID_1620975863" CREATED="1486762958777" MODIFIED="1486762963896">
+<node TEXT="PI definition" ID="ID_417035497" CREATED="1487353654489" MODIFIED="1487353665445">
+<node TEXT="PI of a time discrete process $\left\{S_t\right\}_{t=a}^b$ $\in\mathbb{R}$" ID="ID_1556194674" CREATED="1487353784232" MODIFIED="1487353917884" FORMAT="latexPatternFormat"/>
+<node TEXT="$I(S_{future};S_{past})$ mutual info between" ID="ID_1628473337" CREATED="1487353687051" MODIFIED="1487354117367" FORMAT="latexPatternFormat">
+<node TEXT="past" ID="ID_1158438733" CREATED="1487353702066" MODIFIED="1487353704114"/>
+<node TEXT="future" ID="ID_1284436560" CREATED="1487353704471" MODIFIED="1487353718232"/>
+</node>
+<node TEXT="relative to an instant of time $a&lt;t_0&lt;b$" ID="ID_1786316232" CREATED="1487353724388" MODIFIED="1487353765111" FORMAT="latexPatternFormat"/>
+</node>
 <node TEXT="Nonstationary and Time-local Predictive Information (TiPI)" ID="ID_226641445" CREATED="1486762977685" MODIFIED="1486763170208"/>
 </node>
 <node TEXT="Estimating the TiPI" ID="ID_1015121133" CREATED="1486763171880" MODIFIED="1486763186980">
