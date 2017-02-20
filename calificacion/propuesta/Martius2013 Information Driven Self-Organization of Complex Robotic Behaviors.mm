@@ -193,6 +193,7 @@
 </node>
 <node TEXT="Discussion" POSITION="right" ID="ID_1108933663" CREATED="1486762848422" MODIFIED="1486762858368">
 <edge COLOR="#00ffff"/>
+<node TEXT="8 paragraphs" ID="ID_604000617" CREATED="1487628195656" MODIFIED="1487628229559"/>
 </node>
 </node>
 </map>
