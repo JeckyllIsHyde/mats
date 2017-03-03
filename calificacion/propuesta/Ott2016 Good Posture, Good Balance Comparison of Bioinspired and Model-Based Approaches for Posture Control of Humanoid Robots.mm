@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="2"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="3"/>
 <richcontent TYPE="NOTE">
 
 <html>
@@ -98,7 +98,37 @@
 <node TEXT="robust under time-delays in the feedback loop" ID="ID_1046756965" CREATED="1488313285442" MODIFIED="1488313310057"/>
 </node>
 </node>
-<node TEXT="on robot TORO [6-9]" ID="ID_1546785604" CREATED="1488313358682" MODIFIED="1488314145064"/>
+<node TEXT="on robot TORO [6-9]" ID="ID_1546785604" CREATED="1488313358682" MODIFIED="1488314145064">
+<node TEXT="qualitative and quantitative performance comparison" ID="ID_514215622" CREATED="1488396285183" MODIFIED="1488396352813">
+<node TEXT="in the feedback loop in" ID="ID_534066223" CREATED="1488396352815" MODIFIED="1488396395159">
+<node TEXT="time delays" ID="ID_205486869" CREATED="1488396355703" MODIFIED="1488396360192"/>
+<node TEXT="sampling rates" ID="ID_376683638" CREATED="1488396360732" MODIFIED="1488396371047"/>
+</node>
+<node TEXT="controllers are" ID="ID_97248770" CREATED="1488396416208" MODIFIED="1488396422841">
+<node TEXT="extended version of [16]" ID="ID_878939406" CREATED="1488396422842" MODIFIED="1488396430354"/>
+<node TEXT="model-base of [12]" ID="ID_126677822" CREATED="1488396430870" MODIFIED="1488396501712"/>
+</node>
+<node TEXT="disturbance cases are" ID="ID_542435572" CREATED="1488396502632" MODIFIED="1488396518887">
+<node TEXT="on firm stationary ground" ID="ID_119032179" CREATED="1488396518888" MODIFIED="1488396537783"/>
+<node TEXT="tilting surface" ID="ID_2304761" CREATED="1488396538191" MODIFIED="1488396545286"/>
+<node TEXT="horizontal aceleration of the feet" ID="ID_388530978" CREATED="1488396545727" MODIFIED="1488396569412"/>
+<node TEXT="compliant floor" ID="ID_1195470913" CREATED="1488396569904" MODIFIED="1488396578793"/>
+</node>
+<node TEXT="on a sagital plane" ID="ID_1847821516" CREATED="1488396874785" MODIFIED="1488396885996">
+<node TEXT="for both controllers" ID="ID_1890269239" CREATED="1488396885998" MODIFIED="1488396890409"/>
+<node TEXT="model-based allows" ID="ID_576873515" CREATED="1488396943343" MODIFIED="1488397037921">
+<node TEXT="frontal plane control" ID="ID_902414455" CREATED="1488397037923" MODIFIED="1488397040704"/>
+<node TEXT="extension to multiple contacts" ID="ID_1227551126" CREATED="1488396991423" MODIFIED="1488397026638">
+<node TEXT="including hands" ID="ID_1069760579" CREATED="1488397063007" MODIFIED="1488397073008"/>
+</node>
+<node TEXT="not supported on bio-inspired controllers" ID="ID_1048157214" CREATED="1488397193419" MODIFIED="1488397223702">
+<icon BUILTIN="closed"/>
+<icon BUILTIN="closed"/>
+</node>
+</node>
+</node>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="A neurorobotics approach" POSITION="right" ID="ID_1933551277" CREATED="1488313396141" MODIFIED="1488313406232">
@@ -137,10 +167,16 @@
 </node>
 <node TEXT="dynamically modify contribution for each sensory system to account for changes in the environment scenarios and sensory availability" ID="ID_1491417396" CREATED="1488317707232" MODIFIED="1488317821772" MAX_WIDTH="300"/>
 </node>
-<node TEXT="3" OBJECT="java.lang.Long|3" ID="ID_39292479" CREATED="1488317554132" MODIFIED="1488329675112"/>
+<node TEXT="3. low loop gain" ID="ID_39292479" CREATED="1488317554132" MODIFIED="1488396777435">
+<node TEXT="to provide robustness with respect to long neural time delays and with mechanical compliance" ID="ID_21257197" CREATED="1488396777439" MODIFIED="1488396833402" MAX_WIDTH="300"/>
 </node>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="model-based bipedal balancing" POSITION="right" ID="ID_1038858456" CREATED="1488397366400" MODIFIED="1488397383125">
+<edge COLOR="#00ff00"/>
+<node TEXT="" ID="ID_1848559245" CREATED="1488397384849" MODIFIED="1488397384849"/>
 </node>
 </node>
 </map>

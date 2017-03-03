@@ -830,7 +830,20 @@
 <node TEXT="innovaci&#xf3;n" ID="ID_218187806" CREATED="1483542594209" MODIFIED="1483542598098"/>
 </node>
 </node>
-<node TEXT="formulaci&#xf3;n probabil&#xed;stica" ID="ID_623348190" CREATED="1483475343793" MODIFIED="1483475757227" FORMAT="STANDARD_FORMAT">
+<node TEXT="formulaci&#xf3;n probabil&#xed;stica" ID="ID_623348190" CREATED="1483475343793" MODIFIED="1487695045123" FORMAT="STANDARD_FORMAT"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-left: 24pt; text-indent: -24.0pt">
+      Ay, N. et al., 2012. Information-driven self-organization: The dynamical system approach to autonomous robot behavior. <i>Theory in Biosciences</i>, 131, pp.161&#8211;179.
+    </p>
+  </body>
+</html>
+
+</richcontent>
 <node TEXT="Din&#xe1;mica del entorno: $p(w_{t+1}|w_t,a_t)$\\&#xa;Estimaci&#xf3;n del estado del entorno: $p(s_t|w_t)$\\&#xa;Evoluci&#xf3;n de la memoria: $p(m_t|m_{t-1},s_t)$\\&#xa;Politica estoc&#xe1;stica: $p(a_t|m_t)$\\&#xa;Modelo interno del entorno: $p(s_{t+1}|m_t,a_t)$" ID="ID_1758811011" CREATED="1483475623713" MODIFIED="1483476493149" FORMAT="latexPatternFormat"/>
 </node>
 <node TEXT="formulaci&#xf3;n como sistema din&#xe1;mico" ID="ID_1453103964" CREATED="1483475361679" MODIFIED="1483732388647" FORMAT="STANDARD_FORMAT">
