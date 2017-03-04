@@ -12,6 +12,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <hook NAME="MapStyle">
     <properties show_note_icons="true"/>
